@@ -151,6 +151,7 @@
     <ClCompile Include="DynamicArray.cpp" />
     <ClCompile Include="Functions.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="WorkWithFiles.cpp" />
     <ClCompile Include="StaticArray.cpp" />
     <ClCompile Include="SupportFunction.cpp" />
   </ItemGroup>
@@ -158,6 +159,7 @@
     <ClInclude Include="Breakpoints.h" />
     <ClInclude Include="DynamicArray.h" />
     <ClInclude Include="Functions.h" />
+    <ClInclude Include="WorkWithFiles.h" />
     <ClInclude Include="Output.h" />
     <ClInclude Include="Read.h" />
     <ClInclude Include="StaticArray.h" />

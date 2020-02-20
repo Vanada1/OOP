@@ -13,10 +13,10 @@ void DynamicArrayBool();
 // 1.1.5.3
 void DynamicArrayChar();
 //1.1.5.4 
-void DynamicArrayDoubleWithSort();
+void DynamicArrayDoubleWithSorting();
 //1.1.5.5
 void DynamicArrayInt();
 // 1.1.5.6
 void DynamicArrayCharWithSearchLetter();
 // 1.1.5.7
-void ThreeArray();
+void ThreeArrays();

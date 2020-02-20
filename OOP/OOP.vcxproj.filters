@@ -16,6 +16,15 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
+    <Filter Include="General Files">
+      <UniqueIdentifier>{9b759319-f013-4e1d-bd61-80d1670849c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="General Files\Header Files">
+      <UniqueIdentifier>{b9f6a2a4-f29c-44a3-ade0-9cda92b4ac52}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="General Files\Source Files">
+      <UniqueIdentifier>{391cff52-0a08-47cb-ad67-baf1674746a4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Breakpoints.cpp">
@@ -36,12 +45,12 @@
     <ClCompile Include="StaticArray.cpp">
       <Filter>Lab1\Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="WorkWithFiles.cpp">
+      <Filter>General Files\Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SupportFunction.h">
-      <Filter>Lab1\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Read.h">
       <Filter>Lab1\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Output.h">
@@ -58,6 +67,12 @@
     </ClInclude>
     <ClInclude Include="Breakpoints.h">
       <Filter>Lab1\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Read.h">
+      <Filter>General Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WorkWithFiles.h">
+      <Filter>General Files\Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

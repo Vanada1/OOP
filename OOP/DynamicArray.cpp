@@ -56,7 +56,7 @@ void DynamicArrayChar()
     delete[] arr;
 }
 
-void DynamicArrayDoubleWithSort()
+void DynamicArrayDoubleWithSorting()
 {
     int countElements = 10;
     double* arr = new double[countElements];
@@ -112,7 +112,7 @@ void DynamicArrayCharWithSearchLetter()
     delete[] arr;
 }
 
-void ThreeArray()
+void ThreeArrays()
 {
     int* arr5 = MakeRandomArray(5);
     int* arr8 = MakeRandomArray(8);

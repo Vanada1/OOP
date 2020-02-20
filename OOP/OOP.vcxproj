@@ -147,7 +147,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="OOP.cpp" />
+    <ClCompile Include="Breakpoints.cpp" />
+    <ClCompile Include="DynamicArray.cpp" />
+    <ClCompile Include="Functions.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="StaticArray.cpp" />
+    <ClCompile Include="SupportFunction.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Breakpoints.h" />
+    <ClInclude Include="DynamicArray.h" />
+    <ClInclude Include="Functions.h" />
+    <ClInclude Include="Output.h" />
+    <ClInclude Include="Read.h" />
+    <ClInclude Include="StaticArray.h" />
+    <ClInclude Include="SupportFunction.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

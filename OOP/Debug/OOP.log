@@ -1,0 +1,9 @@
+﻿  Breakpoints.cpp
+  DynamicArray.cpp
+  Functions.cpp
+  Main.cpp
+C:\Users\vovas\source\repos\OOP\OOP\Main.cpp(16,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  StaticArray.cpp
+  SupportFunction.cpp
+  Generating Code...
+  OOP.vcxproj -> C:\Users\vovas\source\repos\OOP\Debug\OOP.exe

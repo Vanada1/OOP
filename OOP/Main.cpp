@@ -1,11 +1,11 @@
 #include <iostream>
 #include <ctime>
-#include "Read.h"
+#include "../General Files/Read.h"
 #include "DynamicArray.h"
 #include "Breakpoints.h"
 #include "StaticArray.h"
 #include "Functions.h"
-#include "WorkWithFiles.h"
+#include "../General Files/WorkWithFiles.h"
 
 #define BREAKPOINT
 #define STATICARRAY

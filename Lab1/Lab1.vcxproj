@@ -20,7 +20,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{F7AFD817-A19F-44E1-959A-654B01FC3E20}</ProjectGuid>
+    <ProjectGuid>{9ED281F0-6857-47D1-9A14-A9CABC258820}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>OOP</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>

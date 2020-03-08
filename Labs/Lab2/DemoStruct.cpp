@@ -252,3 +252,29 @@ void DemoCircle()
 	Circle* coppyCircle2 = CoppyCircle(*circle2);
 	Circle* coppyCircle3 = CoppyCircle(*circle3);
 }
+
+void DemoEnums()
+{
+	//2.2.8.3
+	Color color = GREEN;
+	EnducationForm  enducationForm = EVENING;
+	Ganre  ganre = ACTION;
+	Season  season = SUMMER;
+	SmartphoneManufacturer smartphoneManufacturer = HUAWAI;
+	WeekDay  weekDay = MONDAY;
+	//2.2.8.4
+	const int COUNT = 6;
+	Color colorArray[COUNT] = 
+	{ RED, BLUE, DARKBLUE, GREEN, PURPLE,RED };
+	EnducationForm  enducationFormArray[COUNT] =
+	{ INTRAMURAL, EXTAMURAL, EVENING,
+		REMOTE, INTRAMURAL, INTRAMURAL };
+	Ganre  ganreArray[COUNT] = { COMEDY, DRAMA, THRILLER,
+		ACTION, HORROR, BLOCKBUSTER };
+	Season  seasonArray[COUNT] = { WINTER, SUMMER, AUTUMN,
+	SPRING, WINTER, SUMMER };
+	SmartphoneManufacturer smartphoneManufacturerArray[COUNT] =
+	{ APPLE, XIAOMI,  SAMSUNG, HUAWAI, MOTOROLA, LENOVO };
+	WeekDay  weekDayArray[COUNT] = { MONDAY, TUESDAY, WEDNESDAY,
+	THURSDAY, FRIDAY, SUTURDAY};
+}

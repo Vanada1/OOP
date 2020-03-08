@@ -148,6 +148,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Circle.cpp" />
+    <ClCompile Include="Color.cpp" />
     <ClCompile Include="DemoStruct.cpp" />
     <ClCompile Include="Flight.cpp" />
     <ClCompile Include="Lab2.cpp" />
@@ -159,12 +160,19 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Circle.h" />
+    <ClInclude Include="Color.h" />
     <ClInclude Include="DemoStruct.h" />
+    <ClInclude Include="EnducationForm.h" />
+    <ClInclude Include="Enums.h" />
+    <ClInclude Include="Ganre.h" />
     <ClInclude Include="Movie.h" />
     <ClInclude Include="Flight.h" />
     <ClInclude Include="Rectangle.h" />
+    <ClInclude Include="Season.h" />
+    <ClInclude Include="SmartphoneManufacturer.h" />
     <ClInclude Include="Sort.h" />
     <ClInclude Include="Time.h" />
+    <ClInclude Include="WeekDay.h" />
     <ClInclude Include="WrongPointers.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

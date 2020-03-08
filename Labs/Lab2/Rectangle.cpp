@@ -77,3 +77,22 @@ void FindMaxRectangle(Rectangle* rectangles, int count)
 	cout << "The rectangle with max  area: " << endl;
 	WriteRectangle(rectangleMaxArea);
 }
+
+Rectangle* MakeRectangle(double length,
+	double width, std::string color)
+{
+	Rectangle* newRectangle = new Rectangle();
+	newRectangle->Length = length;
+	newRectangle->Width = width;
+	newRectangle->Color = color;
+	return newRectangle;
+}
+
+Rectangle* CoppyRectangle(Rectangle& rectangle)
+{
+	Rectangle* coppyRectangle = new Rectangle();
+	coppyRectangle->Length = rectangle.Length;
+	coppyRectangle->Width = rectangle.Width;
+	coppyRectangle->Color = rectangle.Color;
+	return coppyRectangle;
+}

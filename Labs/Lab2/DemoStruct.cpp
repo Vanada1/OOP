@@ -240,3 +240,15 @@ void DemoTime()
 	cout << timePointer << endl;
 	cout << timePointer2 << endl;
 }
+
+//2.2.7.1
+void DemoCircle()
+{
+	Circle* circle1 = MakeCircle(5.0, 7.0, 7.5, "Red");
+	Circle* circle2 = MakeCircle(2.0, -12.0, 12.75, "Green");
+	Circle* circle3 = MakeCircle(-10.0, 10.0, 1.45, "Blue");
+
+	Circle* coppyCircle1 = CoppyCircle(*circle1);
+	Circle* coppyCircle2 = CoppyCircle(*circle2);
+	Circle* coppyCircle3 = CoppyCircle(*circle3);
+}

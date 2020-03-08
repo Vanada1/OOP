@@ -147,14 +147,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Circle.cpp" />
     <ClCompile Include="DemoStruct.cpp" />
     <ClCompile Include="Flight.cpp" />
     <ClCompile Include="Lab2.cpp" />
+    <ClCompile Include="Movie.cpp" />
     <ClCompile Include="Rectangle.cpp" />
     <ClCompile Include="Sort.cpp" />
+    <ClCompile Include="Time.cpp" />
     <ClCompile Include="WrongPointers.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Circle.h" />
     <ClInclude Include="DemoStruct.h" />
     <ClInclude Include="Movie.h" />
     <ClInclude Include="Flight.h" />

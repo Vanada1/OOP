@@ -150,6 +150,7 @@
     <ClCompile Include="DemoStruct.cpp" />
     <ClCompile Include="Lab2.cpp" />
     <ClCompile Include="Sort.cpp" />
+    <ClCompile Include="WrongPointers.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DemoStruct.h" />
@@ -158,6 +159,7 @@
     <ClInclude Include="Rectangle.h" />
     <ClInclude Include="Sort.h" />
     <ClInclude Include="Time.h" />
+    <ClInclude Include="WrongPointers.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

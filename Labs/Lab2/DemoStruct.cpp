@@ -47,6 +47,12 @@ void DemoFlight()
 			<< " will be " << flightArray[i].FlightTimeMinute
 			<< "minutes" << endl;
 	}
+	// 2.2.4.1
+	Flight* flightPointer = &flight;
+	// 2.2.4.2
+	Flight* flightPointer2 = &flight;
+	cout << flightPointer << endl;
+	cout << flightPointer2 << endl;
 }
 
 void DemoMovie()
@@ -110,6 +116,12 @@ void DemoMovie()
 		cout << "Genre: " << movieArray[i].Genre << endl;
 		cout << "Rating: " << movieArray[i].Rating << endl;
 	}
+	// 2.2.4.1
+	Movie* moviePointer = &movie;
+	// 2.2.4.2
+	Movie* moviePointer2 = &movie;
+	cout << moviePointer << endl;
+	cout << moviePointer2 << endl;
 }
 
 void DemoRectangle()
@@ -130,9 +142,9 @@ void DemoRectangle()
 	cout << "Input the color: ";
 	cin >> reactangleSecond.Color;
 	cout << endl;
-	cout << "Reactangle has a size —  " << reactangleSecond.Length 
+	cout << "Reactangle has a size   " << reactangleSecond.Length 
 		<< "x" << reactangleSecond.Width 
-		<< "; Color — " << reactangleSecond.Color<<  endl;
+		<< "; Color  " << reactangleSecond.Color<<  endl;
 	//2.2.3.3
 	const int COUNT = 3;
 	Rectangle rectangleArray[COUNT];
@@ -150,11 +162,17 @@ void DemoRectangle()
 	}
 	for (int i = 0; i < COUNT; i++)
 	{
-		cout << "Reactangle has a size —  " 
+		cout << "Reactangle has a size   " 
 			<< rectangleArray[i].Length
 			<< "x" << rectangleArray[i].Width
-			<< "; Color — " << rectangleArray[i].Color << endl;
+			<< "; Color  " << rectangleArray[i].Color << endl;
 	}
+	// 2.2.4.1
+	Rectangle* rectanglePointer = &reactangle;
+	// 2.2.4.2
+	Rectangle* rectanglePointer2 = &reactangle;
+	cout << rectanglePointer << endl;
+	cout << rectanglePointer2 << endl;
 }
 
 void DemoTime()
@@ -215,4 +233,10 @@ void DemoTime()
 		}
 		cout << timeArray[i].Second << endl;
 	}
+	// 2.2.4.1
+	Time* timePointer = &time;
+	// 2.2.4.2
+	Time* timePointer2 = &time;
+	cout << timePointer << endl;
+	cout << timePointer2 << endl;
 }

@@ -147,11 +147,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="DemoStruct.cpp" />
     <ClCompile Include="Lab2.cpp" />
     <ClCompile Include="Sort.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DemoStruct.h" />
+    <ClInclude Include="Movie.h" />
+    <ClInclude Include="Flight.h" />
+    <ClInclude Include="Rectangle.h" />
     <ClInclude Include="Sort.h" />
+    <ClInclude Include="Time.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

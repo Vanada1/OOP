@@ -21,12 +21,12 @@ void DemoFlight()
 	cout << "How long to fly (in minutes): ";
 	cin >> flightSecond.FlightTimeMinute;
 	cout << endl;
-	cout << "Your flight from" << flightSecond.From 
+	cout << "Your flight from " << flightSecond.From 
 		 << " to " << flightSecond.Where 
 		 << " will be " << flightSecond.FlightTimeMinute 
-		 << "minutes" << endl;
+		 << " minutes" << endl;
 	//2.2.3.3
-	const int COUNT  = 3;
+	const int COUNT  = 4;
 	Flight flightArray[COUNT];
 	for (int i = 0; i < COUNT; i++)
 	{
@@ -40,16 +40,18 @@ void DemoFlight()
 		cin >> flightArray[i].FlightTimeMinute;
 		cout << endl;
 	}
+	//2.2.6.3
+	FindShortestFlight(flightArray, COUNT);
 	for (int i = 0; i < COUNT; i++)
 	{
 		cout << "Your flight from" << flightArray[i].From
 			<< " to " << flightArray[i].Where
 			<< " will be " << flightArray[i].FlightTimeMinute
-			<< "minutes" << endl;
+			<< " minutes" << endl;
 	}
 	// 2.2.4.1
 	Flight* flightPointer = &flight;
-	// 2.2.4.2
+	 //2.2.4.2
 	Flight* flightPointer2 = &flight;
 	cout << flightPointer << endl;
 	cout << flightPointer2 << endl;
@@ -131,42 +133,40 @@ void DemoRectangle()
 	reactangle.Length = 15;
 	reactangle.Width = 40;
 	reactangle.Color = "Green";
+	//2.2.5.4
+	Rectangle  reactangle2;
+	reactangle2.Length = 30;
+	reactangle2.Width = 200;
+	reactangle2.Color = "Purple";
+	cout << "Before: " << endl;
+	WriteRectangle(reactangle);
+	WriteRectangle(reactangle2);
+
+	Exchange(reactangle, reactangle2);
+
+	cout << "After: " << endl;
+	WriteRectangle(reactangle);
+	WriteRectangle(reactangle2);
+	
 	//2.2.3.2
 	Rectangle  reactangleSecond;
-	cout << "Input the length (positive): ";
-	cin >> reactangleSecond.Length; 
-	cout << endl;
-	cout << "Input the width (positive): ";
-	cin >> reactangleSecond.Width;
-	cout << endl;
-	cout << "Input the color: ";
-	cin >> reactangleSecond.Color;
-	cout << endl;
-	cout << "Reactangle has a size   " << reactangleSecond.Length 
-		<< "x" << reactangleSecond.Width 
-		<< "; Color  " << reactangleSecond.Color<<  endl;
+	ReadRectangle(reactangleSecond);
+	WriteRectangle(reactangleSecond);
 	//2.2.3.3
 	const int COUNT = 3;
 	Rectangle rectangleArray[COUNT];
 	for (int i = 0; i < COUNT; i++)
 	{
-		cout << "Input the length (positive): ";
-		cin >> rectangleArray[i].Length;
-		cout << endl;
-		cout << "Input the width (positive): ";
-		cin >> rectangleArray[i].Width;
-		cout << endl;
-		cout << "Input the color: ";
-		cin >> rectangleArray[i].Color;
-		cout << endl;
+		ReadRectangle(rectangleArray[i]);
 	}
 	for (int i = 0; i < COUNT; i++)
 	{
-		cout << "Reactangle has a size   " 
-			<< rectangleArray[i].Length
-			<< "x" << rectangleArray[i].Width
-			<< "; Color  " << rectangleArray[i].Color << endl;
+		WriteRectangle(rectangleArray[i]);
 	}
+	//2.2.5.5
+	FindRectangle(rectangleArray, COUNT);
+	//2.2.5.6
+	FindMaxRectangle(rectangleArray, COUNT);
 	// 2.2.4.1
 	Rectangle* rectanglePointer = &reactangle;
 	// 2.2.4.2

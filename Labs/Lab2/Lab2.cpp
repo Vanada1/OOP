@@ -1,9 +1,13 @@
 ﻿#include <iostream>
 #include "Sort.h"
 #include "DemoStruct.h"
+#include "Rectangle.h"
 
 int main()
 {
-    DemoSort();
-    DemoRectangle(); 
+   // DemoSort();
+   // DemoRectangle(); 
+   // DemoReadAndWriteRectangles(); 
+   // DemoDynamicFlights();
+    DemoFlight();
 }

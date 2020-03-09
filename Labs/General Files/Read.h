@@ -1,8 +1,6 @@
 #pragma once
 #include  <iostream>
 
-using namespace std;
-
 template < typename T >
 T Read()
 {
@@ -11,13 +9,13 @@ T Read()
     do
     {
         error = false;
-        cin >> number;
-        if (cin.fail())
+        std::cin >> number;
+        if (std::cin.fail())
         {
-            cout << "Wrong\n";
+            std::cout << "Wrong\n";
             error = true;
-            cin.clear();
-            cin.ignore(80, '\n');
+            std::cin.clear();
+            std::cin.ignore(80, '\n');
         }
     } while (error);
     return number;

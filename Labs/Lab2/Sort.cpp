@@ -1,5 +1,7 @@
 #include "Sort.h"
 
+using namespace std;
+
 void Sort(double* values, int count)
 {
 	if (count < 0)

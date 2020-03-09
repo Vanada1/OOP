@@ -7,8 +7,8 @@ void WrongPointers()
 {
 	Movie movie;
 	Flight flight;
-	/*Movie* moviePointer = &flight;
-	Flight* flightPointer = &movie;*/
+	/*Movie* wrongMoviePointer = &flight;
+	Flight* wrongFlightPointer = &movie;*/
 	Movie* moviePointer = &movie;
 	Flight* flightPointer = &flight;
 }

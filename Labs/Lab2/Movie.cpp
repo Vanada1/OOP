@@ -1,4 +1,7 @@
 #include "Movie.h"
+#include<iostream>
+
+using namespace std;
 
 Movie* MakeMovie(std::string name, int duration,
     int year, Genre ganre, double rating)
@@ -50,4 +53,34 @@ Movie* FindBestGenreMovie(Movie* movies, int count, Genre  genre)
         }
     }
     return searchBest;
+}
+
+void  ReadMovie(Movie& movie)
+{
+    cout << "Movie name: ";
+    cin >> movie.Name;
+    cout << endl;
+    cout << "Duration in minute: ";
+    cin >> movie.DurationMinute;
+    cout << endl;
+    cout << "Year: ";
+    cin >> movie.Year;
+    cout << endl;
+    cout << "Genre: ";
+    movie.MovieGenre = ReadGenre();
+    cout << endl;
+    cout << "Rating: ";
+    cin >> movie.Rating;
+    cout << endl;
+}
+
+void WriteMovie(Movie& movie)
+{
+    cout << "The  movie: " << movie.Name << endl;
+    cout << "Duration in minute: " << movie.DurationMinute << endl;
+    cout << "Year: " << movie.Year << endl;
+    cout << "Genre: ";
+    WriteGenre(movie.MovieGenre);
+    cout << endl;
+    cout << "Rating: " << movie.Rating << endl;
 }

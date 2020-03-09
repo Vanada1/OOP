@@ -6,14 +6,8 @@ using namespace  std;
 void DemoDynamicFlight()
 {
 	Flight* flight = new  Flight();
-	flight->From = "Moscow";
-	flight->Where = "Tomsk";
-	flight->FlightTimeMinute = 240;
-
-	cout << "Your flight from  " << flight->From
-		<< " to " << flight->Where
-		<< " will be " << flight->FlightTimeMinute
-		<< " minutes" << endl;
+	ReadFlight(*flight);
+	WriteFlight(*flight);
 	delete  flight;
 }
 
@@ -23,22 +17,11 @@ void DemoDynamicFlights()
 	Flight* flight = new  Flight[count];
 	for (int i = 0; i < count; i++)
 	{
-		cout << "From: ";
-		cin >> flight[i].From;
-		cout << endl;
-		cout << "Where: ";
-		cin >> flight[i].Where;
-		cout << endl;
-		cout << "How long to fly (in minutes): ";
-		cin >> flight[i].FlightTimeMinute;
-		cout << endl;
+		ReadFlight(flight[i]);
 	}
 	for (int i = 0; i < count; i++)
 	{
-		cout << "Your flight from  " << flight[i].From
-			<< " to " << flight[i].Where
-			<< " will be " << flight[i].FlightTimeMinute
-			<< " minutes" << endl;
+		WriteFlight(flight[i]);
 	}
 	delete[] flight;
 }
@@ -55,10 +38,7 @@ void FindShortestFlight(Flight* flight, int count)
 	}
 
 	cout << "The fast flight:" << endl;
-	cout << flightMinTime.From
-		<< " to " << flightMinTime.Where
-		<< " will be " << flightMinTime.FlightTimeMinute
-		<< " minutes" << endl;
+	WriteFlight(flightMinTime);
 }
 
 Flight* MakeFlight(std::string from, std::string where,
@@ -78,4 +58,25 @@ Flight* CoppyFlight(Flight& flight)
 	coppyFlight->Where = flight.Where;
 	coppyFlight->FlightTimeMinute = flight.FlightTimeMinute;
 	return coppyFlight;
+}
+
+void ReadFlight(Flight& flight)
+{
+	cout << "From: ";
+	cin >> flight.From;
+	cout << endl;
+	cout << "Where: ";
+	cin >> flight.Where;
+	cout << endl;
+	cout << "How long to fly (in minutes): ";
+	cin >> flight.FlightTimeMinute;
+	cout << endl;
+}
+
+void WriteFlight(Flight& flight)
+{
+	cout << "Your flight from " << flight.From
+		<< " to " << flight.Where
+		<< " will be " << flight.FlightTimeMinute
+		<< " minutes" << endl;
 }

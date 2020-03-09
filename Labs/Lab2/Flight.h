@@ -17,3 +17,5 @@ void FindShortestFlight(Flight*, int);
 Flight* MakeFlight(std::string, std::string, int);
 //2.2.7.3
 Flight* CoppyFlight(Flight&);
+void ReadFlight(Flight&);
+void WriteFlight(Flight&);

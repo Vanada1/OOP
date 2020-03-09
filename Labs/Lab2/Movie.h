@@ -19,3 +19,5 @@ Movie* CoppyMovie(Movie&);
 int CountMoviesByGenre(Movie*, int, Genre);
 //2.2.9.5
 Movie* FindBestGenreMovie(Movie*, int, Genre);
+void ReadMovie(Movie&);
+void WriteMovie(Movie&);

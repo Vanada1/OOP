@@ -12,42 +12,20 @@ void DemoFlight()
 	flight.FlightTimeMinute = 60;
 	//2.2.3.2
 	Flight flightSecond;
-	cout << "From: ";
-	cin >> flightSecond.From;
-	cout << endl;
-	cout << "Where: ";
-	cin >> flightSecond.Where;
-	cout << endl;
-	cout << "How long to fly (in minutes): ";
-	cin >> flightSecond.FlightTimeMinute;
-	cout << endl;
-	cout << "Your flight from " << flightSecond.From 
-		 << " to " << flightSecond.Where 
-		 << " will be " << flightSecond.FlightTimeMinute 
-		 << " minutes" << endl;
+	ReadFlight(flightSecond);
+	WriteFlight(flightSecond);
 	//2.2.3.3
 	const int COUNT  = 4;
 	Flight flightArray[COUNT];
 	for (int i = 0; i < COUNT; i++)
 	{
-		cout << "From: ";
-		cin >> flightArray[i].From;
-		cout << endl;
-		cout << "Where: ";
-		cin >> flightArray[i].Where;
-		cout << endl;
-		cout << "How long to fly (in minutes): ";
-		cin >> flightArray[i].FlightTimeMinute;
-		cout << endl;
+		ReadFlight(flightArray[i]);
 	}
 	//2.2.6.3
 	FindShortestFlight(flightArray, COUNT);
 	for (int i = 0; i < COUNT; i++)
 	{
-		cout << "Your flight from" << flightArray[i].From
-			<< " to " << flightArray[i].Where
-			<< " will be " << flightArray[i].FlightTimeMinute
-			<< " minutes" << endl;
+		WriteFlight(flightArray[i]);
 	}
 	// 2.2.4.1
 	Flight* flightPointer = &flight;
@@ -68,59 +46,18 @@ void DemoMovie()
 	movie.Rating = 7.3;
 	//2.2.3.2
 	Movie  movieSecond;
-	cout << "Movie name: ";
-	cin >> movieSecond.Name;
-	cout << endl;
-	cout << "Duration in minute: ";
-	cin >> movieSecond.DurationMinute;
-	cout << endl;
-	cout << "Year: ";
-	cin >> movieSecond.Year;
-	cout << endl;
-	cout << "Genre: ";
-	movieSecond.MovieGenre = ReadGenre();
-	cout << endl;
-	cout << "Rating: ";
-	cin >> movieSecond.Rating;
-	cout << endl;
-	cout << "The  movie: " << movieSecond.Name << endl;
-	cout << "Duration in minute: " << movieSecond.DurationMinute << endl;
-	cout << "Year: " << movieSecond.Year << endl;
-	cout << "Genre: ";
-	WriteGenre(movieSecond.MovieGenre);
-	cout << endl;
-	cout << "Rating: " << movieSecond.Rating << endl;
+	ReadMovie(movieSecond);
+	WriteMovie(movieSecond);
 	//2.2.3.3
 	const int COUNT = 3;
 	Movie movieArray[COUNT];
 	for (int i = 0; i < COUNT; i++)
 	{
-		cout << "Movie name: ";
-		cin >> movieArray[i].Name;
-		cout << endl;
-		cout << "Duration in minute: ";
-		cin >> movieArray[i].DurationMinute;
-		cout << endl;
-		cout << "Year: ";
-		cin >> movieArray[i].Year;
-		cout << endl;
-		cout << "Genre: ";
-		movieArray[i].MovieGenre = ReadGenre();
-		cout << endl;
-		cout << "Rating: ";
-		cin >> movieArray[i].Rating;
-		cout << endl;
+		ReadMovie(movieArray[i]);
 	}
 	for (int i = 0; i < COUNT; i++)
 	{
-		cout << "The  movie: " << movieArray[i].Name << endl;
-		cout << "Duration in minute: " 
-			 << movieArray[i].DurationMinute << endl;
-		cout << "Year: " << movieArray[i].Year << endl;
-		cout << "Genre: "; 
-		WriteGenre(movieArray[i].MovieGenre);
-		cout << endl;
-		cout << "Rating: " << movieArray[i].Rating << endl;
+		WriteMovie(movieArray[i]);
 	}
 	// 2.2.4.1
 	Movie* moviePointer = &movie;
@@ -188,54 +125,18 @@ void DemoTime()
 	time.Second = 30;
 	//2.2.3.2
 	Time  timeSecond;
-	cout << "Input hours (from 0 to 23): ";
-	cin >> timeSecond.Hour;
-	cout << endl;
-	cout << "Input minutes (from 0 to 59): ";
-	cin >> timeSecond.Minute;
-	cout << endl;
-	cout << "Input seconds (from 0 to 59): ";
-	cin >> timeSecond.Second;
-	cout << endl;
-	cout << "Time is  " << timeSecond.Hour << ":";
-	if (timeSecond.Minute < 10)
-	{
-		cout << 0;
-	}
-	cout << timeSecond.Minute<<":";
-	if (timeSecond.Second < 10)
-	{
-		cout << 0;
-	}
-	cout << timeSecond.Second << endl;
+	ReadTime(timeSecond);
+	WriteTime(timeSecond);
 	//2.2.3.3
 	const int COUNT = 3;
 	Time timeArray[COUNT];
 	for (int i = 0; i < COUNT; i++)
 	{
-		cout << "Input hours (from 0 to 23): ";
-		cin >> timeArray[i].Hour;
-		cout << endl;
-		cout << "Input minutes (from 0 to 59): ";
-		cin >> timeArray[i].Minute;
-		cout << endl;
-		cout << "Input seconds (from 0 to 59): ";
-		cin >> timeArray[i].Second;
-		cout << endl;
+		ReadTime(timeArray[i]);
 	}
 	for (int i = 0; i < COUNT; i++)
 	{
-		cout << "Time is  " << timeArray[i].Hour << ":";
-		if (timeArray[i].Minute < 10)
-		{
-			cout << 0;
-		}
-		cout << timeArray[i].Minute << ":";
-		if (timeArray[i].Second < 10)
-		{
-			cout << 0;
-		}
-		cout << timeArray[i].Second << endl;
+		WriteTime(timeArray[i]);
 	}
 	// 2.2.4.1
 	Time* timePointer = &time;
@@ -259,6 +160,9 @@ void DemoCircle()
 	delete circle1;
 	delete circle2;
 	delete circle3;
+	delete coppyCircle1;
+	delete coppyCircle2;
+	delete coppyCircle3;
 }
 
 void DemoEnums()
@@ -298,37 +202,19 @@ void DemoMovieWithGenre()
 
 	Movie* movie2 = MakeMovie("Dumb and Dumber", 113,
 		1994, Comedy, 7.3);
-	cout << "The  movie: " << movie2->Name << endl;
-	cout << "Duration in minute: " << movie2->DurationMinute << endl;
-	cout << "Year: " << movie2->Year << endl;
-	cout << "Genre: ";
-	WriteGenre(movie2->MovieGenre);
-	cout << endl;
-	cout << "Rating: " << movie2->Rating << endl;
+	WriteMovie(*movie2);
 	delete movie2;
 
 	int countElements = 4;
 	Movie* movieArray = new Movie[countElements];
 	for (int i = 0; i < countElements; i++)
 	{
-
-		cout << "Movie name: ";
-		cin >> movieArray[i].Name;
-		cout << endl;
-		cout << "Duration in minute: ";
-		cin >> movieArray[i].DurationMinute;
-		cout << endl;
-		cout << "Year: ";
-		cin >> movieArray[i].Year;
-		cout << endl;
-		cout << "Genre: ";
-		movieArray[i].MovieGenre = ReadGenre();
-		cout << endl;
-		cout << "Rating: ";
-		cin >> movieArray[i].Rating;
-		cout << endl;
+		ReadMovie(movieArray[i]);
 	}
-	FindBestGenreMovie(movieArray, countElements, ReadGenre());
 	cout << CountMoviesByGenre(movieArray,
 		countElements, ReadGenre()) << endl;
+	Movie* bestMovie= FindBestGenreMovie(movieArray, 
+		countElements, ReadGenre());
+	WriteMovie(*bestMovie);
+	delete[] movieArray;
 }

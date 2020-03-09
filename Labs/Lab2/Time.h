@@ -10,3 +10,5 @@ struct  Time
 Time* MakeTime(int, int, int);
 //2.2.7.3
 Time* CoppyTime(Time&);
+void ReadTime(Time&);
+void WriteTime(Time&);

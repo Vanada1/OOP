@@ -1,4 +1,5 @@
 #include "Rectangle.h"
+#include"../General Files/Read.h"
 #include <iostream>
 
 using namespace std;
@@ -13,13 +14,13 @@ void WriteRectangle(Rectangle& rectangle)
 void ReadRectangle(Rectangle& rectangle)
 {
 	cout << "Input the length (positive): ";
-	cin >> rectangle.Length;
+	rectangle.Length = Read<double>();
 	cout << endl;
 	cout << "Input the width (positive): ";
-	cin >> rectangle.Width;
+	rectangle.Width = Read<double>();;
 	cout << endl;
 	cout << "Input the color: ";
-	cin >> rectangle.Color;
+	rectangle.Color = Read<string>();;
 	cout << endl;
 }
 

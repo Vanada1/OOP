@@ -1,4 +1,5 @@
 #include "Genre.h"
+#include"../General Files/Read.h"
 #include <iostream>
 
 using namespace std;
@@ -51,8 +52,8 @@ Genre ReadGenre()
 		<< "(0 - Comedy, 1 - Drama, 2 - Thriller, "
 		<< "3 - Action, 4 - Horror,"
 		<< "5 - Blockbuster):" << endl;
-	int colorNum;
-	cin >> colorNum;
+	int colorNum = Read<int>();
+	colorNum;
 	Genre  genre;
 	switch (colorNum)
 	{

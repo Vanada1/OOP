@@ -1,4 +1,5 @@
 #include "Time.h"
+#include"../General Files/Read.h"
 #include <iostream>
 
 using namespace std;
@@ -24,13 +25,13 @@ Time* CoppyTime(Time& time)
 void  ReadTime(Time& time)
 {
 	cout << "Input hours (from 0 to 23): ";
-	cin >> time.Hour;
+	time.Hour = Read<int>();
 	cout << endl;
 	cout << "Input minutes (from 0 to 59): ";
-	cin >> time.Minute;
+	time.Minute = Read<int>();
 	cout << endl;
 	cout << "Input seconds (from 0 to 59): ";
-	cin >> time.Second;
+	time.Second = Read<int>();
 	cout << endl;
 }
 

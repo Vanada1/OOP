@@ -1,4 +1,5 @@
 #include "Flight.h"
+#include"../General Files/Read.h"
 #include<iostream>
 
 using namespace  std;
@@ -63,13 +64,13 @@ Flight* CoppyFlight(Flight& flight)
 void ReadFlight(Flight& flight)
 {
 	cout << "From: ";
-	cin >> flight.From;
+	flight.From = Read<string>();
 	cout << endl;
 	cout << "Where: ";
-	cin >> flight.Where;
+	flight.Where = Read<string>();
 	cout << endl;
 	cout << "How long to fly (in minutes): ";
-	cin >> flight.FlightTimeMinute;
+	flight.FlightTimeMinute = Read<int>();
 	cout << endl;
 }
 

@@ -1,6 +1,8 @@
 #include "DemoStruct.h"
 #include <iostream>
 
+#define STOP
+
 using namespace std;
 
 void DemoFlight()
@@ -203,8 +205,8 @@ void DemoMovieWithGenre()
 		1994, Comedy, 7.3);
 	WriteMovie(*movie2);
 	delete movie2;
-
-	int countElements = 4;
+#ifdef STOP
+	int countElements = 1;
 	Movie* movieArray = new Movie[countElements];
 	for (int i = 0; i < countElements; i++)
 	{
@@ -214,6 +216,14 @@ void DemoMovieWithGenre()
 		countElements, ReadGenre()) << endl;
 	Movie* bestMovie= FindBestGenreMovie(movieArray, 
 		countElements, ReadGenre());
-	WriteMovie(*bestMovie);
+	if (bestMovie)
+	{
+		WriteMovie(*bestMovie);
+	}
+	else
+	{
+		cout << "None" << endl;
+	}
 	delete[] movieArray;
+#endif // STOP
 }

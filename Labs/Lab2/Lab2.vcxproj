@@ -160,6 +160,7 @@
     <ClCompile Include="WrongPointers.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\General Files\Read.h" />
     <ClInclude Include="Circle.h" />
     <ClInclude Include="Color.h" />
     <ClInclude Include="DemoStruct.h" />

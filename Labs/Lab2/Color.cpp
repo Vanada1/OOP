@@ -1,4 +1,5 @@
 #include  "Color.h"
+#include"../General Files/Read.h"
 #include<iostream>
 
 using namespace std;
@@ -58,7 +59,7 @@ Color ReadColor()
 		<< "3 - Green, 4 - Blue,"
 		<< "5 - Dark blue, 6  - Purple):" << endl;
 	int colorNum;
-	cin >> colorNum;
+	colorNum = Read<int>();
 	Color  color;
 	switch (colorNum)
 	{

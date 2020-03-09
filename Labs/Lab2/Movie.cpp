@@ -1,4 +1,5 @@
 #include "Movie.h"
+#include"../General Files/Read.h"
 #include<iostream>
 
 using namespace std;
@@ -58,19 +59,19 @@ Movie* FindBestGenreMovie(Movie* movies, int count, Genre  genre)
 void  ReadMovie(Movie& movie)
 {
     cout << "Movie name: ";
-    cin >> movie.Name;
+    movie.Name = Read<string>();
     cout << endl;
     cout << "Duration in minute: ";
-    cin >> movie.DurationMinute;
+    movie.DurationMinute = Read<int>();
     cout << endl;
     cout << "Year: ";
-    cin >> movie.Year;
+    movie.Year = Read<int>();
     cout << endl;
     cout << "Genre: ";
     movie.MovieGenre = ReadGenre();
     cout << endl;
     cout << "Rating: ";
-    cin >> movie.Rating;
+    movie.Rating = Read<int>();
     cout << endl;
 }
 

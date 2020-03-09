@@ -64,7 +64,7 @@ void DemoMovie()
 	movie.Name = "It";
 	movie.DurationMinute = 135;
 	movie.Year = 2017;
-	movie.Genre = "Horror";
+	movie.MovieGenre = Horror;
 	movie.Rating = 7.3;
 	//2.2.3.2
 	Movie  movieSecond;
@@ -78,7 +78,7 @@ void DemoMovie()
 	cin >> movieSecond.Year;
 	cout << endl;
 	cout << "Genre: ";
-	cin >> movieSecond.Genre;
+	movieSecond.MovieGenre = ReadGenre();
 	cout << endl;
 	cout << "Rating: ";
 	cin >> movieSecond.Rating;
@@ -86,7 +86,9 @@ void DemoMovie()
 	cout << "The  movie: " << movieSecond.Name << endl;
 	cout << "Duration in minute: " << movieSecond.DurationMinute << endl;
 	cout << "Year: " << movieSecond.Year << endl;
-	cout << "Genre: " << movieSecond.Genre << endl;
+	cout << "Genre: ";
+	WriteGenre(movieSecond.MovieGenre);
+	cout << endl;
 	cout << "Rating: " << movieSecond.Rating << endl;
 	//2.2.3.3
 	const int COUNT = 3;
@@ -103,7 +105,7 @@ void DemoMovie()
 		cin >> movieArray[i].Year;
 		cout << endl;
 		cout << "Genre: ";
-		cin >> movieArray[i].Genre;
+		movieArray[i].MovieGenre = ReadGenre();
 		cout << endl;
 		cout << "Rating: ";
 		cin >> movieArray[i].Rating;
@@ -115,7 +117,9 @@ void DemoMovie()
 		cout << "Duration in minute: " 
 			 << movieArray[i].DurationMinute << endl;
 		cout << "Year: " << movieArray[i].Year << endl;
-		cout << "Genre: " << movieArray[i].Genre << endl;
+		cout << "Genre: "; 
+		WriteGenre(movieArray[i].MovieGenre);
+		cout << endl;
 		cout << "Rating: " << movieArray[i].Rating << endl;
 	}
 	// 2.2.4.1
@@ -251,30 +255,80 @@ void DemoCircle()
 	Circle* coppyCircle1 = CoppyCircle(*circle1);
 	Circle* coppyCircle2 = CoppyCircle(*circle2);
 	Circle* coppyCircle3 = CoppyCircle(*circle3);
+
+	delete circle1;
+	delete circle2;
+	delete circle3;
 }
 
 void DemoEnums()
 {
 	//2.2.8.3
-	Color color = GREEN;
+	Color color = Green;
 	EnducationForm  enducationForm = EVENING;
-	Ganre  ganre = ACTION;
-	Season  season = SUMMER;
-	SmartphoneManufacturer smartphoneManufacturer = HUAWAI;
-	WeekDay  weekDay = MONDAY;
+	Genre  ganre = Action;
+	Season  season = Summer;
+	SmartphoneManufacturer smartphoneManufacturer = Huawai;
+	WeekDay  weekDay = Monday;
 	//2.2.8.4
 	const int COUNT = 6;
 	Color colorArray[COUNT] = 
-	{ RED, BLUE, DARKBLUE, GREEN, PURPLE,RED };
+	{ Red, Blue, DarkBlue, Green, Purple,Red };
 	EnducationForm  enducationFormArray[COUNT] =
 	{ INTRAMURAL, EXTAMURAL, EVENING,
 		REMOTE, INTRAMURAL, INTRAMURAL };
-	Ganre  ganreArray[COUNT] = { COMEDY, DRAMA, THRILLER,
-		ACTION, HORROR, BLOCKBUSTER };
-	Season  seasonArray[COUNT] = { WINTER, SUMMER, AUTUMN,
-	SPRING, WINTER, SUMMER };
+	Genre  ganreArray[COUNT] = { Comedy, Drama, Thriller,
+		Action, Horror, Blockbuster };
+	Season  seasonArray[COUNT] = { Winter, Summer, Autumn,
+	Spring, Winter, Summer };
 	SmartphoneManufacturer smartphoneManufacturerArray[COUNT] =
-	{ APPLE, XIAOMI,  SAMSUNG, HUAWAI, MOTOROLA, LENOVO };
-	WeekDay  weekDayArray[COUNT] = { MONDAY, TUESDAY, WEDNESDAY,
-	THURSDAY, FRIDAY, SUTURDAY};
+	{ Apple, Xiaomi,  Samsung, Huawai, Motorola, Lenovo };
+	WeekDay  weekDayArray[COUNT] = { Monday, Tuesday, Wednesday,
+	Thursday, Friday, Suturday};
+}
+
+void DemoMovieWithGenre()
+{
+	Movie movie;
+	movie.Name = "Who Am I";
+	movie.DurationMinute = 106;
+	movie.MovieGenre = Drama;
+	movie.Year = 2014;
+	movie.Rating = 7.4;
+
+	Movie* movie2 = MakeMovie("Dumb and Dumber", 113,
+		1994, Comedy, 7.3);
+	cout << "The  movie: " << movie2->Name << endl;
+	cout << "Duration in minute: " << movie2->DurationMinute << endl;
+	cout << "Year: " << movie2->Year << endl;
+	cout << "Genre: ";
+	WriteGenre(movie2->MovieGenre);
+	cout << endl;
+	cout << "Rating: " << movie2->Rating << endl;
+	delete movie2;
+
+	int countElements = 4;
+	Movie* movieArray = new Movie[countElements];
+	for (int i = 0; i < countElements; i++)
+	{
+
+		cout << "Movie name: ";
+		cin >> movieArray[i].Name;
+		cout << endl;
+		cout << "Duration in minute: ";
+		cin >> movieArray[i].DurationMinute;
+		cout << endl;
+		cout << "Year: ";
+		cin >> movieArray[i].Year;
+		cout << endl;
+		cout << "Genre: ";
+		movieArray[i].MovieGenre = ReadGenre();
+		cout << endl;
+		cout << "Rating: ";
+		cin >> movieArray[i].Rating;
+		cout << endl;
+	}
+	FindBestGenreMovie(movieArray, countElements, ReadGenre());
+	cout << CountMoviesByGenre(movieArray,
+		countElements, ReadGenre()) << endl;
 }

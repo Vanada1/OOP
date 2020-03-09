@@ -2,11 +2,11 @@
 
 enum  WeekDay
 {
-	MONDAY,
-	TUESDAY,
-	WEDNESDAY,
-	THURSDAY,
-	FRIDAY,
-	SUTURDAY,
-	SUNDAY
+	Monday,
+	Tuesday,
+	Wednesday,
+	Thursday,
+	Friday,
+	Suturday,
+	Sunday
 };

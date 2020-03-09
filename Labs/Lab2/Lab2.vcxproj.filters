@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Lab2.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Sort.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -43,6 +40,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Color.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Genre.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -80,9 +83,6 @@
     <ClInclude Include="EnducationForm.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Ganre.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Season.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -90,6 +90,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="WeekDay.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Genre.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

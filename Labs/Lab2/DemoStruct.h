@@ -14,3 +14,5 @@ void DemoTime();
 void DemoCircle();
 //2.2.8.3
 void DemoEnums();
+//2.2.9.2
+void DemoMovieWithGenre();

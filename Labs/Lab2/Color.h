@@ -2,13 +2,13 @@
 
 enum Color
 {
-	RED,
-	ORANGE,
-	YELLOW,
-	GREEN,
-	BLUE,
-	DARKBLUE,
-	PURPLE
+	Red,
+	Orange,
+	Yellow,
+	Green,
+	Blue,
+	DarkBlue,
+	Purple
 };
 //2.2.8.5
 void WriteColor(Color);

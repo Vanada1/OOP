@@ -2,10 +2,10 @@
 
 enum SmartphoneManufacturer
 {
-	APPLE,
-	XIAOMI,
-	SAMSUNG,
-	HUAWAI,
-	MOTOROLA,
-	LENOVO
+	Apple,
+	Xiaomi,
+	Samsung,
+	Huawai,
+	Motorola,
+	Lenovo
 };

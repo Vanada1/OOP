@@ -151,7 +151,8 @@
     <ClCompile Include="Color.cpp" />
     <ClCompile Include="DemoStruct.cpp" />
     <ClCompile Include="Flight.cpp" />
-    <ClCompile Include="Lab2.cpp" />
+    <ClCompile Include="Genre.cpp" />
+    <ClCompile Include="Main.cpp" />
     <ClCompile Include="Movie.cpp" />
     <ClCompile Include="Rectangle.cpp" />
     <ClCompile Include="Sort.cpp" />
@@ -164,7 +165,7 @@
     <ClInclude Include="DemoStruct.h" />
     <ClInclude Include="EnducationForm.h" />
     <ClInclude Include="Enums.h" />
-    <ClInclude Include="Ganre.h" />
+    <ClInclude Include="Genre.h" />
     <ClInclude Include="Movie.h" />
     <ClInclude Include="Flight.h" />
     <ClInclude Include="Rectangle.h" />

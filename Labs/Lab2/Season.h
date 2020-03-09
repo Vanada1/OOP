@@ -2,8 +2,8 @@
 
 enum Season
 {
-	WINTER,
-	SUMMER,
-	AUTUMN,
-	SPRING
+	Winter,
+	Summer,
+	Autumn,
+	Spring
 };

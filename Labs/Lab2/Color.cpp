@@ -8,45 +8,46 @@ void WriteColor(Color color)
 {
 	switch (color)
 	{
-	case RED:
-	{
-		cout << "Red color" << endl;
-		break;
-	}
-	case ORANGE:
-	{
-		cout << "Orange color" << endl;
-		break;
-	}
-	case YELLOW:
-	{
-		cout << "Yellow color" << endl;
-		break;
-	}
-	case GREEN:
-	{
-		cout << "Green color" << endl;
-		break;
-	}
-	case BLUE:
-	{
-		cout << "Blue color" << endl;
-		break;
-	}
-	case DARKBLUE:
-	{
-		cout << "Dark blue color" << endl;
-		break;
-	}
-	case PURPLE:
-	{
-		cout << "Purple color" << endl;
-		break;
-	}
-	default:
-	{
-		break;
-	}
+		case Red:
+		{
+			cout << "Red color" << endl;
+			break;
+		}
+		case Orange:
+		{
+			cout << "Orange color" << endl;
+			break;
+		}
+		case Yellow:
+		{
+			cout << "Yellow color" << endl;
+			break;
+		}
+		case Green:
+		{
+			cout << "Green color" << endl;
+			break;
+		}
+		case Blue:
+		{
+			cout << "Blue color" << endl;
+			break;
+		}
+		case DarkBlue:
+		{
+			cout << "Dark blue color" << endl;
+			break;
+		}
+		case Purple:
+		{
+			cout << "Purple color" << endl;
+			break;
+		}
+		default:
+		{
+			cout << " Unknown color " << endl;
+			break;
+		}
 	}
 }
 //2.2.8.6
@@ -61,71 +62,73 @@ Color ReadColor()
 	Color  color;
 	switch (colorNum)
 	{
-	case 0:
-	{
-		color = RED;
-		break;
-	}
-	case 1:
-	{
-		color = ORANGE;
-		break;
-	}
-	case 2:
-	{
-		color = YELLOW;
-		break;
-	}
-	case 3:
-	{
-		color = GREEN;
-		break;
-	}
-	case 4:
-	{
-		color = BLUE;
-		break;
-	}
-	case 5:
-	{
-		color = DARKBLUE;
-		break;
-	}
-	case 6:
-	{
-		color = PURPLE;
-		break;
-	}
-	default:
-		cout << "Strange number! I'll take red!" << endl;
-		color = RED;
-		break;
+		case 0:
+		{
+			color = Red;
+			break;
+		}
+		case 1:
+		{
+			color = Orange;
+			break;
+		}
+		case 2:
+		{
+			color = Yellow;
+			break;
+		}
+		case 3:
+		{
+			color = Green;
+			break;
+		}
+		case 4:
+		{
+			color = Blue;
+			break;
+		}
+		case 5:
+		{
+			color = DarkBlue;
+			break;
+		}
+		case 6:
+		{
+			color = Purple;
+			break;
+		}
+		default:
+		{
+			cout << "Strange number! I'll take red!" << endl;
+			color = Red;
+			break;
+		}
 	}
 	return color;
 }
 //2.2.8.7
 int CountRed(Color* colors, int count)
 {
-	int countRed = 0;
+	int redCounter = 0;
 	for (int i = 0; i < count; i++)
 	{
-		if (colors[i] == RED)
+		if (colors[i] == Red)
 		{
-			countRed++;
+			redCounter++;
 		}
 	}
-	return countRed;
+	return redCounter;
 }
 //2.2.8.8
 int CountColor(Color* colors, int count, Color findedColor)
 {
-	int countColor = 0;
+	int colorCounter = 0;
 	for (int i = 0; i < count; i++)
 	{
 		if (colors[i] == findedColor)
 		{
-			countColor++;
+			colorCounter++;
 		}
 	}
-	return countColor;
+	return colorCounter;
 }

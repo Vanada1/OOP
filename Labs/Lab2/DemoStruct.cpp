@@ -145,7 +145,6 @@ void DemoTime()
 	cout << timePointer << endl;
 	cout << timePointer2 << endl;
 }
-
 //2.2.7.1
 void DemoCircle()
 {

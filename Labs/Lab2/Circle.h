@@ -10,5 +10,4 @@ struct Circle
 };
 
 Circle* MakeCircle(double, double, double, std::string color);
-
 Circle* CoppyCircle(Circle&);

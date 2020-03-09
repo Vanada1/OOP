@@ -8,7 +8,6 @@ void WriteRectangle(Rectangle& rectangle)
 	cout << "Reactangel has a size " << rectangle.Length
 		<< "x" << rectangle.Width 
 		<< "; Color  " << rectangle.Color << endl;
-
 }
 
 void ReadRectangle(Rectangle& rectangle)

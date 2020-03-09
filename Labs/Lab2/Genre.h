@@ -11,5 +11,4 @@ enum Genre
 };
 
 void WriteGenre(Genre);
-
 Genre ReadGenre();

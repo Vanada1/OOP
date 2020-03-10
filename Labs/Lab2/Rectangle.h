@@ -12,8 +12,6 @@ struct Rectangle
 void WriteRectangle(Rectangle&);
 //2.2.5.2
 void ReadRectangle(Rectangle&);
-//2.2.5.3
-void DemoReadAndWriteRectangles();
 //2.2.5.4
 void Exchange(Rectangle&, Rectangle&);
 //2.2.5.5

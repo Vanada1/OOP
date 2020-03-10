@@ -58,8 +58,7 @@ Color ReadColor()
 		<< "(0 - Red, 1 - Orange, 2 - Yellow, "
 		<< "3 - Green, 4 - Blue,"
 		<< "5 - Dark blue, 6  - Purple):" << endl;
-	int colorNum;
-	colorNum = Read<int>();
+	int colorNum = Read<int>();
 	Color  color;
 	switch (colorNum)
 	{

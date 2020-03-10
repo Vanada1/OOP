@@ -1,9 +1,8 @@
 #include "DemoStruct.h"
 #include <iostream>
 
-#define STOP
-
 using namespace std;
+const int COUNT = 3;
 
 void DemoFlight()
 {
@@ -17,7 +16,6 @@ void DemoFlight()
 	ReadFlight(flightSecond);
 	WriteFlight(flightSecond);
 	//2.2.3.3
-	const int COUNT  = 4;
 	Flight flightArray[COUNT];
 	for (int i = 0; i < COUNT; i++)
 	{
@@ -51,7 +49,6 @@ void DemoMovie()
 	ReadMovie(movieSecond);
 	WriteMovie(movieSecond);
 	//2.2.3.3
-	const int COUNT = 3;
 	Movie movieArray[COUNT];
 	for (int i = 0; i < COUNT; i++)
 	{
@@ -96,7 +93,6 @@ void DemoRectangle()
 	ReadRectangle(reactangleSecond);
 	WriteRectangle(reactangleSecond);
 	//2.2.3.3
-	const int COUNT = 3;
 	Rectangle rectangleArray[COUNT];
 	for (int i = 0; i < COUNT; i++)
 	{
@@ -130,7 +126,6 @@ void DemoTime()
 	ReadTime(timeSecond);
 	WriteTime(timeSecond);
 	//2.2.3.3
-	const int COUNT = 3;
 	Time timeArray[COUNT];
 	for (int i = 0; i < COUNT; i++)
 	{
@@ -205,17 +200,16 @@ void DemoMovieWithGenre()
 		1994, Comedy, 7.3);
 	WriteMovie(*movie2);
 	delete movie2;
-#ifdef STOP
-	int countElements = 1;
-	Movie* movieArray = new Movie[countElements];
-	for (int i = 0; i < countElements; i++)
+	;
+	Movie* movieArray = new Movie[COUNT];
+	for (int i = 0; i < COUNT; i++)
 	{
 		ReadMovie(movieArray[i]);
 	}
 	cout << CountMoviesByGenre(movieArray,
-		countElements, ReadGenre()) << endl;
+		COUNT, ReadGenre()) << endl;
 	Movie* bestMovie= FindBestGenreMovie(movieArray, 
-		countElements, ReadGenre());
+		COUNT, ReadGenre());
 	if (bestMovie)
 	{
 		WriteMovie(*bestMovie);
@@ -225,5 +219,20 @@ void DemoMovieWithGenre()
 		cout << "None" << endl;
 	}
 	delete[] movieArray;
-#endif // STOP
+}
+
+void DemoReadAndWriteRectangles()
+{
+	const int COUNT = 5;
+	Rectangle rectangleArray[COUNT];
+
+	for (int i = 0; i < COUNT; i++)
+	{
+		ReadRectangle(rectangleArray[i]);
+	}
+
+	for (int i = 0; i < COUNT; i++)
+	{
+		WriteRectangle(rectangleArray[i]);
+	}
 }

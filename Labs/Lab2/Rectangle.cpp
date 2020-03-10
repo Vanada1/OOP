@@ -24,22 +24,6 @@ void ReadRectangle(Rectangle& rectangle)
 	cout << endl;
 }
 
-void DemoReadAndWriteRectangles()
-{
-	const int COUNT = 5;
-	Rectangle rectangleArray[COUNT];
-
-	for (int i = 0; i < COUNT; i++)
-	{
-		ReadRectangle(rectangleArray[i]);
-	}
-
-	for (int i = 0; i < COUNT; i++)
-	{
-		WriteRectangle(rectangleArray[i]);
-	}
-}
-
 void Exchange(Rectangle& rectangle1, Rectangle& rectangle2)
 {
 	Rectangle rectangleTemp = rectangle1;

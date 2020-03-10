@@ -16,3 +16,5 @@ void DemoCircle();
 void DemoEnums();
 //2.2.9.2
 void DemoMovieWithGenre();
+//2.2.5.3
+void DemoReadAndWriteRectangles();

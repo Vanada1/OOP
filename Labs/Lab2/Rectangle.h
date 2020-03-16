@@ -8,12 +8,10 @@ struct Rectangle
 	std::string Color;
 };
 
-//TODO: naming - Display?
 //2.2.5.1
 void WriteRectangle(Rectangle&);
 //2.2.5.2
 void ReadRectangle(Rectangle&);
-//TODO: naming - Swap?
 //2.2.5.4
 void Exchange(Rectangle&, Rectangle&);
 //2.2.5.5
@@ -24,4 +22,4 @@ void FindMaxRectangle(Rectangle*, int);
 Rectangle* MakeRectangle(double, double, std::string);
 //TODO: naming(Done)
 //2.2.7.3
-Rectangle* CoppyRectangle(Rectangle&);
+Rectangle* CopyRectangle(Rectangle&);

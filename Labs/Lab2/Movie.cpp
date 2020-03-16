@@ -15,9 +15,10 @@ Movie* MakeMovie(std::string name, int duration,
     newMove->Rating = rating;
     return newMove;
 }
-
+//TODO: naming
 Movie* CoppyMovie(Movie& movie)
 {
+	//TODO: naming
     Movie* coppyMove = new Movie();
     coppyMove->Name = movie.Name;
     coppyMove->DurationMinute = movie.DurationMinute;

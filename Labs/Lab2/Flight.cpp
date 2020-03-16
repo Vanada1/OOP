@@ -42,6 +42,7 @@ void FindShortestFlight(Flight* flight, int count)
 	WriteFlight(flightMinTime);
 }
 
+//TODO: naming
 Flight* MakeFlight(std::string from, std::string where,
 	int flightTimeMinute)
 {
@@ -51,9 +52,10 @@ Flight* MakeFlight(std::string from, std::string where,
 	newFlight->FlightTimeMinute = flightTimeMinute;
 	return newFlight;
 }
-
+//TODO: naming
 Flight* CoppyFlight(Flight& flight)
 {
+	//TODO: naming
 	Flight* coppyFlight = new Flight();
 	coppyFlight->From = flight.From;
 	coppyFlight->Where = flight.Where;

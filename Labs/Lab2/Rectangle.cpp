@@ -48,6 +48,7 @@ void FindRectangle(Rectangle* rectangles, int count)
 void FindMaxRectangle(Rectangle* rectangles, int count)
 {
 	Rectangle rectangleMaxArea = rectangles[0];
+	//TODO: Потеря точности
 	int maxArea = rectangleMaxArea.Length * rectangleMaxArea.Width;
 	for (int i = 0; i < count; i++)
 	{
@@ -72,8 +73,10 @@ Rectangle* MakeRectangle(double length,
 	return newRectangle;
 }
 
+//TODO: naming
 Rectangle* CoppyRectangle(Rectangle& rectangle)
 {
+	//TODO: naming
 	Rectangle* coppyRectangle = new Rectangle();
 	coppyRectangle->Length = rectangle.Length;
 	coppyRectangle->Width = rectangle.Width;

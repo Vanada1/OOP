@@ -68,11 +68,13 @@ void DemoMovie()
 
 void DemoRectangle()
 {
+	//TODO: naming
 	//2.2.3.1
 	Rectangle  reactangle;
 	reactangle.Length = 15;
 	reactangle.Width = 40;
 	reactangle.Color = "Green";
+	//TODO: naming
 	//2.2.5.4
 	Rectangle  reactangle2;
 	reactangle2.Length = 30;
@@ -87,7 +89,7 @@ void DemoRectangle()
 	cout << "After: " << endl;
 	WriteRectangle(reactangle);
 	WriteRectangle(reactangle2);
-	
+	//TODO: naming
 	//2.2.3.2
 	Rectangle  reactangleSecond;
 	ReadRectangle(reactangleSecond);
@@ -172,17 +174,23 @@ void DemoEnums()
 	WeekDay  weekDay = Monday;
 	//2.2.8.4
 	const int COUNT = 6;
+	//TODO: RSDN
 	Color colorArray[COUNT] = 
 	{ Red, Blue, DarkBlue, Green, Purple,Red };
+	//TODO: RSDN
 	EnducationForm  enducationFormArray[COUNT] =
 	{ INTRAMURAL, EXTAMURAL, EVENING,
 		REMOTE, INTRAMURAL, INTRAMURAL };
+	//TODO: RSDN
 	Genre  ganreArray[COUNT] = { Comedy, Drama, Thriller,
 		Action, Horror, Blockbuster };
+	//TODO: RSDN
 	Season  seasonArray[COUNT] = { Winter, Summer, Autumn,
 	Spring, Winter, Summer };
+	//TODO: RSDN
 	SmartphoneManufacturer smartphoneManufacturerArray[COUNT] =
 	{ Apple, Xiaomi,  Samsung, Huawai, Motorola, Lenovo };
+	//TODO: RSDN
 	WeekDay  weekDayArray[COUNT] = { Monday, Tuesday, Wednesday,
 	Thursday, Friday, Suturday};
 }

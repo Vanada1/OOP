@@ -12,8 +12,10 @@ Circle* MakeCircle(double x, double y, double radius, string color)
 	return newCircle;
 }
 
+//TODO: naming
 Circle* CoppyCircle(Circle& circle)
 {
+	//TODO: naming
 	Circle* coppyCircle = new Circle();
 	coppyCircle->X = circle.X;
 	coppyCircle->Y = circle.Y;

@@ -9,7 +9,5 @@ enum Genre
 	Horror,
 	Blockbuster
 };
-//TODO: naming - display
 void WriteGenre(Genre);
-//TODO: naming - enter
 Genre ReadGenre();

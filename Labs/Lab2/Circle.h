@@ -8,7 +8,6 @@ struct Circle
 	double Radius;
 	std::string Color;
 };
-//TODO: naming - create
 Circle* MakeCircle(double, double, double, std::string color);
-//TODO: naming
-Circle* CoppyCircle(Circle&);
+//TODO: naming(Done)
+Circle* CopyCircle(Circle&);

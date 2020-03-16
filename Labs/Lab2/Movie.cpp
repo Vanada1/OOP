@@ -15,17 +15,17 @@ Movie* MakeMovie(std::string name, int duration,
     newMove->Rating = rating;
     return newMove;
 }
-//TODO: naming
-Movie* CoppyMovie(Movie& movie)
+//TODO: naming(Done)
+Movie* CopyMovie(Movie& movie)
 {
-	//TODO: naming
-    Movie* coppyMove = new Movie();
-    coppyMove->Name = movie.Name;
-    coppyMove->DurationMinute = movie.DurationMinute;
-    coppyMove->Year = movie.Year;
-    coppyMove->MovieGenre = movie.MovieGenre;
-    coppyMove->Rating = movie.Rating;
-    return coppyMove;
+	//TODO: naming(Done)
+    Movie* copyMove = new Movie();
+    copyMove->Name = movie.Name;
+    copyMove->DurationMinute = movie.DurationMinute;
+    copyMove->Year = movie.Year;
+    copyMove->MovieGenre = movie.MovieGenre;
+    copyMove->Rating = movie.Rating;
+    return copyMove;
 }
 
 int CountMoviesByGenre(Movie* movies, int count, Genre genre)

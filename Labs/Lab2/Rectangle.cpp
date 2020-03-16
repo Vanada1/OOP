@@ -73,13 +73,13 @@ Rectangle* MakeRectangle(double length,
 	return newRectangle;
 }
 
-//TODO: naming
-Rectangle* CoppyRectangle(Rectangle& rectangle)
+//TODO: naming(Done)
+Rectangle* CopyRectangle(Rectangle& rectangle)
 {
-	//TODO: naming
-	Rectangle* coppyRectangle = new Rectangle();
-	coppyRectangle->Length = rectangle.Length;
-	coppyRectangle->Width = rectangle.Width;
-	coppyRectangle->Color = rectangle.Color;
-	return coppyRectangle;
+	//TODO: naming(Done)
+	Rectangle* copyRectangle = new Rectangle();
+	copyRectangle->Length = rectangle.Length;
+	copyRectangle->Width = rectangle.Width;
+	copyRectangle->Color = rectangle.Color;
+	return copyRectangle;
 }

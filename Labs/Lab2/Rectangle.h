@@ -22,6 +22,6 @@ void FindRectangle(Rectangle*, int);
 void FindMaxRectangle(Rectangle*, int);
 //2.2.7.2
 Rectangle* MakeRectangle(double, double, std::string);
-//TODO: naming
+//TODO: naming(Done)
 //2.2.7.3
 Rectangle* CoppyRectangle(Rectangle&);

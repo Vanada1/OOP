@@ -53,48 +53,47 @@ Genre ReadGenre()
 		<< "3 - Action, 4 - Horror,"
 		<< "5 - Blockbuster):" << endl;
 	int colorNum = Read<int>();
-	//TODO: ?
-	colorNum;
+	//TODO: ?(Done)
 	Genre  genre;
 	switch (colorNum)
 	{
-		//TODO: RSDN
-	case 0:
-	{
-		genre = Comedy;
-		break;
-	}
-	case 1:
-	{
-		genre = Drama;
-		break;
-	}
-	case 2:
-	{
-		genre = Thriller;
-		break;
-	}
-	case 3:
-	{
-		genre = Action;
-		break;
-	}
-	case 4:
-	{
-		genre = Horror;
-		break;
-	}
-	case 5:
-	{
-		genre = Blockbuster;
-		break;
-	}
-	default:
-	{
-		cout << "Strange number! I'll take Horror!" << endl;
-		genre = Horror;
-		break;
-	}
+		//TODO: RSDN(Done)
+		case 0:
+		{
+			genre = Comedy;
+			break;
+		}
+		case 1:
+		{
+			genre = Drama;
+			break;
+		}
+		case 2:
+		{
+			genre = Thriller;
+			break;
+		}
+		case 3:
+		{
+			genre = Action;
+			break;
+		}
+		case 4:
+		{
+			genre = Horror;
+			break;
+		}
+		case 5:
+		{
+			genre = Blockbuster;
+			break;
+		}
+		default:
+		{
+			cout << "Strange number! I'll take Horror!" << endl;
+			genre = Horror;
+			break;
+		}
 	}
 	return genre;
 }

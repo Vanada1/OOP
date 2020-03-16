@@ -10,10 +10,8 @@ enum Color
 	DarkBlue,
 	Purple
 };
-//TODO: naming - display
 //2.2.8.5
 void WriteColor(Color);
-//TODO: naming - enter
 //2.2.8.6
 Color ReadColor();
 //2.2.8.7

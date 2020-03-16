@@ -11,7 +11,7 @@ struct  Time
 Time* MakeTime(int, int, int);
 //TODO: naming
 //2.2.7.3
-Time* CoppyTime(Time&);
+Time* CopyTime(Time&);
 //TODO: naming - enter
 void ReadTime(Time&);
 //TODO: naming - display

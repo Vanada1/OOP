@@ -68,32 +68,32 @@ void DemoMovie()
 
 void DemoRectangle()
 {
-	//TODO: naming
+	//TODO: naming(Done)
 	//2.2.3.1
-	Rectangle  reactangle;
-	reactangle.Length = 15;
-	reactangle.Width = 40;
-	reactangle.Color = "Green";
-	//TODO: naming
+	Rectangle  rectangle;
+	rectangle.Length = 15;
+	rectangle.Width = 40;
+	rectangle.Color = "Green";
+	//TODO: naming(Done)
 	//2.2.5.4
-	Rectangle  reactangle2;
-	reactangle2.Length = 30;
-	reactangle2.Width = 200;
-	reactangle2.Color = "Purple";
+	Rectangle  rectangle2;
+	rectangle2.Length = 30;
+	rectangle2.Width = 200;
+	rectangle2.Color = "Purple";
 	cout << "Before: " << endl;
-	WriteRectangle(reactangle);
-	WriteRectangle(reactangle2);
+	WriteRectangle(rectangle);
+	WriteRectangle(rectangle2);
 
-	Exchange(reactangle, reactangle2);
+	Exchange(rectangle, rectangle2);
 
 	cout << "After: " << endl;
-	WriteRectangle(reactangle);
-	WriteRectangle(reactangle2);
-	//TODO: naming
+	WriteRectangle(rectangle);
+	WriteRectangle(rectangle2);
+	//TODO: naming(Done)
 	//2.2.3.2
-	Rectangle  reactangleSecond;
-	ReadRectangle(reactangleSecond);
-	WriteRectangle(reactangleSecond);
+	Rectangle  rectangleSecond;
+	ReadRectangle(rectangleSecond);
+	WriteRectangle(rectangleSecond);
 	//2.2.3.3
 	Rectangle rectangleArray[COUNT];
 	for (int i = 0; i < COUNT; i++)
@@ -109,9 +109,9 @@ void DemoRectangle()
 	//2.2.5.6
 	FindMaxRectangle(rectangleArray, COUNT);
 	// 2.2.4.1
-	Rectangle* rectanglePointer = &reactangle;
+	Rectangle* rectanglePointer = &rectangle;
 	// 2.2.4.2
-	Rectangle* rectanglePointer2 = &reactangle;
+	Rectangle* rectanglePointer2 = &rectangle;
 	cout << rectanglePointer << endl;
 	cout << rectanglePointer2 << endl;
 }
@@ -151,9 +151,9 @@ void DemoCircle()
 	Circle* circle2 = MakeCircle(2.0, -12.0, 12.75, "Green");
 	Circle* circle3 = MakeCircle(-10.0, 10.0, 1.45, "Blue");
 
-	Circle* coppyCircle1 = CoppyCircle(*circle1);
-	Circle* coppyCircle2 = CoppyCircle(*circle2);
-	Circle* coppyCircle3 = CoppyCircle(*circle3);
+	Circle* coppyCircle1 = CopyCircle(*circle1);
+	Circle* coppyCircle2 = CopyCircle(*circle2);
+	Circle* coppyCircle3 = CopyCircle(*circle3);
 
 	delete circle1;
 	delete circle2;

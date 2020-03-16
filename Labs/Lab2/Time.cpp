@@ -13,13 +13,13 @@ Time* MakeTime(int hour, int minute, int second)
 	return newTime;
 }
 
-Time* CoppyTime(Time& time)
+Time* CopyTime(Time& time)
 {
-	Time* coppyTime = new Time();
-	coppyTime->Hour = time.Hour;
-	coppyTime->Minute = time.Minute;
-	coppyTime->Second = time.Second;
-	return coppyTime;
+	Time* copyTime = new Time();
+	copyTime->Hour = time.Hour;
+	copyTime->Minute = time.Minute;
+	copyTime->Second = time.Second;
+	return copyTime;
 }
 
 void  ReadTime(Time& time)

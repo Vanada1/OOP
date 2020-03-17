@@ -2,14 +2,14 @@
 
 using namespace std;
 
-//TODO: передача по значению, насколько правильно?
-Circle* MakeCircle(double x, double y, double radius, string color)
+//TODO: передача по значению, насколько правильно?(Done)
+Circle* MakeCircle(double x, double y, double radius, string* color)
 {
 	Circle* newCircle = new Circle();
 	newCircle->X = x;
 	newCircle->Y = y;
 	newCircle->Radius = radius;
-	newCircle->Color = color;
+	newCircle->Color = *color;
 	return newCircle;
 }
 

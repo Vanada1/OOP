@@ -52,8 +52,8 @@ Genre ReadGenre()
 		<< "(0 - Comedy, 1 - Drama, 2 - Thriller, "
 		<< "3 - Action, 4 - Horror,"
 		<< "5 - Blockbuster):" << endl;
-	//TODO: const?
-	int colorNum = Read<int>();
+	//TODO: const?(Done)
+	const int colorNum = Read<int>();
 	Genre  genre;
 	switch (colorNum)
 	{

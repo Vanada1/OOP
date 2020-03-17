@@ -14,8 +14,8 @@ void DemoDynamicFlight()
 
 void DemoDynamicFlights()
 {
-	//TODO: const?
-	int count = 4;
+	//TODO: const?(Done)
+	const int count = 4;
 	Flight* flight = new  Flight[count];
 	for (int i = 0; i < count; i++)
 	{
@@ -43,13 +43,13 @@ void FindShortestFlight(Flight* flight, int count)
 	WriteFlight(flightMinTime);
 }
 
-//TODO: передача по значению, насколько правильно?
-Flight* MakeFlight(std::string from, std::string where,
+//TODO: передача по значению, насколько правильно?(Done)
+Flight* MakeFlight(std::string* from, std::string* where,
 	int flightTimeMinute)
 {
 	Flight* newFlight = new Flight();
-	newFlight->From = from;
-	newFlight->Where = where;
+	newFlight->From = *from;
+	newFlight->Where = *where;
 	newFlight->FlightTimeMinute = flightTimeMinute;
 	return newFlight;
 }

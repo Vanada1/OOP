@@ -19,6 +19,6 @@ void FindRectangle(Rectangle*, int);
 //2.2.5.6
 void FindMaxRectangle(Rectangle*, int);
 //2.2.7.2
-Rectangle* MakeRectangle(double, double, std::string);
+Rectangle* MakeRectangle(double, double, std::string*);
 //2.2.7.3
 Rectangle* CopyRectangle(Rectangle&);

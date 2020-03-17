@@ -4,12 +4,12 @@
 
 using namespace std;
 
-//TODO: передача по значению, насколько правильно?
-Movie* MakeMovie(std::string name, int duration,
+//TODO: передача по значению, насколько правильно?(Done)
+Movie* MakeMovie(std::string* name, int duration,
     int year, Genre ganre, double rating)
 {
     Movie* newMove = new Movie();
-    newMove->Name = name;
+    newMove->Name = *name;
     newMove->DurationMinute = duration;
     newMove->Year = year;
     newMove->MovieGenre = ganre;
@@ -59,19 +59,23 @@ Movie* FindBestGenreMovie(Movie* movies, int count, Genre  genre)
 
 void  ReadMovie(Movie& movie)
 {
-	//TODO: Форматирование кода, сгруппированные логические части кода лучше разделять пустыми строками
+	//TODO: Форматирование кода, сгруппированные логические части кода лучше разделять пустыми строками(Done)
     cout << "Movie name: ";
     movie.Name = Read<string>();
     cout << endl;
+
     cout << "Duration in minute: ";
     movie.DurationMinute = Read<int>();
     cout << endl;
+
     cout << "Year: ";
     movie.Year = Read<int>();
     cout << endl;
+
     cout << "Genre: ";
     movie.MovieGenre = ReadGenre();
     cout << endl;
+
     cout << "Rating: ";
     movie.Rating = Read<int>();
     cout << endl;

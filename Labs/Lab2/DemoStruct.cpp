@@ -144,9 +144,12 @@ void DemoTime()
 //2.2.7.1
 void DemoCircle()
 {
-	Circle* circle1 = MakeCircle(5.0, 7.0, 7.5, "Red");
-	Circle* circle2 = MakeCircle(2.0, -12.0, 12.75, "Green");
-	Circle* circle3 = MakeCircle(-10.0, 10.0, 1.45, "Blue");
+	string color = "Red";
+	Circle* circle1 = MakeCircle(5.0, 7.0, 7.5, &color);
+	color = "Green";
+	Circle* circle2 = MakeCircle(2.0, -12.0, 12.75, &color);
+	color = "Green";
+	Circle* circle3 = MakeCircle(-10.0, 10.0, 1.45, &color);
 
 	Circle* coppyCircle1 = CopyCircle(*circle1);
 	Circle* coppyCircle2 = CopyCircle(*circle2);
@@ -171,33 +174,39 @@ void DemoEnums()
 	WeekDay  weekDay = Monday;
 	//2.2.8.4
 	const int COUNT = 6;
-	//TODO: RSDN - Скобку перенести
-	Color colorArray[COUNT] = {
+	//TODO: RSDN - Скобку перенести(Done)
+	Color colorArray[COUNT] = 
+	{
 		Red, Blue, DarkBlue, 
 		Green, Purple, Red 
 	};
-	//TODO: RSDN - Скобку перенести
-	EnducationForm  enducationFormArray[COUNT] = { 
+	//TODO: RSDN - Скобку перенести(Done)
+	EnducationForm  enducationFormArray[COUNT] = 
+	{ 
 		INTRAMURAL, EXTAMURAL, EVENING,
 		REMOTE, INTRAMURAL, INTRAMURAL 
 	};
-	//TODO: RSDN - Скобку перенести
-	Genre  ganreArray[COUNT] = { 
+	//TODO: RSDN - Скобку перенести(Done)
+	Genre  ganreArray[COUNT] = 
+	{ 
 		Comedy, Drama, Thriller,
 		Action, Horror, Blockbuster 
 	};
-	//TODO: RSDN - Скобку перенести
-	Season  seasonArray[COUNT] = { 
+	//TODO: RSDN - Скобку перенести(Done)
+	Season  seasonArray[COUNT] = 
+	{ 
 		Winter, Summer, Autumn,
 		Spring, Winter, Summer 
 	};
-	//TODO: RSDN - Скобку перенести
-	SmartphoneManufacturer smartphoneManufacturerArray[COUNT] = {
+	//TODO: RSDN - Скобку перенести(Done)
+	SmartphoneManufacturer smartphoneManufacturerArray[COUNT] = 
+	{
 		Apple, Xiaomi,  Samsung, 
 		Huawai, Motorola, Lenovo 
 	};
-	//TODO: RSDN - Скобку перенести
-	WeekDay  weekDayArray[COUNT] = {
+	//TODO: RSDN - Скобку перенести(Done)
+	WeekDay  weekDayArray[COUNT] = 
+	{
 		Monday, Tuesday, Wednesday,
 		Thursday, Friday, Suturday
 	};
@@ -211,8 +220,8 @@ void DemoMovieWithGenre()
 	movie.MovieGenre = Drama;
 	movie.Year = 2014;
 	movie.Rating = 7.4;
-
-	Movie* movie2 = MakeMovie("Dumb and Dumber", 113,
+	string movieName = "Dumb and Dumber";
+	Movie* movie2 = MakeMovie(&movieName, 113,
 		1994, Comedy, 7.3);
 	WriteMovie(*movie2);
 	delete movie2;

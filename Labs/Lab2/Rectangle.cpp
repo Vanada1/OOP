@@ -64,12 +64,12 @@ void FindMaxRectangle(Rectangle* rectangles, int count)
 
 //TODO: передача по значению, насколько правильно? Указатель или ссылка?
 Rectangle* MakeRectangle(double length,
-	double width, std::string* color)
+	double width, std::string& color)
 {
 	Rectangle* newRectangle = new Rectangle();
 	newRectangle->Length = length;
 	newRectangle->Width = width;
-	newRectangle->Color = *color;
+	newRectangle->Color = color;
 	return newRectangle;
 }
 

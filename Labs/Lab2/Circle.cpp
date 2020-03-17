@@ -3,13 +3,13 @@
 using namespace std;
 
 //TODO: передача по значению, насколько правильно? Указатель или ссылка?
-Circle* MakeCircle(double x, double y, double radius, string* color)
+Circle* MakeCircle(double x, double y, double radius, string& color)
 {
 	Circle* newCircle = new Circle();
 	newCircle->X = x;
 	newCircle->Y = y;
 	newCircle->Radius = radius;
-	newCircle->Color = *color;
+	newCircle->Color = color;
 	return newCircle;
 }
 

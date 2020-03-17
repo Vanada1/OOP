@@ -145,11 +145,11 @@ void DemoTime()
 void DemoCircle()
 {
 	string color = "Red";
-	Circle* circle1 = MakeCircle(5.0, 7.0, 7.5, &color);
+	Circle* circle1 = MakeCircle(5.0, 7.0, 7.5, color);
 	color = "Green";
-	Circle* circle2 = MakeCircle(2.0, -12.0, 12.75, &color);
+	Circle* circle2 = MakeCircle(2.0, -12.0, 12.75, color);
 	color = "Green";
-	Circle* circle3 = MakeCircle(-10.0, 10.0, 1.45, &color);
+	Circle* circle3 = MakeCircle(-10.0, 10.0, 1.45, color);
 
 	Circle* coppyCircle1 = CopyCircle(*circle1);
 	Circle* coppyCircle2 = CopyCircle(*circle2);
@@ -215,7 +215,7 @@ void DemoMovieWithGenre()
 	movie.Year = 2014;
 	movie.Rating = 7.4;
 	string movieName = "Dumb and Dumber";
-	Movie* movie2 = MakeMovie(&movieName, 113,
+	Movie* movie2 = MakeMovie(movieName, 113,
 		1994, Comedy, 7.3);
 	WriteMovie(*movie2);
 	delete movie2;

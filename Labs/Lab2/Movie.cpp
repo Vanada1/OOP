@@ -5,11 +5,11 @@
 using namespace std;
 
 //TODO: передача по значению, насколько правильно? Указатель или ссылка?
-Movie* MakeMovie(std::string* name, int duration,
+Movie* MakeMovie(std::string& name, int duration,
     int year, Genre ganre, double rating)
 {
     Movie* newMove = new Movie();
-    newMove->Name = *name;
+    newMove->Name = name;
     newMove->DurationMinute = duration;
     newMove->Year = year;
     newMove->MovieGenre = ganre;

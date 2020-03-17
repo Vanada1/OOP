@@ -43,12 +43,12 @@ void FindShortestFlight(Flight* flight, int count)
 }
 
 //TODO: передача по значению, насколько правильно? Указатель или ссылка?
-Flight* MakeFlight(std::string* from, std::string* where,
+Flight* MakeFlight(std::string& from, std::string& where,
 	int flightTimeMinute)
 {
 	Flight* newFlight = new Flight();
-	newFlight->From = *from;
-	newFlight->Where = *where;
+	newFlight->From = from;
+	newFlight->Where = where;
 	newFlight->FlightTimeMinute = flightTimeMinute;
 	return newFlight;
 }

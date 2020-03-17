@@ -175,8 +175,8 @@ void DemoEnums()
 	//2.2.8.4
 	const int COUNT = 6;
 	//TODO: RSDN
-	Color colorArray[COUNT] = 
-	{ Red, Blue, DarkBlue, Green, Purple,Red };
+	Color colorArray[COUNT] =
+	{ Red, Blue, DarkBlue, Green, Purple, Red };
 	//TODO: RSDN
 	EnducationForm  enducationFormArray[COUNT] =
 	{ INTRAMURAL, EXTAMURAL, EVENING,
@@ -191,7 +191,7 @@ void DemoEnums()
 	SmartphoneManufacturer smartphoneManufacturerArray[COUNT] =
 	{ Apple, Xiaomi,  Samsung, Huawai, Motorola, Lenovo };
 	//TODO: RSDN
-	WeekDay  weekDayArray[COUNT] = { Monday, Tuesday, Wednesday,
+	WeekDay  weekDayArray[COUNT] { Monday, Tuesday, Wednesday,
 	Thursday, Friday, Suturday};
 }
 

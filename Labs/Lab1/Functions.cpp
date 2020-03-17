@@ -1,5 +1,7 @@
 #include "Functions.h"
 
+using  namespace std;
+
 double GetPower(double base, int exponent)
 {
     //return pow(base, exponent);

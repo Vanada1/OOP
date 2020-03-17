@@ -68,13 +68,11 @@ void DemoMovie()
 
 void DemoRectangle()
 {
-	//TODO: naming(Done)
 	//2.2.3.1
 	Rectangle  rectangle;
 	rectangle.Length = 15;
 	rectangle.Width = 40;
 	rectangle.Color = "Green";
-	//TODO: naming(Done)
 	//2.2.5.4
 	Rectangle  rectangle2;
 	rectangle2.Length = 30;
@@ -89,7 +87,6 @@ void DemoRectangle()
 	cout << "After: " << endl;
 	WriteRectangle(rectangle);
 	WriteRectangle(rectangle2);
-	//TODO: naming(Done)
 	//2.2.3.2
 	Rectangle  rectangleSecond;
 	ReadRectangle(rectangleSecond);
@@ -174,32 +171,32 @@ void DemoEnums()
 	WeekDay  weekDay = Monday;
 	//2.2.8.4
 	const int COUNT = 6;
-	//TODO: RSDN(Done)
+	//TODO: RSDN - Скобку перенести
 	Color colorArray[COUNT] = {
 		Red, Blue, DarkBlue, 
 		Green, Purple, Red 
 	};
-	//TODO: RSDN(Done)
+	//TODO: RSDN - Скобку перенести
 	EnducationForm  enducationFormArray[COUNT] = { 
 		INTRAMURAL, EXTAMURAL, EVENING,
 		REMOTE, INTRAMURAL, INTRAMURAL 
 	};
-	//TODO: RSDN(Done)
+	//TODO: RSDN - Скобку перенести
 	Genre  ganreArray[COUNT] = { 
 		Comedy, Drama, Thriller,
 		Action, Horror, Blockbuster 
 	};
-	//TODO: RSDN(Done)
+	//TODO: RSDN - Скобку перенести
 	Season  seasonArray[COUNT] = { 
 		Winter, Summer, Autumn,
 		Spring, Winter, Summer 
 	};
-	//TODO: RSDN(Done)
+	//TODO: RSDN - Скобку перенести
 	SmartphoneManufacturer smartphoneManufacturerArray[COUNT] = {
 		Apple, Xiaomi,  Samsung, 
 		Huawai, Motorola, Lenovo 
 	};
-	//TODO: RSDN(Done)
+	//TODO: RSDN - Скобку перенести
 	WeekDay  weekDayArray[COUNT] = {
 		Monday, Tuesday, Wednesday,
 		Thursday, Friday, Suturday
@@ -219,7 +216,7 @@ void DemoMovieWithGenre()
 		1994, Comedy, 7.3);
 	WriteMovie(*movie2);
 	delete movie2;
-	;
+	
 	Movie* movieArray = new Movie[COUNT];
 	for (int i = 0; i < COUNT; i++)
 	{

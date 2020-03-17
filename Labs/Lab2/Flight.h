@@ -15,7 +15,6 @@ void DemoDynamicFlights();
 void FindShortestFlight(Flight*, int);
 //2.2.7.2
 Flight* MakeFlight(std::string, std::string, int);
-//TODO: naming(Done)
 //2.2.7.3
 Flight* CopyFlight(Flight&);
 void ReadFlight(Flight&);

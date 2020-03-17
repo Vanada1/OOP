@@ -52,6 +52,7 @@ void FindMaxRectangle(Rectangle* rectangles, int count)
 	double maxArea = rectangleMaxArea.Length * rectangleMaxArea.Width;
 	for (int i = 1; i < count; i++)
 	{
+		//TODO: Потеря точности =)
 		int tempArea = rectangles[i].Length * rectangles[i].Width;
 		if (maxArea < tempArea)
 		{
@@ -63,6 +64,7 @@ void FindMaxRectangle(Rectangle* rectangles, int count)
 	WriteRectangle(rectangleMaxArea);
 }
 
+//TODO: передача по значению, насколько правильно?
 Rectangle* MakeRectangle(double length,
 	double width, std::string color)
 {
@@ -73,10 +75,8 @@ Rectangle* MakeRectangle(double length,
 	return newRectangle;
 }
 
-//TODO: naming(Done)
 Rectangle* CopyRectangle(Rectangle& rectangle)
 {
-	//TODO: naming(Done)
 	Rectangle* copyRectangle = new Rectangle();
 	copyRectangle->Length = rectangle.Length;
 	copyRectangle->Width = rectangle.Width;

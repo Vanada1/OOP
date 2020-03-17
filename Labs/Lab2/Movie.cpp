@@ -4,6 +4,7 @@
 
 using namespace std;
 
+//TODO: передача по значению, насколько правильно?
 Movie* MakeMovie(std::string name, int duration,
     int year, Genre ganre, double rating)
 {
@@ -15,10 +16,9 @@ Movie* MakeMovie(std::string name, int duration,
     newMove->Rating = rating;
     return newMove;
 }
-//TODO: naming(Done)
+
 Movie* CopyMovie(Movie& movie)
 {
-	//TODO: naming(Done)
     Movie* copyMove = new Movie();
     copyMove->Name = movie.Name;
     copyMove->DurationMinute = movie.DurationMinute;
@@ -59,6 +59,7 @@ Movie* FindBestGenreMovie(Movie* movies, int count, Genre  genre)
 
 void  ReadMovie(Movie& movie)
 {
+	//TODO: Форматирование кода, сгруппированные логические части кода лучше разделять пустыми строками
     cout << "Movie name: ";
     movie.Name = Read<string>();
     cout << endl;

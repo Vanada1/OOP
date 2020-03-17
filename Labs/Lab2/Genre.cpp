@@ -52,12 +52,11 @@ Genre ReadGenre()
 		<< "(0 - Comedy, 1 - Drama, 2 - Thriller, "
 		<< "3 - Action, 4 - Horror,"
 		<< "5 - Blockbuster):" << endl;
+	//TODO: const?
 	int colorNum = Read<int>();
-	//TODO: ?(Done)
 	Genre  genre;
 	switch (colorNum)
 	{
-		//TODO: RSDN(Done)
 		case 0:
 		{
 			genre = Comedy;

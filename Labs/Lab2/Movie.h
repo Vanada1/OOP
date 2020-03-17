@@ -13,7 +13,6 @@ struct Movie
 
 //2.2.7.2
 Movie* MakeMovie(std::string, int, int, Genre, double);
-//TODO: naming(Done)
 //2.2.7.3
 Movie* CopyMovie(Movie&);
 //2.2.9.4

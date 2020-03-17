@@ -2,6 +2,7 @@
 
 using namespace std;
 
+//TODO: передача по значению, насколько правильно?
 Circle* MakeCircle(double x, double y, double radius, string color)
 {
 	Circle* newCircle = new Circle();
@@ -12,10 +13,8 @@ Circle* MakeCircle(double x, double y, double radius, string color)
 	return newCircle;
 }
 
-//TODO: naming(Done)
 Circle* CopyCircle(Circle& circle)
 {
-	//TODO: naming(Done)
 	Circle* copyCircle = new Circle();
 	copyCircle->X = circle.X;
 	copyCircle->Y = circle.Y;

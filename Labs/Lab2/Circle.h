@@ -9,5 +9,4 @@ struct Circle
 	std::string Color;
 };
 Circle* MakeCircle(double, double, double, std::string color);
-//TODO: naming(Done)
 Circle* CopyCircle(Circle&);

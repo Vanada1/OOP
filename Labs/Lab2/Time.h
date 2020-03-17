@@ -8,7 +8,6 @@ struct  Time
 };
 //2.2.7.2
 Time* MakeTime(int, int, int);
-//TODO: naming(Done)
 //2.2.7.3
 Time* CopyTime(Time&);
 void ReadTime(Time&);

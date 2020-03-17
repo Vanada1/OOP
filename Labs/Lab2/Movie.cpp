@@ -4,7 +4,7 @@
 
 using namespace std;
 
-//TODO: передача по значению, насколько правильно?(Done)
+//TODO: передача по значению, насколько правильно? Указатель или ссылка?
 Movie* MakeMovie(std::string* name, int duration,
     int year, Genre ganre, double rating)
 {
@@ -59,7 +59,6 @@ Movie* FindBestGenreMovie(Movie* movies, int count, Genre  genre)
 
 void  ReadMovie(Movie& movie)
 {
-	//TODO: Форматирование кода, сгруппированные логические части кода лучше разделять пустыми строками(Done)
     cout << "Movie name: ";
     movie.Name = Read<string>();
     cout << endl;

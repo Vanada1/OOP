@@ -14,7 +14,6 @@ void DemoDynamicFlight()
 
 void DemoDynamicFlights()
 {
-	//TODO: const?(Done)
 	const int count = 4;
 	Flight* flight = new  Flight[count];
 	for (int i = 0; i < count; i++)
@@ -43,7 +42,7 @@ void FindShortestFlight(Flight* flight, int count)
 	WriteFlight(flightMinTime);
 }
 
-//TODO: передача по значению, насколько правильно?(Done)
+//TODO: передача по значению, насколько правильно? Указатель или ссылка?
 Flight* MakeFlight(std::string* from, std::string* where,
 	int flightTimeMinute)
 {

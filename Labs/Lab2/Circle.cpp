@@ -2,7 +2,7 @@
 
 using namespace std;
 
-//TODO: передача по значению, насколько правильно?(Done)
+//TODO: передача по значению, насколько правильно? Указатель или ссылка?
 Circle* MakeCircle(double x, double y, double radius, string* color)
 {
 	Circle* newCircle = new Circle();

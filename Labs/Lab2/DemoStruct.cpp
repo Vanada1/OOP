@@ -174,37 +174,31 @@ void DemoEnums()
 	WeekDay  weekDay = Monday;
 	//2.2.8.4
 	const int COUNT = 6;
-	//TODO: RSDN - Скобку перенести(Done)
 	Color colorArray[COUNT] = 
 	{
 		Red, Blue, DarkBlue, 
 		Green, Purple, Red 
 	};
-	//TODO: RSDN - Скобку перенести(Done)
 	EnducationForm  enducationFormArray[COUNT] = 
 	{ 
 		INTRAMURAL, EXTAMURAL, EVENING,
 		REMOTE, INTRAMURAL, INTRAMURAL 
 	};
-	//TODO: RSDN - Скобку перенести(Done)
 	Genre  ganreArray[COUNT] = 
 	{ 
 		Comedy, Drama, Thriller,
 		Action, Horror, Blockbuster 
 	};
-	//TODO: RSDN - Скобку перенести(Done)
 	Season  seasonArray[COUNT] = 
 	{ 
 		Winter, Summer, Autumn,
 		Spring, Winter, Summer 
 	};
-	//TODO: RSDN - Скобку перенести(Done)
 	SmartphoneManufacturer smartphoneManufacturerArray[COUNT] = 
 	{
 		Apple, Xiaomi,  Samsung, 
 		Huawai, Motorola, Lenovo 
 	};
-	//TODO: RSDN - Скобку перенести(Done)
 	WeekDay  weekDayArray[COUNT] = 
 	{
 		Monday, Tuesday, Wednesday,

@@ -174,25 +174,36 @@ void DemoEnums()
 	WeekDay  weekDay = Monday;
 	//2.2.8.4
 	const int COUNT = 6;
-	//TODO: RSDN
-	Color colorArray[COUNT] =
-	{ Red, Blue, DarkBlue, Green, Purple, Red };
-	//TODO: RSDN
-	EnducationForm  enducationFormArray[COUNT] =
-	{ INTRAMURAL, EXTAMURAL, EVENING,
-		REMOTE, INTRAMURAL, INTRAMURAL };
-	//TODO: RSDN
-	Genre  ganreArray[COUNT] = { Comedy, Drama, Thriller,
-		Action, Horror, Blockbuster };
-	//TODO: RSDN
-	Season  seasonArray[COUNT] = { Winter, Summer, Autumn,
-	Spring, Winter, Summer };
-	//TODO: RSDN
-	SmartphoneManufacturer smartphoneManufacturerArray[COUNT] =
-	{ Apple, Xiaomi,  Samsung, Huawai, Motorola, Lenovo };
-	//TODO: RSDN
-	WeekDay  weekDayArray[COUNT] { Monday, Tuesday, Wednesday,
-	Thursday, Friday, Suturday};
+	//TODO: RSDN(Done)
+	Color colorArray[COUNT] = {
+		Red, Blue, DarkBlue, 
+		Green, Purple, Red 
+	};
+	//TODO: RSDN(Done)
+	EnducationForm  enducationFormArray[COUNT] = { 
+		INTRAMURAL, EXTAMURAL, EVENING,
+		REMOTE, INTRAMURAL, INTRAMURAL 
+	};
+	//TODO: RSDN(Done)
+	Genre  ganreArray[COUNT] = { 
+		Comedy, Drama, Thriller,
+		Action, Horror, Blockbuster 
+	};
+	//TODO: RSDN(Done)
+	Season  seasonArray[COUNT] = { 
+		Winter, Summer, Autumn,
+		Spring, Winter, Summer 
+	};
+	//TODO: RSDN(Done)
+	SmartphoneManufacturer smartphoneManufacturerArray[COUNT] = {
+		Apple, Xiaomi,  Samsung, 
+		Huawai, Motorola, Lenovo 
+	};
+	//TODO: RSDN(Done)
+	WeekDay  weekDayArray[COUNT] = {
+		Monday, Tuesday, Wednesday,
+		Thursday, Friday, Suturday
+	};
 }
 
 void DemoMovieWithGenre()

@@ -48,9 +48,9 @@ void FindRectangle(Rectangle* rectangles, int count)
 void FindMaxRectangle(Rectangle* rectangles, int count)
 {
 	Rectangle rectangleMaxArea = rectangles[0];
-	//TODO: Потеря точности
-	int maxArea = rectangleMaxArea.Length * rectangleMaxArea.Width;
-	for (int i = 0; i < count; i++)
+	//TODO: Потеря точности(Done)
+	double maxArea = rectangleMaxArea.Length * rectangleMaxArea.Width;
+	for (int i = 1; i < count; i++)
 	{
 		int tempArea = rectangles[i].Length * rectangles[i].Width;
 		if (maxArea < tempArea)

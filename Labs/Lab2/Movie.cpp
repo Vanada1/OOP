@@ -4,7 +4,6 @@
 
 using namespace std;
 
-//TODO: передача по значению, насколько правильно? Указатель или ссылка?
 Movie* MakeMovie(std::string& name, int duration,
     int year, Genre ganre, double rating)
 {

@@ -42,7 +42,6 @@ void FindShortestFlight(Flight* flight, int count)
 	WriteFlight(flightMinTime);
 }
 
-//TODO: передача по значению, насколько правильно? Указатель или ссылка?
 Flight* MakeFlight(std::string& from, std::string& where,
 	int flightTimeMinute)
 {

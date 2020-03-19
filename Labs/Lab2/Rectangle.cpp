@@ -62,7 +62,6 @@ void FindMaxRectangle(Rectangle* rectangles, int count)
 	WriteRectangle(rectangleMaxArea);
 }
 
-//TODO: передача по значению, насколько правильно? Указатель или ссылка?
 Rectangle* MakeRectangle(double length,
 	double width, std::string& color)
 {

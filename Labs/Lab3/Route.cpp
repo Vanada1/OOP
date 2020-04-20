@@ -5,15 +5,15 @@ using namespace std;
 
 void DemoRoute()
 {
-	const int COUNTELEMENTS = 2;
-	Route routes[COUNTELEMENTS];
-	for (int i = 0; i < COUNTELEMENTS; i++)
+	const int COUNT = 2;
+	Route routes[COUNT];
+	for (int i = 0; i < COUNT; i++)
 	{
 		ReadRouteFromConsole(routes[i]);
 	}
 	cout << "What stop to find?" << endl;
 	string stop = Read<string>();
-	int foundIndex = FindRouteTo(routes, COUNTELEMENTS, stop);
+	int foundIndex = FindRouteTo(routes, COUNT, stop);
 	if (foundIndex < 0)
 	{
 		cout << "Not found" << endl;

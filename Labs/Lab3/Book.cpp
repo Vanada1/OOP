@@ -9,15 +9,15 @@ using namespace std;
 
 void DemoBook()
 {
-	const int COUNTELEMENTS = 2;
-	Book books[COUNTELEMENTS];
-	for (int i = 0; i < COUNTELEMENTS; i++)
+	const int COUNT = 2;
+	Book books[COUNT];
+	for (int i = 0; i < COUNT; i++)
 	{
 		ReadBookFromConsole(books[i]);
 	}
 	cout << "Which author to find?" << endl;
 	string author = Read<string>();
-	int foundIndex = FindBookByAuthor(books, COUNTELEMENTS, author);
+	int foundIndex = FindBookByAuthor(books, COUNT, author);
 	if (foundIndex < 0)
 	{
 		cout << "Not found";
@@ -30,7 +30,7 @@ void DemoBook()
 	{
 		WriteBookToConsole(books[i]);
 	}*/
-	for (int i = 0; i < COUNTELEMENTS; i++)
+	for (int i = 0; i < COUNT; i++)
 	{
 		delete[] books[i].Authors;
 	}

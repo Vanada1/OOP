@@ -1,6 +1,7 @@
 ﻿#include <iostream>
 #include "Book.h"
 #include "Route.h"
+#include "Rectangle.h"
 
 int main()
 {
@@ -9,5 +10,6 @@ int main()
     WriteBookToConsole(book);
     delete[] book.Authors;*/
     //DemoBook();
-    DemoRoute();
+    //DemoRoute();
+    DemoRecangleWithPoint();
 }

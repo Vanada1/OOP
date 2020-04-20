@@ -1,5 +1,6 @@
 ﻿#include <iostream>
 #include "Book.h"
+#include "Route.h"
 
 int main()
 {
@@ -7,5 +8,6 @@ int main()
     ReadBookFromConsole(book);
     WriteBookToConsole(book);
     delete[] book.Authors;*/
-    DemoBook();
+    //DemoBook();
+    DemoRoute();
 }

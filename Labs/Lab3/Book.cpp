@@ -15,8 +15,9 @@ void DemoBook()
 	{
 		ReadBookFromConsole(books[i]);
 	}
-	string mem = "Mem";
-	int foundIndex = FindBookByAuthor(books, COUNTELEMENTS, mem);
+	cout << "Which author to find?" << endl;
+	string author = Read<string>();
+	int foundIndex = FindBookByAuthor(books, COUNTELEMENTS, author);
 	if (foundIndex < 0)
 	{
 		cout << "Not found";

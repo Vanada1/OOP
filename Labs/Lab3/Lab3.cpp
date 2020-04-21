@@ -2,6 +2,7 @@
 #include "Book.h"
 #include "Route.h"
 #include "Rectangle.h"
+#include "Flight.h"
 
 int main()
 {
@@ -11,5 +12,6 @@ int main()
     delete[] book.Authors;*/
     //DemoBook();
     //DemoRoute();
-    DemoRecangleWithPoint();
+    //DemoRecangleWithPoint();
+    DemoFlightWithTime();
 }

@@ -1,19 +1,19 @@
 #include "Point.h"
 
-Point CreatePoint(double x, double y)
+Point* CreatePoint(double x, double y)
 {
-	Point point;
-	point.X = x;
-	point.Y = y;
-	return point;
+	Point* newPoint = new Point();
+	newPoint->X = x;
+	newPoint->Y = y;
+	return newPoint;
 }
 
-void SetX(Point& point, double  x)
+void SetX(Point* point, double  x)
 {
-	point.X = x;
+	point->X = x;
 }
 
-void SetY(Point& point, double  y)
+void SetY(Point* point, double  y)
 {
-	point.Y = y;
+	point->Y = y;
 }

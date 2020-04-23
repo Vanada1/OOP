@@ -23,5 +23,4 @@ void SetDepartureTime(Flight* flight, int year, int month,
 	int day, int hour, int minute);
 void SetPurposeTime(Flight* flight, int year, int month,
 	int day, int hour, int minute);
-void DemoFlightWithTime();
 int GetFlightTimeMinutes(Flight* flight);

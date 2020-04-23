@@ -10,7 +10,6 @@ struct Band
 	Album** Albums = nullptr;
 };
 
-void DemoBand();
 Band* CreateBand(std::string nameBand, std::string description,
 	int albumsCount, Album** albums);
 void SetNameBand(Band* band, std::string nameBand);

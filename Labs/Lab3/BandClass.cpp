@@ -35,20 +35,20 @@ void Band::SetAlbums(int albumsCount, Album** albums)
 
 Song* Band::FindSong(std::string songTitle)
 {
-
+	return nullptr;
 }
 
 Album* Band::FindAlbum(Song* song)
 {
-
+	return nullptr;
 }
 
 Song** Band::GetAllSongs(int& allSongsCount)
 {
-
+	return nullptr;
 }
 
 Song** Band::GetAllGenreSongs(Genre findingGenre, int& allSongsCount)
 {
-
+	return nullptr;
 }

@@ -20,3 +20,13 @@ void Point::SetY(double y)
 {
 	this->_y = y;
 }
+
+double Point::GetX()
+{
+	return _x;
+}
+
+double Point::GetY()
+{
+	return _y;
+}

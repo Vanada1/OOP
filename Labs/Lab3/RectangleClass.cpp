@@ -39,3 +39,23 @@ void Rectangle::SetWidth(double width)
 	this->_width = width;
 }
 
+double Rectangle::GetCenterX()
+{
+	return this->_center->GetX();
+}
+
+double Rectangle::GetCenterY()
+{
+	return this->_center->GetY();
+}
+
+double Rectangle::GetLength()
+{
+	return _length;
+}
+
+double Rectangle::GetWidth()
+{
+	return _width;
+}
+

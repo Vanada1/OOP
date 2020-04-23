@@ -13,6 +13,12 @@ class Rectangle
 		void SetLength(double length);
 		void SetWidth(double width);
 
+		double GetCenterX();
+		double GetCenterY();
+		double GetLength();
+		double GetWidth();
+
+
 		Rectangle(double x, double y, double length, double width);
 		~Rectangle();
 

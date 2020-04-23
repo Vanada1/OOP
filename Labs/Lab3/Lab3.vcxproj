@@ -152,6 +152,7 @@
     <ClCompile Include="Band.cpp" />
     <ClCompile Include="BandClass.cpp" />
     <ClCompile Include="Book.cpp" />
+    <ClCompile Include="DemoStruct.cpp" />
     <ClCompile Include="Flight.cpp" />
     <ClCompile Include="FlightClass.cpp" />
     <ClCompile Include="Lab3.cpp" />
@@ -172,6 +173,8 @@
     <ClInclude Include="Band.h" />
     <ClInclude Include="BandClass.h" />
     <ClInclude Include="Book.h" />
+    <ClInclude Include="DemoClass.h" />
+    <ClInclude Include="DemoStruct.h" />
     <ClInclude Include="Flight.h" />
     <ClInclude Include="FlightClass.h" />
     <ClInclude Include="Genre.h" />

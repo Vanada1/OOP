@@ -4,50 +4,6 @@
 
 using namespace std;
 
-void DemoFlightWithTime()
-{
-	const int COUNT = 5;
-	Flight* flights[COUNT];
-	flights[0] = CreateFlight("A201", "Moscow", "Tomsk", 2020, 1, 23, 
-		12, 40, 2020, 1, 23, 16, 30);
-	flights[1] = CreateFlight("A323", "Tomsk", "Moscow", 2020, 1, 23, 
-		12, 0, 2020, 1, 23, 16, 0);
-	flights[2] = CreateFlight("S588", "Kemerovo", "Moscow", 2020, 3, 2, 
-		9, 30, 2020, 3, 2, 12, 30);
-	flights[3] = CreateFlight("G023", "Moscow", "Kemerovo", 2020, 3, 2,
-		9, 30, 2020, 3, 2, 12, 30);
-	flights[4] = CreateFlight("MA404", "Kemerovo", "Tomsk", 2020, 6, 12, 
-		3, 0, 2020, 6, 12, 4, 0);
-	
-	for (int i = 0; i < COUNT; i++)
-	{
-		cout << flights[i]->FlightNumber << "\t" << flights[i]->From << '-'
-			<< flights[i]->Purpose << "\t Departure "
-			<< flights[i]->DepartureTime->Month << '.'
-			<< flights[i]->DepartureTime->Day << '\t'
-			<< flights[i]->DepartureTime->Hour << ':'
-			<< flights[i]->DepartureTime->Minute << '.'
-			<< "\tArrival " << flights[i]->PurposeTime->Month
-			<< flights[i]->PurposeTime->Day
-			<< '\t' << flights[i]->PurposeTime->Hour << ':'
-			<< flights[i]->PurposeTime->Minute << endl;
-	}
-
-	int timeDifference = GetFlightTimeMinutes(flights[0]);
-	int minutesPerHour = 60;
-	cout << flights[0]->FlightNumber << "\t" << flights[0]->From << '-'
-		<< flights[0]->Purpose << "\tFlight time: "
-		<< timeDifference / minutesPerHour << "h " 
-		<< timeDifference % minutesPerHour << "min" << endl;
-
-	for (int i = 0; i < COUNT; i++)
-	{
-		delete flights[i]->DepartureTime;
-		delete flights[i]->PurposeTime;
-		delete flights[i];
-	}
-}
-
 Flight* CreateFlight(string flightNumber, string from, string purpose,
 	int departureYear, int departureMonth, int departureDay,
 	int departureHour, int departureMinute,
@@ -55,6 +11,8 @@ Flight* CreateFlight(string flightNumber, string from, string purpose,
 	int PurposeHour, int PurposeMinute)
 {
 	Flight* newFlight = new Flight();
+	newFlight->DepartureTime = new Time();
+	newFlight->PurposeTime = new Time();
 	SetFlightNumber(newFlight, flightNumber);
 	SetFrom(newFlight, from);
 	SetPurpose(newFlight, purpose);
@@ -90,6 +48,7 @@ void SetDepartureTime(Flight* flight, int year, int month,
 void SetPurposeTime(Flight* flight, int year, int month,
 	int day, int hour, int minute)
 {
+	int minutesInHour = 60;
 	if (flight->DepartureTime->Year > year)
 	{
 		throw exception("Error");
@@ -102,11 +61,8 @@ void SetPurposeTime(Flight* flight, int year, int month,
 	{
 		throw exception("Error");
 	}
-	else if (flight->DepartureTime->Hour > hour)
-	{
-		throw exception("Error");
-	}
-	else if (flight->DepartureTime->Minute > minute)
+	else if (flight->DepartureTime->Hour * minutesInHour
+		+ flight->DepartureTime->Minute > hour* minutesInHour + minute)
 	{
 		throw exception("Error");
 	}
@@ -123,11 +79,11 @@ int GetFlightTimeMinutes(Flight* flight)
 	Time* purposeTime = flight->PurposeTime;
 	int timeDifferenceMinutes = purposeTime->Minute - departureTime->Minute;
 	int timeDifferenceHours = purposeTime->Hour - departureTime->Hour;
-	int minutesPerHour = 60;
+	int minutesInHour = 60;
 	if (timeDifferenceMinutes < 0)
 	{
-		timeDifferenceMinutes += minutesPerHour;
+		timeDifferenceMinutes += minutesInHour;
 		timeDifferenceHours--;
 	}
-	return timeDifferenceHours * minutesPerHour + timeDifferenceMinutes;
+	return timeDifferenceHours * minutesInHour + timeDifferenceMinutes;
 }

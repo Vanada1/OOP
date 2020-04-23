@@ -23,10 +23,10 @@ void Point::SetY(double y)
 
 double Point::GetX()
 {
-	return _x;
+	return this->_x;
 }
 
 double Point::GetY()
 {
-	return _y;
+	return this->_y;
 }

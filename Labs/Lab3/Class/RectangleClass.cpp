@@ -5,7 +5,7 @@ using namespace std;
 
 Rectangle::Rectangle(double x, double y, double length, double width)
 {
-	this->SetCenter(x, y);
+	this->_center = new Point(x, y);
 	this->SetLength(length);
 	this->SetWidth(width);
 }
@@ -39,23 +39,18 @@ void Rectangle::SetWidth(double width)
 	this->_width = width;
 }
 
-double Rectangle::GetCenterX()
+Point* Rectangle::GetCenter()
 {
-	return this->_center->GetX();
-}
-
-double Rectangle::GetCenterY()
-{
-	return this->_center->GetY();
+	return this->_center;
 }
 
 double Rectangle::GetLength()
 {
-	return _length;
+	return this->_length;
 }
 
 double Rectangle::GetWidth()
 {
-	return _width;
+	return this->_width;
 }
 

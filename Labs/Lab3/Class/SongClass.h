@@ -1,5 +1,5 @@
 #pragma once
-#include"Genre.h"
+#include"../Genre.h"
 #include<string>
 
 class Song
@@ -13,6 +13,10 @@ class Song
 		void SetSongTitle(std::string songTitle);
 		void SetDuration(int durationInSeconds);
 		void SetGenre(Genre genre);
+
+		std::string GetSongTitle();
+		int GetDuration();
+		Genre GetSongGenre();
 
 		Song(std::string songTitle, int durationInSeconds, Genre songGenre);
 		~Song();

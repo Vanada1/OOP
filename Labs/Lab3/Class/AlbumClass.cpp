@@ -39,3 +39,23 @@ void Album::SetSongs(int songsCount, Song** songs)
 	this->_songsCount = songsCount;
 	this->_songs = songs;
 }
+
+string Album::GetAlbumTitle()
+{
+	return this->_albumTitle;
+}
+
+int Album::GetIssueYear()
+{
+	return this->_issueYear;
+}
+
+int Album::GetSongsCount()
+{
+	return this->_songsCount;
+}
+
+Song** Album::GetSongs()
+{
+	return this->_songs;
+}

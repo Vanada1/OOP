@@ -13,8 +13,7 @@ class Rectangle
 		void SetLength(double length);
 		void SetWidth(double width);
 
-		double GetCenterX();
-		double GetCenterY();
+		Point* GetCenter();
 		double GetLength();
 		double GetWidth();
 

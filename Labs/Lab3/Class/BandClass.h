@@ -19,6 +19,11 @@ class Band
 		Song** GetAllSongs(int& allSongsCount);
 		Song** GetAllGenreSongs(Genre findingGenre, int& allSongsCount);
 
+		std::string GetNameBand();
+		std::string GetDescription();
+		int GetAlbumsCount();
+		Album** GetAlbums();
+
 		Band(std::string nameBand, std::string description,
 			int albumsCount, Album** albums);
 		~Band();

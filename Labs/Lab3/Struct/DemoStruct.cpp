@@ -1,7 +1,7 @@
-#include"DemoStruct.h"
+#include "DemoStruct.h"
 #include "Flight.h"
 #include "Band.h"
-#include"Rectangle.h"
+#include "Rectangle.h"
 #include <iostream>
 
 using namespace std;

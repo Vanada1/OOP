@@ -15,6 +15,11 @@ class Album
 		void SetIssueYear(int issueYear);
 		void SetSongs(int songsCount, Song** songs);
 
+		std::string GetAlbumTitle();
+		int GetIssueYear();
+		int GetSongsCount();
+		Song** GetSongs();
+
 		Album(std::string albumTitle, int issueYear, int songsCount,
 			Song** songs);
 		~Album();

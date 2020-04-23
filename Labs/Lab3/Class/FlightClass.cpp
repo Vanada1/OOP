@@ -41,11 +41,7 @@ void Flight::SetPurpose(std::string purpose)
 void Flight::SetDepartureTime(int year, int month,
 	int day, int hour, int minute)
 {
-	this->_departureTime->SetYear(year);
-	this->_departureTime->SetMonth(month);
-	this->_departureTime->SetDay(day);
-	this->_departureTime->SetHour(hour);
-	this->_departureTime->SetMinute(minute);
+	this->_departureTime = new Time(year, month, day, hour, minute);
 }
 
 void Flight::SetPurposeTime(int year, int month,
@@ -69,14 +65,47 @@ void Flight::SetPurposeTime(int year, int month,
 	{
 		throw std::exception("Error");
 	}
-	this->_purposeTime->SetYear(year);
-	this->_purposeTime->SetMonth(month);
-	this->_purposeTime->SetDay(day);
-	this->_purposeTime->SetHour(hour);
-	this->_purposeTime->SetMinute(minute);
+	this->_purposeTime = new Time(year, month, day, hour, minute);
 }
 
-int Flight::GetFlightTimeMinutes(Flight* flight)
+string Flight::GetFlightNumber()
 {
-	return 0;
+	return this->_flightNumber;
+}
+
+string Flight::GetFrom() 
+{
+	return this->_from;
+}
+
+string Flight::GetPurpose()
+{
+	return this->_purpose;
+}
+
+Time* Flight::GetDepartureTime()
+{
+	return this->_departureTime;
+}
+
+Time* Flight::GetPurposeTime()
+{
+	return this->_purposeTime;
+}
+
+int Flight::GetFlightTimeMinutes()
+{
+	Time* departureTime = this->GetDepartureTime();
+	Time* purposeTime = this->GetPurposeTime();
+	int timeDifferenceMinutes = purposeTime->GetMinute()
+		- departureTime->GetMinute();
+	int timeDifferenceHours = purposeTime->GetHour()
+		- departureTime->GetHour();
+	int minutesInHour = 60;
+	if (timeDifferenceMinutes < 0)
+	{
+		timeDifferenceMinutes += minutesInHour;
+		timeDifferenceHours--;
+	}
+	return timeDifferenceHours * minutesInHour + timeDifferenceMinutes;
 }

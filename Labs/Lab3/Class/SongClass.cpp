@@ -33,3 +33,18 @@ void Song::SetGenre(Genre genre)
 {
 	this->_songGenre = genre;
 }
+
+string Song::GetSongTitle()
+{
+	return this->_songTitle;
+}
+
+int Song::GetDuration()
+{
+	return this->_durationInSeconds;
+}
+
+Genre Song::GetSongGenre()
+{
+	return this->_songGenre;
+}

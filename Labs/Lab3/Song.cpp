@@ -5,9 +5,9 @@ using namespace std;
 Song* CreateSong(string songTitle, int durationInSeconds, Genre songGenre)
 {
 	Song* newSong = new Song();
-	newSong->SongTitle = songTitle;
-	newSong->DurationInSeconds = durationInSeconds;
-	newSong->SongGenre = songGenre;
+	SetSongTitle(newSong, songTitle);
+	SetDuration(newSong, durationInSeconds);
+	SetGenre(newSong, songGenre);
 	return newSong;
 }
 

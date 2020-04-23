@@ -34,9 +34,11 @@ void DemoFlightWithTime()
 	}
 
 	int timeDifference = GetFlightTimeMinutes(flights[0]);
+	int minutesPerHour = 60;
 	cout << flights[0]->FlightNumber << "\t" << flights[0]->From << '-'
 		<< flights[0]->Purpose << "\tFlight time: "
-		<< timeDifference / 60 << "h " << timeDifference % 60 << "min" << endl;
+		<< timeDifference / minutesPerHour << "h " 
+		<< timeDifference % minutesPerHour << "min" << endl;
 
 	for (int i = 0; i < COUNT; i++)
 	{
@@ -53,12 +55,12 @@ Flight* CreateFlight(string flightNumber, string from, string purpose,
 	int PurposeHour, int PurposeMinute)
 {
 	Flight* newFlight = new Flight();
-	newFlight->FlightNumber = flightNumber;
-	newFlight->From = from;
-	newFlight->Purpose = purpose;
-	newFlight->DepartureTime = CreateTime(departureYear, departureMonth,
+	SetFlightNumber(newFlight, flightNumber);
+	SetFrom(newFlight, from);
+	SetPurpose(newFlight, purpose);
+	SetDepartureTime(newFlight, departureYear, departureMonth,
 		departureDay, departureHour, departureMinute);
-	newFlight->PurposeTime = CreateTime(PurposeYear, PurposeMonth,
+	SetPurposeTime(newFlight, PurposeYear, PurposeMonth,
 		PurposeDay, PurposeHour, PurposeMinute);
 	return newFlight;
 }

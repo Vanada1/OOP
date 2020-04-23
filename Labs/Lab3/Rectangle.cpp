@@ -43,9 +43,9 @@ void DemoRecangleWithPoint()
 Rectangle* CreateRectangle(double x, double y, double length, double width)
 {
 	Rectangle* newRectangle = new Rectangle;
-	newRectangle->Center = CreatePoint(x, y);
-	newRectangle->Length = length;
-	newRectangle->Width = width;
+	SetCenter(newRectangle, x, y);
+	SetLength(newRectangle, length);
+	SetWidth(newRectangle, width);
 	return newRectangle;
 }
 

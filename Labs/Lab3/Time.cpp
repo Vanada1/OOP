@@ -6,11 +6,11 @@ using namespace std;
 Time* CreateTime(int year, int month, int day, int hour, int minute)
 {
 	Time* newTime = new Time;
-	newTime->Year = year;
-	newTime->Month = month;
-	newTime->Day = day;
-	newTime->Hour = hour;
-	newTime->Minute = minute;
+	SetYear(newTime, year);
+	SetMonth(newTime, month);
+	SetDay(newTime, day);
+	SetHour(newTime, hour);
+	SetMinute(newTime, minute);
 	return newTime;
 }
 

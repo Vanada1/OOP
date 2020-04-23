@@ -3,8 +3,8 @@
 Point* CreatePoint(double x, double y)
 {
 	Point* newPoint = new Point();
-	newPoint->X = x;
-	newPoint->Y = y;
+	SetX(newPoint, x);
+	SetY(newPoint, y);
 	return newPoint;
 }
 

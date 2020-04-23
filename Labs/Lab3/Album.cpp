@@ -1,14 +1,15 @@
 #include "Album.h"
+#include <exception>
 
 using namespace std;
 
-Album* CreateAlbum(string albumTitle, int issueYear, int songsCount, Song** songs)
+Album* CreateAlbum(string albumTitle, int issueYear, int songsCount,
+	Song** songs)
 {
 	Album* newAlbum = new Album();
-	newAlbum->AlbumTitle = albumTitle;
-	newAlbum->IssueYear = issueYear;
-	newAlbum->SongsCount = songsCount;
-	newAlbum->Songs = songs;
+	SetAlbumTitle(newAlbum, albumTitle); 
+	SetIssueYear(newAlbum, issueYear);
+	SetSongs(newAlbum, songsCount, songs);
 	return newAlbum;
 }
 
@@ -19,6 +20,10 @@ void SetAlbumTitle(Album* album, string albumTitle)
 
 void SetIssueYear(Album* album, int issueYear)
 {
+	if (issueYear < 0)
+	{
+		throw exception("Issue year cannot be negative");
+	}
 	album->IssueYear = issueYear;
 }
 

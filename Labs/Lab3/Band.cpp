@@ -67,10 +67,9 @@ Band* CreateBand(string nameBand, string description,
 	int albumsCount, Album** albums)
 {
 	Band* newBand = new Band;
-	newBand->NameBand = nameBand;
-	newBand->Description = description;
-	newBand->AlbumsCount = albumsCount;
-	newBand->Albums = albums;
+	SetNameBand(newBand, nameBand);
+	SetDescription(newBand, description);
+	SetAlbums(newBand, albumsCount, albums);
 	return newBand;
 }
 

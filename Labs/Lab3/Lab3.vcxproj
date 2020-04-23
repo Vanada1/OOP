@@ -148,28 +148,42 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Album.cpp" />
+    <ClCompile Include="AlbumClass.cpp" />
     <ClCompile Include="Band.cpp" />
+    <ClCompile Include="BandClass.cpp" />
     <ClCompile Include="Book.cpp" />
     <ClCompile Include="Flight.cpp" />
+    <ClCompile Include="FlightClass.cpp" />
     <ClCompile Include="Lab3.cpp" />
     <ClCompile Include="Point.cpp" />
+    <ClCompile Include="PointClass.cpp" />
     <ClCompile Include="Rectangle.cpp" />
+    <ClCompile Include="RectangleClass.cpp" />
     <ClCompile Include="Route.cpp" />
     <ClCompile Include="Song.cpp" />
+    <ClCompile Include="SongClass.cpp" />
     <ClCompile Include="Time.cpp" />
+    <ClCompile Include="TimeClass.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\General Files\Read.h" />
     <ClInclude Include="Album.h" />
+    <ClInclude Include="AlbumClass.h" />
     <ClInclude Include="Band.h" />
+    <ClInclude Include="BandClass.h" />
     <ClInclude Include="Book.h" />
     <ClInclude Include="Flight.h" />
+    <ClInclude Include="FlightClass.h" />
     <ClInclude Include="Genre.h" />
     <ClInclude Include="Point.h" />
+    <ClInclude Include="PointClass.h" />
     <ClInclude Include="Rectangle.h" />
+    <ClInclude Include="RectangleClass.h" />
     <ClInclude Include="Route.h" />
     <ClInclude Include="Song.h" />
+    <ClInclude Include="SongClass.h" />
     <ClInclude Include="Time.h" />
+    <ClInclude Include="TimeClass.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

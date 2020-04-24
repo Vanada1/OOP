@@ -18,11 +18,6 @@ Flight::Flight(string flightNumber, string from,
 		PurposeDay, PurposeHour, PurposeMinute);
 }
 
-//Flight::~Flight()
-//{
-//
-//}
-
 void Flight::SetFlightNumber(string flightNumber)
 {
 	this->_flightNumber = flightNumber;

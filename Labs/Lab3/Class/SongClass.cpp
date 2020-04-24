@@ -3,7 +3,7 @@
 
 using namespace std;
 
-Song::Song(std::string songTitle, int durationInSeconds, Genre songGenre)
+Song::Song(string songTitle, int durationInSeconds, Genre songGenre)
 {
 	this->SetSongTitle(songTitle);
 	this->SetDuration(durationInSeconds);

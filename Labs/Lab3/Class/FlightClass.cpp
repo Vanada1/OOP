@@ -23,17 +23,17 @@ Flight::Flight(string flightNumber, string from,
 //
 //}
 
-void Flight::SetFlightNumber(std::string flightNumber)
+void Flight::SetFlightNumber(string flightNumber)
 {
 	this->_flightNumber = flightNumber;
 }
 
-void Flight::SetFrom(std::string from)
+void Flight::SetFrom(string from)
 {
 	this->_from = from;
 }
 
-void Flight::SetPurpose(std::string purpose)
+void Flight::SetPurpose(string purpose)
 {
 	this->_purpose = purpose;
 }
@@ -50,20 +50,20 @@ void Flight::SetPurposeTime(int year, int month,
 	int minutesInHour = 60;
 	if (this->_departureTime->GetYear() > year)
 	{
-		throw std::exception("Error");
+		throw exception("Error");
 	}
 	else if (this->_departureTime->GetMonth() > month)
 	{
-		throw std::exception("Error");
+		throw exception("Error");
 	}
 	else if (this->_departureTime->GetDay() > day)
 	{
-		throw std::exception("Error");
+		throw exception("Error");
 	}
 	else if (this->_departureTime->GetHour() * minutesInHour
 		+ this->_departureTime->GetMinute() > hour * minutesInHour + minute)
 	{
-		throw std::exception("Error");
+		throw exception("Error");
 	}
 	this->_purposeTime = new Time(year, month, day, hour, minute);
 }

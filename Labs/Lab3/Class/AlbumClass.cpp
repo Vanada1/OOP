@@ -3,7 +3,7 @@
 
 using namespace std;
 
-Album::Album(std::string albumTitle, int issueYear, int songsCount,
+Album::Album(string albumTitle, int issueYear, int songsCount,
 	Song** songs)
 {
 	this->SetAlbumTitle(albumTitle);
@@ -16,7 +16,7 @@ Album::~Album()
 
 }
 
-void Album::SetAlbumTitle(std::string albumTitle)
+void Album::SetAlbumTitle(string albumTitle)
 {
 	this->_albumTitle = albumTitle;
 }
@@ -25,7 +25,7 @@ void Album::SetIssueYear(int issueYear)
 {
 	if (issueYear < 0)
 	{
-		throw std::exception("Issue year cannot be negative");
+		throw exception("Issue year cannot be negative");
 	}
 	this->_issueYear = issueYear;
 }

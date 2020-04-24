@@ -2,7 +2,7 @@
 
 using namespace std;
 
-Band::Band(std::string nameBand, std::string description,
+Band::Band(string nameBand, string description,
 	int albumsCount, Album** albums)
 {
 	this->SetNameBand(nameBand);
@@ -15,12 +15,12 @@ Band::~Band()
 
 }
 
-void Band::SetNameBand(std::string nameBand)
+void Band::SetNameBand(string nameBand)
 {
 	this->_nameBand = nameBand;
 }
 
-void Band::SetDescription(std::string description)
+void Band::SetDescription(string description)
 {
 	this->_description = description;
 }
@@ -55,7 +55,7 @@ Album** Band::GetAlbums()
 	return this->_albums;
 }
 
-Song* Band::FindSong(std::string songTitle)
+Song* Band::FindSong(string songTitle)
 {
 	for (int i = 0; i < this->GetAlbumsCount(); i++)
 	{

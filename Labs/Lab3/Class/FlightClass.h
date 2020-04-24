@@ -33,8 +33,5 @@ class Flight
 			int departureDay, int departureHour, int departureMinute,
 			int PurposeYear, int PurposeMonth, int PurposeDay,
 			int PurposeHour, int PurposeMinute);
-		~Flight()
-		{
-
-		}
+		~Flight();
 };

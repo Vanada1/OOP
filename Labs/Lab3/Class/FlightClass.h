@@ -1,6 +1,7 @@
 #pragma once
 #include "TimeClass.h"
 #include <string>
+
 class Flight
 {
 	private:

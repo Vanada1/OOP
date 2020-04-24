@@ -34,6 +34,9 @@
     <Filter Include="Source Files\Struct">
       <UniqueIdentifier>{0abf2ee1-dcdb-425e-84a7-f1c3316a1873}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ClassDiagram">
+      <UniqueIdentifier>{fb5d15d1-d3c0-4b9f-a04b-4599c95214be}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Lab3.cpp">
@@ -55,9 +58,6 @@
       <Filter>Source Files\Class</Filter>
     </ClCompile>
     <ClCompile Include="Class\RectangleClass.cpp">
-      <Filter>Source Files\Class</Filter>
-    </ClCompile>
-    <ClCompile Include="Class\SongClass.cpp">
       <Filter>Source Files\Class</Filter>
     </ClCompile>
     <ClCompile Include="Class\TimeClass.cpp">
@@ -93,6 +93,9 @@
     <ClCompile Include="Struct\Route.cpp">
       <Filter>Source Files\Struct</Filter>
     </ClCompile>
+    <ClCompile Include="Class\SongClass.cpp">
+      <Filter>Source Files\Class</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\General Files\Read.h">
@@ -105,9 +108,6 @@
       <Filter>Header Files\Class</Filter>
     </ClInclude>
     <ClInclude Include="Class\BandClass.h">
-      <Filter>Header Files\Class</Filter>
-    </ClInclude>
-    <ClInclude Include="Class\SongClass.h">
       <Filter>Header Files\Class</Filter>
     </ClInclude>
     <ClInclude Include="Class\RectangleClass.h">
@@ -155,5 +155,19 @@
     <ClInclude Include="Struct\Book.h">
       <Filter>Header Files\Struct</Filter>
     </ClInclude>
+    <ClInclude Include="Class\SongClass.h">
+      <Filter>Header Files\Class</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram\BandAlbumSong.cd">
+      <Filter>ClassDiagram</Filter>
+    </None>
+    <None Include="ClassDiagram\Flight.cd">
+      <Filter>ClassDiagram</Filter>
+    </None>
+    <None Include="ClassDiagram\Rectangle.cd">
+      <Filter>ClassDiagram</Filter>
+    </None>
   </ItemGroup>
 </Project>

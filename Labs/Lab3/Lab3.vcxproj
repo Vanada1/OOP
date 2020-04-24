@@ -189,6 +189,11 @@
     <ClInclude Include="Struct\Song.h" />
     <ClInclude Include="Struct\Time.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram\BandAlbumSong.cd" />
+    <None Include="ClassDiagram\Flight.cd" />
+    <None Include="ClassDiagram\Rectangle.cd" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

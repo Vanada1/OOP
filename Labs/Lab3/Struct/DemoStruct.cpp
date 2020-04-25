@@ -6,9 +6,10 @@
 
 using namespace std;
 
+const int COUNT = 5;
+
 void DemoFlightWithTime()
 {
-	const int COUNT = 5;
 	Flight* flights[COUNT];
 	flights[0] = CreateFlight("A201", "Moscow", "Tomsk", 2020, 1, 23,
 		12, 40, 2020, 1, 23, 16, 30);
@@ -52,7 +53,6 @@ void DemoFlightWithTime()
 
 void DemoRecangleWithPoint()
 {
-	const int COUNT = 5;
 	Rectangle* rectangles[COUNT];
 	rectangles[0] = CreateRectangle(0.0, 0.0, 8.1, 25.23);
 	rectangles[1] = CreateRectangle(1.0, 21.0, 81.0, 223.8);

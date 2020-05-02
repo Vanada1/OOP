@@ -12,7 +12,7 @@ Band::Band(string nameBand, string description,
 
 Band::~Band()
 {
-
+	delete this;
 }
 
 void Band::SetNameBand(string nameBand)

@@ -14,7 +14,7 @@ Time::Time(int year, int month, int day, int hour, int minute)
 
 Time::~Time()
 {
-
+	delete  this;
 }
 
 void Time::SetYear(int year)

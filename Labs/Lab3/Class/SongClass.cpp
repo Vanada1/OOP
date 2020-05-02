@@ -12,7 +12,7 @@ Song::Song(string songTitle, int durationInSeconds, Genre songGenre)
 
 Song::~Song()
 {
-
+	delete this;
 }
 
 void Song::SetSongTitle(string songTitle)

@@ -36,6 +36,6 @@ class Flight
 			int PurposeHour, int PurposeMinute);
 		~Flight()
 		{
-
+			delete this;
 		}
 };

@@ -13,7 +13,7 @@ Album::Album(string albumTitle, int issueYear, int songsCount,
 
 Album::~Album()
 {
-
+	delete this;
 }
 
 void Album::SetAlbumTitle(string albumTitle)

@@ -123,6 +123,7 @@ void DemoBandClass()
 			<< "Duration: " << allSongs[i]->GetDuration()
 			<< '\t' << "Genre: " << allSongs[i]->GetSongGenre() << endl;
 	}
+	delete[] allSongs;
 	cout << endl;
 
 	int allSongsCountGenre;
@@ -133,6 +134,7 @@ void DemoBandClass()
 			<< "Duration: " << allSongGenre[i]->GetDuration()
 			<< '\t' << "Genre: " << allSongGenre[i]->GetSongGenre() << endl;
 	}
+	delete[] allSongGenre;
 	delete[] songs1;
 	delete[] songs2;
 	delete[] songs3;

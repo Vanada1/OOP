@@ -11,8 +11,8 @@ const int COUNT = 5;
 void DemoFlightWithTimeClass()
 {
 	Flight* flights[COUNT];
-	flights[0] = new Flight("A201", "Moscow", "Tomsk", 2020, 1, 23,
-		12, 40, 2020, 1, 23, 16, 30);
+	flights[0] = new Flight("A201", "Moscow", "Tomsk", 2020, 12, 30,
+		12, 40, 2021, 1, 1, 16, 30);
 	flights[1] = new Flight("A323", "Tomsk", "Moscow", 2020, 1, 23,
 		12, 0, 2020, 1, 23, 16, 0);
 	flights[2] = new Flight("S588", "Kemerovo", "Moscow", 2020, 3, 2,

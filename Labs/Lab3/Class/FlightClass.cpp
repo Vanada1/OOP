@@ -47,18 +47,28 @@ void Flight::SetPurposeTime(int year, int month,
 	{
 		throw exception("Error");
 	}
-	else if (this->_departureTime->GetMonth() > month)
+	else if (this->_departureTime->GetYear() == year)
 	{
-		throw exception("Error");
-	}
-	else if (this->_departureTime->GetDay() > day)
-	{
-		throw exception("Error");
-	}
-	else if (this->_departureTime->GetHour() * minutesInHour
-		+ this->_departureTime->GetMinute() > hour * minutesInHour + minute)
-	{
-		throw exception("Error");
+		if (this->_departureTime->GetMonth() > month)
+		{
+			throw exception("Error");
+		}
+		else if (this->_departureTime->GetMonth() == month)
+		{
+			if (this->_departureTime->GetDay() > day)
+			{
+				throw exception("Error");
+			}
+			else if (this->_departureTime->GetDay() > day)
+			{
+				if (this->_departureTime->GetHour() * minutesInHour
+					+ this->_departureTime->GetMinute() >= 
+					hour * minutesInHour + minute)
+				{
+					throw exception("Error");
+				}
+			}
+		}
 	}
 	this->_purposeTime = new Time(year, month, day, hour, minute);
 }

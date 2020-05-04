@@ -53,13 +53,29 @@ void SetPurposeTime(Flight* flight, int year, int month,
 	{
 		throw exception("Error");
 	}
-	else if (flight->DepartureTime->Month > month)
+	else if (flight->DepartureTime->Year == year)
 	{
-		throw exception("Error");
-	}
-	else if (flight->DepartureTime->Day > day)
-	{
-		throw exception("Error");
+		if (flight->DepartureTime->Month > month)
+		{
+			throw exception("Error");
+		}
+		else if (flight->DepartureTime->Month == month)
+		{
+			if (flight->DepartureTime->Day > day)
+			{
+				throw exception("Error");
+			}
+			else if (flight->DepartureTime->Day == day)
+			{
+				if (flight->DepartureTime->Hour * minutesInHour
+				+ flight->DepartureTime->Minute >=
+					hour * minutesInHour + minute)
+				{
+					throw exception("Error");
+				}
+			}
+		}
+
 	}
 	else if (flight->DepartureTime->Hour * minutesInHour
 		+ flight->DepartureTime->Minute > hour* minutesInHour + minute)

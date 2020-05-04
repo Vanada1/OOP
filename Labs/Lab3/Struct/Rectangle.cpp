@@ -7,8 +7,7 @@ using namespace std;
 Rectangle* CreateRectangle(double x, double y, double length, double width)
 {
 	Rectangle* newRectangle = new Rectangle;
-	newRectangle->Center = new Point();
-	SetCenter(newRectangle, x, y);
+	newRectangle->Center = CreatePoint(x, y);
 	SetLength(newRectangle, length);
 	SetWidth(newRectangle, width);
 	return newRectangle;

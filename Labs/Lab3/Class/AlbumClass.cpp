@@ -13,6 +13,7 @@ Album::Album(string albumTitle, int issueYear, int songsCount,
 
 Album::~Album()
 {
+	delete[] this->_songs;
 	delete this;
 }
 

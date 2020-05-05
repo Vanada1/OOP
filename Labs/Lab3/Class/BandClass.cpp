@@ -12,6 +12,7 @@ Band::Band(string nameBand, string description,
 
 Band::~Band()
 {
+	delete[] this->_albums;
 	delete this;
 }
 

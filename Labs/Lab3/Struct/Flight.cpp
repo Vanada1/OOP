@@ -77,11 +77,6 @@ void SetPurposeTime(Flight* flight, int year, int month,
 		}
 
 	}
-	else if (flight->DepartureTime->Hour * minutesInHour
-		+ flight->DepartureTime->Minute > hour* minutesInHour + minute)
-	{
-		throw exception("Error");
-	}
 	SetYear(flight->PurposeTime, year);
 	SetMonth(flight->PurposeTime, month);
 	SetDay(flight->PurposeTime, day);

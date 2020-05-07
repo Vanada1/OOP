@@ -4,18 +4,13 @@
 using namespace std;
 
 Flight::Flight(string flightNumber, string from,
-	string purpose, int departureYear, int departureMonth,
-	int departureDay, int departureHour, int departureMinute,
-	int PurposeYear, int PurposeMonth, int PurposeDay,
-	int PurposeHour, int PurposeMinute)
+	string purpose, Time* departureTime, Time* purposeTime)
 {
 	this->SetFlightNumber(flightNumber);
 	this->SetFrom(from);
 	this->SetPurpose(purpose);
-	this->SetDepartureTime(departureYear, departureMonth,
-		departureDay, departureHour, departureMinute);
-	this->SetPurposeTime(PurposeYear, PurposeMonth,
-		PurposeDay, PurposeHour, PurposeMinute);
+	this->SetDepartureTime(departureTime);
+	this->SetPurposeTime(purposeTime);
 }
 
 void Flight::SetFlightNumber(string flightNumber)
@@ -33,44 +28,45 @@ void Flight::SetPurpose(string purpose)
 	this->_purpose = purpose;
 }
 
-void Flight::SetDepartureTime(int year, int month,
-	int day, int hour, int minute)
+void Flight::SetDepartureTime(Time* departureTime)
 {
-	this->_departureTime = new Time(year, month, day, hour, minute);
+	this->_departureTime = departureTime;
 }
 
-void Flight::SetPurposeTime(int year, int month,
-	int day, int hour, int minute)
+void Flight::SetPurposeTime(Time* purposeTime)
 {
 	int minutesInHour = 60;
-	if (this->_departureTime->GetYear() > year)
+	if (this->_departureTime->GetYear() > purposeTime->GetYear())
 	{
 		throw exception("Error");
 	}
-	else if (this->_departureTime->GetYear() == year)
+	else if (this->_departureTime->GetYear() == purposeTime->GetYear())
 	{
-		if (this->_departureTime->GetMonth() > month)
+		if (this->_departureTime->GetMonth() > purposeTime->GetMonth())
 		{
 			throw exception("Error");
 		}
-		else if (this->_departureTime->GetMonth() == month)
+		else if (this->_departureTime->GetMonth() == 
+			purposeTime->GetMonth())
 		{
-			if (this->_departureTime->GetDay() > day)
+			if (this->_departureTime->GetDay() > purposeTime->GetDay())
 			{
 				throw exception("Error");
 			}
-			else if (this->_departureTime->GetDay() > day)
+			else if (this->_departureTime->GetDay() >
+				purposeTime->GetDay())
 			{
 				if (this->_departureTime->GetHour() * minutesInHour
 					+ this->_departureTime->GetMinute() >= 
-					hour * minutesInHour + minute)
+					purposeTime->GetHour() * minutesInHour + 
+					purposeTime->GetMinute())
 				{
 					throw exception("Error");
 				}
 			}
 		}
 	}
-	this->_purposeTime = new Time(year, month, day, hour, minute);
+	this->_purposeTime = purposeTime;
 }
 
 string Flight::GetFlightNumber()

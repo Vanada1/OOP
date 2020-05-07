@@ -11,16 +11,31 @@ const int COUNT = 5;
 void DemoFlightWithTimeClass()
 {
 	Flight* flights[COUNT];
-	flights[0] = new Flight("A201", "Moscow", "Tomsk", 2020, 12, 30,
-		12, 40, 2021, 1, 1, 16, 30);
-	flights[1] = new Flight("A323", "Tomsk", "Moscow", 2020, 1, 23,
-		12, 0, 2020, 1, 23, 16, 0);
-	flights[2] = new Flight("S588", "Kemerovo", "Moscow", 2020, 3, 2,
-		9, 30, 2020, 3, 2, 12, 30);
-	flights[3] = new Flight("G023", "Moscow", "Kemerovo", 2020, 3, 2,
-		9, 30, 2020, 3, 2, 12, 30);
-	flights[4] = new Flight("MA404", "Kemerovo", "Tomsk", 2020, 6, 12,
-		3, 0, 2020, 6, 12, 4, 0);
+	Time* departureTime = new Time(2020, 12, 30, 12, 40);
+	Time* purposeTime = new Time(2021, 1, 1, 16, 30);
+	flights[0] = new Flight("A201", "Moscow", "Tomsk", departureTime,
+		purposeTime);
+
+
+	departureTime = new Time(2020, 1, 23, 12, 0);
+	purposeTime = new Time(2020, 1, 23, 16, 0);
+	flights[1] = new Flight("A323", "Tomsk", "Moscow", departureTime,
+		purposeTime);
+
+	departureTime = new Time(2020, 3, 2, 9, 30);
+	purposeTime = new Time(2020, 3, 2, 12, 30);
+	flights[2] = new Flight("S588", "Kemerovo", "Moscow", departureTime,
+		purposeTime);
+
+	departureTime = new Time(2020, 3, 2, 9, 30);
+	purposeTime = new Time(2020, 3, 2, 12, 30);
+	flights[3] = new Flight("G023", "Moscow", "Kemerovo", departureTime,
+		purposeTime);
+
+	departureTime = new Time(2020, 6, 12, 3, 0);
+	purposeTime = new Time(2020, 6, 12, 4, 0);
+	flights[4] = new Flight("MA404", "Kemerovo", "Tomsk", departureTime,
+		purposeTime);
 
 	for (int i = 0; i < COUNT; i++)
 	{
@@ -29,9 +44,9 @@ void DemoFlightWithTimeClass()
 			<< flights[i]->GetDepartureTime()->GetMonth() << '.'
 			<< flights[i]->GetDepartureTime()->GetDay() << '\t'
 			<< flights[i]->GetDepartureTime()->GetHour() << ':'
-			<< flights[i]->GetDepartureTime()->GetMinute() << '.'
+			<< flights[i]->GetDepartureTime()->GetMinute() 
 			<< "\tArrival " << flights[i]->GetPurposeTime()->GetMonth()
-			<< flights[i]->GetPurposeTime()->GetDay()
+			<< '.' << flights[i]->GetPurposeTime()->GetDay()
 			<< '\t' << flights[i]->GetPurposeTime()->GetHour() << ':'
 			<< flights[i]->GetPurposeTime()->GetMinute() << endl;
 	}

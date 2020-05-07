@@ -5,10 +5,7 @@
 using namespace std;
 
 Flight* CreateFlight(string flightNumber, string from, string purpose,
-	int departureYear, int departureMonth, int departureDay,
-	int departureHour, int departureMinute,
-	int PurposeYear, int PurposeMonth, int PurposeDay,
-	int PurposeHour, int PurposeMinute)
+	Time* departureTime, Time* purposeTime)
 {
 	Flight* newFlight = new Flight();
 	newFlight->DepartureTime = new Time();
@@ -16,10 +13,8 @@ Flight* CreateFlight(string flightNumber, string from, string purpose,
 	SetFlightNumber(newFlight, flightNumber);
 	SetFrom(newFlight, from);
 	SetPurpose(newFlight, purpose);
-	SetDepartureTime(newFlight, departureYear, departureMonth,
-		departureDay, departureHour, departureMinute);
-	SetPurposeTime(newFlight, PurposeYear, PurposeMonth,
-		PurposeDay, PurposeHour, PurposeMinute);
+	SetDepartureTime(newFlight, departureTime);
+	SetPurposeTime(newFlight, purposeTime);
 	return newFlight;
 }
 
@@ -35,41 +30,36 @@ void SetPurpose(Flight* flight, string purpose)
 {
 	flight->Purpose = purpose;
 }
-void SetDepartureTime(Flight* flight, int year, int month,
-	int day, int hour, int minute)
+void SetDepartureTime(Flight* flight, Time* departureTime)
 {
-	SetYear(flight->DepartureTime, year);
-	SetMonth(flight->DepartureTime, month);
-	SetDay(flight->DepartureTime, day);
-	SetHour(flight->DepartureTime, hour);
-	SetMinute(flight->DepartureTime, minute);
+	flight->DepartureTime = departureTime;
 }
 
-void SetPurposeTime(Flight* flight, int year, int month,
-	int day, int hour, int minute)
+void SetPurposeTime(Flight* flight, Time* purposeTime)
 {
 	int minutesInHour = 60;
-	if (flight->DepartureTime->Year > year)
+	if (flight->DepartureTime->Year > purposeTime->Year)
 	{
 		throw exception("Error");
 	}
-	else if (flight->DepartureTime->Year == year)
+	else if (flight->DepartureTime->Year == purposeTime->Year)
 	{
-		if (flight->DepartureTime->Month > month)
+		if (flight->DepartureTime->Month > purposeTime->Month)
 		{
 			throw exception("Error");
 		}
-		else if (flight->DepartureTime->Month == month)
+		else if (flight->DepartureTime->Month == purposeTime->Month)
 		{
-			if (flight->DepartureTime->Day > day)
+			if (flight->DepartureTime->Day > purposeTime->Day)
 			{
 				throw exception("Error");
 			}
-			else if (flight->DepartureTime->Day == day)
+			else if (flight->DepartureTime->Day == purposeTime->Day)
 			{
 				if (flight->DepartureTime->Hour * minutesInHour
 				+ flight->DepartureTime->Minute >=
-					hour * minutesInHour + minute)
+					purposeTime->Hour * minutesInHour +
+					purposeTime->Minute)
 				{
 					throw exception("Error");
 				}
@@ -77,11 +67,7 @@ void SetPurposeTime(Flight* flight, int year, int month,
 		}
 
 	}
-	SetYear(flight->PurposeTime, year);
-	SetMonth(flight->PurposeTime, month);
-	SetDay(flight->PurposeTime, day);
-	SetHour(flight->PurposeTime, hour);
-	SetMinute(flight->PurposeTime, minute);
+	flight->PurposeTime = purposeTime;
 }
 
 int GetFlightTimeMinutes(Flight* flight)

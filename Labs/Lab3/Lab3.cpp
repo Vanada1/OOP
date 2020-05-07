@@ -12,8 +12,8 @@ int main()
     //DemoRoute();
    /* DemoRecangleWithPointClass();
     DemoRecangleWithPoint();*/
-    /*DemoFlightWithTimeClass();
-    DemoFlightWithTime();*/
-    DemoBandClass();
-    DemoBand();
+    DemoFlightWithTimeClass();
+    DemoFlightWithTime();
+    /*DemoBandClass();
+    DemoBand();*/
 }

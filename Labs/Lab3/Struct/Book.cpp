@@ -26,6 +26,7 @@ void DemoBook()
 	{
 		WriteBookToConsole(books[foundIndex]);
 	}
+	//TODO: Зачем тут этот код?
 	/*for (int i = 0; i < COUNTELEMENTS; i++)
 	{
 		WriteBookToConsole(books[i]);
@@ -61,7 +62,7 @@ void ReadBookFromConsole(Book& book)
 			break;
 		}
 	}
-
+	//TODO: Дубль
 	while (true)
 	{
 		cout << "Enter number pages: ";
@@ -77,7 +78,7 @@ void ReadBookFromConsole(Book& book)
 			break;
 		}
 	}
-
+	//TODO: Дубль
 	while (true)
 	{
 		cout << "Enter number authors: ";

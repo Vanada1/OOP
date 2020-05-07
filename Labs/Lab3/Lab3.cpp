@@ -8,12 +8,12 @@ using namespace std;
 
 int main()
 {
-    //DemoBook();
-    //DemoRoute();
-   /* DemoRecangleWithPointClass();
-    DemoRecangleWithPoint();*/
+    DemoBook();
+    DemoRoute();
+    DemoRecangleWithPointClass();
+    DemoRecangleWithPoint();
     DemoFlightWithTimeClass();
     DemoFlightWithTime();
-    /*DemoBandClass();
-    DemoBand();*/
+    DemoBandClass();
+    DemoBand();
 }

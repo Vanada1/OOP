@@ -33,6 +33,7 @@ void Album::SetIssueYear(int issueYear)
 
 void Album::SetSongs(int songsCount, Song** songs)
 {
+	//TODO: сравнение с nullptr лучше писать явно
 	if (this->_songs)
 	{
 		delete[] this->_songs;

@@ -75,7 +75,7 @@ void DemoRecangleWithPointClass()
 			<< "\tLength = " << rectangles[i]->GetLength()
 			<< "\tWidth = " << rectangles[i]->GetWidth() << endl;
 	}
-
+	//TODO: RSDN
 	double Xcenter = 0.0;
 	double Ycenter = 0.0;
 	for (int i = 0; i < COUNT; i++)
@@ -90,7 +90,7 @@ void DemoRecangleWithPointClass()
 }
 
 void DemoBandClass()
-{
+{//TODO: const
 	int songCount = 4;
 	int albumsCount = 3;
 
@@ -134,6 +134,7 @@ void DemoBandClass()
 	Song** allSongs = band->GetAllSongs(allSongsCount);
 	for (int i = 0; i < allSongsCount; i++)
 	{
+		//TODO: Дубль
 		cout << "Title: " << allSongs[i]->GetSongTitle() << '\t'
 			<< "Duration: " << allSongs[i]->GetDuration()
 			<< '\t' << "Genre: " << allSongs[i]->GetSongGenre() << endl;
@@ -145,6 +146,7 @@ void DemoBandClass()
 	Song** allSongGenre = band->GetAllGenreSongs(HipHop, allSongsCountGenre);
 	for (int i = 0; i < allSongsCountGenre; i++)
 	{
+		//TODO: Дубль
 		cout << "Title: " << allSongGenre[i]->GetSongTitle() << '\t'
 			<< "Duration: " << allSongGenre[i]->GetDuration()
 			<< '\t' << "Genre: " << allSongGenre[i]->GetSongGenre() << endl;

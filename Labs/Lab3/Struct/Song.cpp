@@ -2,6 +2,7 @@
 
 using namespace std;
 
+//TODO: строку по ссылке
 Song* CreateSong(string songTitle, int durationInSeconds, Genre songGenre)
 {
 	Song* newSong = new Song();
@@ -10,7 +11,7 @@ Song* CreateSong(string songTitle, int durationInSeconds, Genre songGenre)
 	SetGenre(newSong, songGenre);
 	return newSong;
 }
-
+//TODO: строку по ссылке
 void SetSongTitle(Song* song, string songTitle)
 {
 	song->SongTitle = songTitle;

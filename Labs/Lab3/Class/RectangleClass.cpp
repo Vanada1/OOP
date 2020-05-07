@@ -22,7 +22,7 @@ void Rectangle::SetCenter(double x, double y)
 }
 
 void Rectangle::SetLength(double length)
-{
+{//TODO: Дубль
 	if (length < 0)
 	{
 		throw exception("Lengtth cannot be less than zero");
@@ -32,6 +32,7 @@ void Rectangle::SetLength(double length)
 
 void Rectangle::SetWidth(double width)
 {
+	//TODO: Дубль
 	if (width < 0)
 	{
 		throw exception("Width cannot be less then zero");

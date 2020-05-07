@@ -21,6 +21,7 @@ void SetCenter(Rectangle* rectangle, double x, double y)
 
 void SetLength(Rectangle* rectangle, double length)
 {
+	//TODO: Дубль
 	if (length < 0)
 	{
 		throw exception("Lengtth cannot be less than zero");
@@ -30,6 +31,7 @@ void SetLength(Rectangle* rectangle, double length)
 
 void SetWidth(Rectangle* rectangle, double width)
 {
+	//TODO: Дубль
 	if (width < 0)
 	{
 		throw exception("Width cannot be less then zero");

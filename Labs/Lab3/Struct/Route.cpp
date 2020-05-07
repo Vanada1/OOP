@@ -22,6 +22,7 @@ void DemoRoute()
 	{
 		WriteRouteToConsole(routes[foundIndex]);
 	}
+	//TODO: Зачем тут этот код?
 	/*for (int i = 0; i < COUNTELEMENTS; i++)
 	{
 		WriteRouteToConsole(routes[i]);
@@ -30,6 +31,7 @@ void DemoRoute()
 
 void ReadRouteFromConsole(Route& route)
 {
+	//TODO: Дубль
 	while (true)
 	{
 		cout << "Enter route number: ";
@@ -45,7 +47,7 @@ void ReadRouteFromConsole(Route& route)
 			break;
 		}
 	}
-
+	//TODO: Дубль
 	while (true)
 	{
 		cout << "Enter duration in mitutes: ";
@@ -60,7 +62,7 @@ void ReadRouteFromConsole(Route& route)
 		{
 			break;
 		}
-	}
+	}//TODO: Дубль
 	
 	while (true)
 	{
@@ -77,7 +79,7 @@ void ReadRouteFromConsole(Route& route)
 			break;
 		}
 	}
-
+	//TODO: Дубль
 	while (true)
 	{
 		cout << "Enter route number: ";

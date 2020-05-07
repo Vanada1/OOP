@@ -28,6 +28,7 @@ void Band::SetDescription(string description)
 
 void Band::SetAlbums(int albumsCount, Album** albums)
 {
+	//TODO: сравнение с nullptr лучше писать явно
 	if (this->_albums)
 	{
 		delete[] this->_albums;

@@ -10,6 +10,7 @@ class Song
 		Genre _songGenre;
 
 	public:
+	//TODO: Строку по ссылке?
 		void SetSongTitle(std::string songTitle);
 		void SetDuration(int durationInSeconds);
 		void SetGenre(Genre genre);

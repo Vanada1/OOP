@@ -37,6 +37,7 @@ void SetDepartureTime(Flight* flight, Time* departureTime)
 
 void SetPurposeTime(Flight* flight, Time* purposeTime)
 {
+	//TODO: const
 	int minutesInHour = 60;
 	if (flight->DepartureTime->Year > purposeTime->Year)
 	{
@@ -76,6 +77,7 @@ int GetFlightTimeMinutes(Flight* flight)
 	Time* purposeTime = flight->PurposeTime;
 	int timeDifferenceMinutes = purposeTime->Minute - departureTime->Minute;
 	int timeDifferenceHours = purposeTime->Hour - departureTime->Hour;
+	//TODO: const
 	int minutesInHour = 60;
 	if (timeDifferenceMinutes < 0)
 	{

@@ -3,6 +3,7 @@
 
 using namespace std;
 
+//TODO: строку по ссылке
 Band* CreateBand(string nameBand, string description, 
 	int albumsCount, Album** albums)
 {
@@ -13,11 +14,13 @@ Band* CreateBand(string nameBand, string description,
 	return newBand;
 }
 
+//TODO: строку по ссылке
 void SetNameBand(Band* band, string nameBand)
 {
 	band->NameBand = nameBand;
 }
 
+//TODO: строку по ссылке
 void SetDescription(Band* band, string description)
 {
 	band->Description = description;
@@ -25,6 +28,7 @@ void SetDescription(Band* band, string description)
 
 void SetAlbums(Band* band, int albumsCount, Album** albums)
 {
+	//TODO: сравнение с nullptr лучше писать явно
 	if (band->Albums)
 	{
 		delete[] band->Albums;
@@ -33,6 +37,7 @@ void SetAlbums(Band* band, int albumsCount, Album** albums)
 	band->Albums = albums;
 }
 
+//TODO: строку по ссылке
 Song* FindSong(Band* band, string songTitle)
 {
 	for (int i = 0; i < band->AlbumsCount; i++)
@@ -54,6 +59,7 @@ Album* FindAlbum(Band* band, Song* song)
 	{
 		for (int j = 0; j < band->Albums[i]->SongsCount; j++)
 		{
+			//TODO: Тут будет сравнение адресов - это правильно или правильнее будет сравнивать хранящиеся значения?
 			if (band->Albums[i]->Songs[j] == song)
 			{
 				return band->Albums[i];

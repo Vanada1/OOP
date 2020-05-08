@@ -34,9 +34,6 @@
     <Filter Include="Source Files\Struct">
       <UniqueIdentifier>{0abf2ee1-dcdb-425e-84a7-f1c3316a1873}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ClassDiagram">
-      <UniqueIdentifier>{fb5d15d1-d3c0-4b9f-a04b-4599c95214be}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Lab3.cpp">
@@ -166,14 +163,8 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram\BandAlbumSong.cd">
-      <Filter>ClassDiagram</Filter>
-    </None>
-    <None Include="ClassDiagram\Flight.cd">
-      <Filter>ClassDiagram</Filter>
-    </None>
-    <None Include="ClassDiagram\Rectangle.cd">
-      <Filter>ClassDiagram</Filter>
-    </None>
+    <Image Include="ClassDiagram\UMLClassDiagrams.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

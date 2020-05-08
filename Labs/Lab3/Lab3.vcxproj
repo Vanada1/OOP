@@ -192,9 +192,7 @@
     <ClInclude Include="Struct\Time.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram\BandAlbumSong.cd" />
-    <None Include="ClassDiagram\Flight.cd" />
-    <None Include="ClassDiagram\Rectangle.cd" />
+    <Image Include="ClassDiagram\UMLClassDiagrams.jpg" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -11,11 +11,11 @@ struct Flight
 	Time* PurposeTime;
 };
 
-Flight* CreateFlight(std::string flightNumber, std::string from, 
-	std::string purpose, Time* departureTime, Time* purposeTime);
-void SetFlightNumber(Flight* flight, std::string flightNumber);
-void SetFrom(Flight* flight, std::string from);
-void SetPurpose(Flight* flight, std::string purpose);
+Flight* CreateFlight(std::string& flightNumber, std::string& from, 
+	std::string& purpose, Time* departureTime, Time* purposeTime);
+void SetFlightNumber(Flight* flight, std::string& flightNumber);
+void SetFrom(Flight* flight, std::string& from);
+void SetPurpose(Flight* flight, std::string& purpose);
 void SetDepartureTime(Flight* flight, Time* departureTime);
 void SetPurposeTime(Flight* flight, Time* purposeTime);
 int GetFlightTimeMinutes(Flight* flight);

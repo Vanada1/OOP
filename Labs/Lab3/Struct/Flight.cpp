@@ -4,7 +4,7 @@
 
 using namespace std;
 
-Flight* CreateFlight(string flightNumber, string from, string purpose,
+Flight* CreateFlight(string& flightNumber, string& from, string& purpose,
 	Time* departureTime, Time* purposeTime)
 {
 	Flight* newFlight = new Flight();
@@ -18,15 +18,15 @@ Flight* CreateFlight(string flightNumber, string from, string purpose,
 	return newFlight;
 }
 
-void SetFlightNumber(Flight* flight, string flightNumber)
+void SetFlightNumber(Flight* flight, string& flightNumber)
 {
 	flight->FlightNumber = flightNumber;
 }
-void SetFrom(Flight* flight, string from)
+void SetFrom(Flight* flight, string& from)
 {
 	flight->From = from;
 }
-void SetPurpose(Flight* flight, string purpose)
+void SetPurpose(Flight* flight, string& purpose)
 {
 	flight->Purpose = purpose;
 }
@@ -37,8 +37,8 @@ void SetDepartureTime(Flight* flight, Time* departureTime)
 
 void SetPurposeTime(Flight* flight, Time* purposeTime)
 {
-	//TODO: const
-	int minutesInHour = 60;
+	//TODO: const Done
+	const int minutesInHour = 60;
 	if (flight->DepartureTime->Year > purposeTime->Year)
 	{
 		throw exception("Error");
@@ -77,8 +77,8 @@ int GetFlightTimeMinutes(Flight* flight)
 	Time* purposeTime = flight->PurposeTime;
 	int timeDifferenceMinutes = purposeTime->Minute - departureTime->Minute;
 	int timeDifferenceHours = purposeTime->Hour - departureTime->Hour;
-	//TODO: const
-	int minutesInHour = 60;
+	//TODO: const Done
+	const int minutesInHour = 60;
 	if (timeDifferenceMinutes < 0)
 	{
 		timeDifferenceMinutes += minutesInHour;

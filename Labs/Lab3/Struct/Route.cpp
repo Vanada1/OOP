@@ -1,5 +1,6 @@
 #include "Route.h"
 #include "../../General Files/Read.h"
+#include "../ReadPositiveNumber.h"
 
 using namespace std;
 
@@ -22,79 +23,18 @@ void DemoRoute()
 	{
 		WriteRouteToConsole(routes[foundIndex]);
 	}
-	//TODO: Зачем тут этот код?
-	/*for (int i = 0; i < COUNTELEMENTS; i++)
-	{
-		WriteRouteToConsole(routes[i]);
-	}*/
 }
 
 void ReadRouteFromConsole(Route& route)
 {
-	//TODO: Дубль
-	while (true)
-	{
-		cout << "Enter route number: ";
-		route.RouteNumber = Read<int>();
-		cout << endl;
-		if (route.RouteNumber < 0)
-		{
-			cout<< "Route number cannot be negative"
-				<< ", try again" << endl;
-		}
-		else
-		{
-			break;
-		}
-	}
-	//TODO: Дубль
-	while (true)
-	{
-		cout << "Enter duration in mitutes: ";
-		route.DurationInMitutes = Read<int>();
-		cout << endl;
-		if (route.DurationInMitutes < 0)
-		{
-			cout << "Duration in mitutes cannot be negative"
-				<< ", try again" << endl;
-		}
-		else
-		{
-			break;
-		}
-	}//TODO: Дубль
-	
-	while (true)
-	{
-		cout << "Enter frequency in mitutes: ";
-		route.FrequencyInMitutes = Read<int>();
-		cout << endl;
-		if (route.FrequencyInMitutes < 0)
-		{
-			cout << "Frequency in mitutes cannot be negative"
-				<< ", try again" << endl;
-		}
-		else
-		{
-			break;
-		}
-	}
-	//TODO: Дубль
-	while (true)
-	{
-		cout << "Enter route number: ";
-		route.NumberStops = Read<int>();
-		cout << endl;
-		if (route.NumberStops <= 0)
-		{
-			cout << "Route number cannot be negative or equal to 0"
-				<< ", try again" << endl;
-		}
-		else
-		{
-			break;
-		}
-	}
+	//TODO: Дубль Done
+	route.RouteNumber = ReadPositiveNumber();
+	//TODO: Дубль Done
+	route.DurationInMitutes = ReadPositiveNumber();
+	//TODO: Дубль Done
+	route.FrequencyInMitutes = ReadPositiveNumber();
+	//TODO: Дубль Done
+	route.NumberStops = ReadPositiveNumber();
 
 	route.Stops = new string[route.NumberStops];
 	for (int i = 0; i < route.NumberStops; i++)

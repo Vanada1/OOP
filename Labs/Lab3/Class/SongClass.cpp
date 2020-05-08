@@ -1,9 +1,10 @@
 #include"SongClass.h"
 #include<exception>
+#include <iostream>
 
 using namespace std;
 
-Song::Song(string songTitle, int durationInSeconds, Genre songGenre)
+Song::Song(string& songTitle, int durationInSeconds, Genre songGenre)
 {
 	this->SetSongTitle(songTitle);
 	this->SetDuration(durationInSeconds);
@@ -15,7 +16,7 @@ Song::~Song()
 	delete this;
 }
 
-void Song::SetSongTitle(string songTitle)
+void Song::SetSongTitle(string& songTitle)
 {
 	this->_songTitle = songTitle;
 }
@@ -47,4 +48,11 @@ int Song::GetDuration()
 Genre Song::GetSongGenre()
 {
 	return this->_songGenre;
+}
+
+void Song::WriteSong()
+{
+	cout << "Title: " << this->GetSongTitle() << '\t'
+		<< "Duration: " << this->GetDuration()
+		<< '\t' << "Genre: " << this->GetSongGenre() << endl;
 }

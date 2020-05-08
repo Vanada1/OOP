@@ -3,8 +3,8 @@
 
 using namespace std;
 
-//TODO: строку по ссылке
-Band* CreateBand(string nameBand, string description, 
+//TODO: строку по ссылке Done
+Band* CreateBand(string& nameBand, string& description, 
 	int albumsCount, Album** albums)
 {
 	Band* newBand = new Band;
@@ -14,22 +14,22 @@ Band* CreateBand(string nameBand, string description,
 	return newBand;
 }
 
-//TODO: строку по ссылке
-void SetNameBand(Band* band, string nameBand)
+//TODO: строку по ссылке Done
+void SetNameBand(Band* band, string& nameBand)
 {
 	band->NameBand = nameBand;
 }
 
-//TODO: строку по ссылке
-void SetDescription(Band* band, string description)
+//TODO: строку по ссылке Done
+void SetDescription(Band* band, string& description)
 {
 	band->Description = description;
 }
 
 void SetAlbums(Band* band, int albumsCount, Album** albums)
 {
-	//TODO: сравнение с nullptr лучше писать явно
-	if (band->Albums)
+	//TODO: сравнение с nullptr лучше писать явно Done
+	if (band->Albums != nullptr)
 	{
 		delete[] band->Albums;
 	}
@@ -38,7 +38,7 @@ void SetAlbums(Band* band, int albumsCount, Album** albums)
 }
 
 //TODO: строку по ссылке
-Song* FindSong(Band* band, string songTitle)
+Song* FindSong(Band* band, string& songTitle)
 {
 	for (int i = 0; i < band->AlbumsCount; i++)
 	{
@@ -59,8 +59,12 @@ Album* FindAlbum(Band* band, Song* song)
 	{
 		for (int j = 0; j < band->Albums[i]->SongsCount; j++)
 		{
-			//TODO: Тут будет сравнение адресов - это правильно или правильнее будет сравнивать хранящиеся значения?
-			if (band->Albums[i]->Songs[j] == song)
+			//TODO: Тут будет сравнение адресов - это правильно или правильнее будет сравнивать хранящиеся значения? Done
+			if (band->Albums[i]->Songs[j]->SongTitle == song->SongTitle
+				&& band->Albums[i]->Songs[j]->SongGenre ==
+				song->SongGenre
+				&& band->Albums[i]->Songs[j]->DurationInSeconds ==
+				song->DurationInSeconds)
 			{
 				return band->Albums[i];
 			}

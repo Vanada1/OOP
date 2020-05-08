@@ -11,11 +11,11 @@ class Band
 		Album** _albums = nullptr;
 
 	public:
-	//TODO: Строку по ссылке?
-		void SetNameBand(std::string nameBand);
-		void SetDescription(std::string description);
+	//TODO: Строку по ссылке? Done
+		void SetNameBand(std::string& nameBand);
+		void SetDescription(std::string& description);
 		void SetAlbums(int albumsCount, Album** albums);
-		Song* FindSong(std::string songTitle);
+		Song* FindSong(std::string& songTitle);
 		Album* FindAlbum(Song* song);
 		Song** GetAllSongs(int& allSongsCount);
 		Song** GetAllGenreSongs(Genre findingGenre, int& allSongsCount);
@@ -25,7 +25,7 @@ class Band
 		int GetAlbumsCount();
 		Album** GetAlbums();
 
-		Band(std::string nameBand, std::string description,
+		Band(std::string& nameBand, std::string& description,
 			int albumsCount, Album** albums);
 		~Band();
 };

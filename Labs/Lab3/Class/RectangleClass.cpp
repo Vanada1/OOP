@@ -22,21 +22,15 @@ void Rectangle::SetCenter(double x, double y)
 }
 
 void Rectangle::SetLength(double length)
-{//TODO: Дубль
-	if (length < 0)
-	{
-		throw exception("Lengtth cannot be less than zero");
-	}
+{//TODO: Дубль Done
+	this->CheckNegative(length);
 	this->_length = length;
 }
 
 void Rectangle::SetWidth(double width)
 {
-	//TODO: Дубль
-	if (width < 0)
-	{
-		throw exception("Width cannot be less then zero");
-	}
+	//TODO: Дубль Done
+	this->CheckNegative(width);
 	this->_width = width;
 }
 
@@ -53,5 +47,13 @@ double Rectangle::GetLength()
 double Rectangle::GetWidth()
 {
 	return this->_width;
+}
+
+void Rectangle::CheckNegative(double number)
+{
+	if (number < 0)
+	{
+		throw exception("Number cannot be less then zero");
+	}
 }
 

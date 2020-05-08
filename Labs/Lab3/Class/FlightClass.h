@@ -12,10 +12,10 @@ class Flight
 		Time* _purposeTime;
 
 	public:
-		//TODO: строку по ссылке
-		void SetFlightNumber(std::string flightNumber);
-		void SetFrom(std::string from);
-		void SetPurpose(std::string purpose);
+		//TODO: строку по ссылкеDone
+		void SetFlightNumber(std::string& flightNumber);
+		void SetFrom(std::string& from);
+		void SetPurpose(std::string& purpose);
 		void SetDepartureTime(Time* departureTime);
 		void SetPurposeTime(Time* purposeTime);
 
@@ -28,9 +28,9 @@ class Flight
 
 		int GetFlightTimeMinutes();
 
-		//TODO: строку по ссылке
-		Flight(std::string flightNumber, std::string from,
-			std::string purpose, Time* departureTime, 
+		//TODO: строку по ссылке Done
+		Flight(std::string& flightNumber, std::string& from,
+			std::string& purpose, Time* departureTime, 
 			Time* purposeTime);
 		~Flight()
 		{

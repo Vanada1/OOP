@@ -13,28 +13,42 @@ void DemoFlightWithTimeClass()
 	Flight* flights[COUNT];
 	Time* departureTime = new Time(2020, 12, 30, 12, 40);
 	Time* purposeTime = new Time(2021, 1, 1, 16, 30);
-	flights[0] = new Flight("A201", "Moscow", "Tomsk", departureTime,
+	string flightNumber = "A201";
+	string from = "Moscow";
+	string purpose = "Tomsk";
+	flights[0] = new Flight(flightNumber, from, purpose, departureTime,
 		purposeTime);
 
-
+	flightNumber = "A323";
+	from = "Tomsk";
+	purpose = "Moscow";
 	departureTime = new Time(2020, 1, 23, 12, 0);
 	purposeTime = new Time(2020, 1, 23, 16, 0);
-	flights[1] = new Flight("A323", "Tomsk", "Moscow", departureTime,
+	flights[1] = new Flight(flightNumber, from, purpose, departureTime,
 		purposeTime);
 
+	flightNumber = "S588";
+	from = "Kemerovo";
+	purpose = "Moscow";
 	departureTime = new Time(2020, 3, 2, 9, 30);
 	purposeTime = new Time(2020, 3, 2, 12, 30);
-	flights[2] = new Flight("S588", "Kemerovo", "Moscow", departureTime,
+	flights[2] = new Flight(flightNumber, from, purpose, departureTime,
 		purposeTime);
 
+	flightNumber = "G023";
+	from = "Moscow";
+	purpose = "Kemerovo";
 	departureTime = new Time(2020, 3, 2, 9, 30);
 	purposeTime = new Time(2020, 3, 2, 12, 30);
-	flights[3] = new Flight("G023", "Moscow", "Kemerovo", departureTime,
+	flights[3] = new Flight(flightNumber, from, purpose, departureTime,
 		purposeTime);
 
+	flightNumber = "MA404";
+	from = "Kemerovo";
+	purpose = "Tomsk";
 	departureTime = new Time(2020, 6, 12, 3, 0);
 	purposeTime = new Time(2020, 6, 12, 4, 0);
-	flights[4] = new Flight("MA404", "Kemerovo", "Tomsk", departureTime,
+	flights[4] = new Flight(flightNumber, from, purpose, departureTime,
 		purposeTime);
 
 	for (int i = 0; i < COUNT; i++)
@@ -75,69 +89,97 @@ void DemoRecangleWithPointClass()
 			<< "\tLength = " << rectangles[i]->GetLength()
 			<< "\tWidth = " << rectangles[i]->GetWidth() << endl;
 	}
-	//TODO: RSDN
-	double Xcenter = 0.0;
-	double Ycenter = 0.0;
+	//TODO: RSDN Done
+	double xCenter = 0.0;
+	double yCenter = 0.0;
 	for (int i = 0; i < COUNT; i++)
 	{
-		Xcenter += rectangles[i]->GetCenter()->GetX();
-		Ycenter += rectangles[i]->GetCenter()->GetY();
+		xCenter += rectangles[i]->GetCenter()->GetX();
+		yCenter += rectangles[i]->GetCenter()->GetY();
 	}
 
-	Xcenter /= COUNT;
-	Ycenter /= COUNT;
-	cout << "Xcenter = " << Xcenter << "\tYcenter = " << Ycenter << endl;
+	xCenter /= COUNT;
+	yCenter /= COUNT;
+	cout << "Xcenter = " << xCenter << "\tYcenter = " << yCenter << endl;
 }
 
 void DemoBandClass()
-{//TODO: const
-	int songCount = 4;
-	int albumsCount = 3;
+{//TODO: const Done
+	const int songCount = 4;
+	const int albumsCount = 3;
 
 	Song** songs1 = new Song * [songCount];
-	songs1[0] = new Song("first", 1, Rock);
-	songs1[1] = new Song("second", 2, Pop);
-	songs1[2] = new Song("third", 3, HipHop);
-	songs1[3] = new Song("fourth", 4, Jazz);
+	string nameSong1 = "first";
+	string nameSong2 = "second";
+	string nameSong3 = "third";
+	string nameSong4 = "fourth";
+	songs1[0] = new Song(nameSong1, 1, Rock);
+	songs1[1] = new Song(nameSong2, 2, Pop);
+	songs1[2] = new Song(nameSong3, 3, HipHop);
+	songs1[3] = new Song(nameSong4, 4, Jazz);
 
 	Song** songs2 = new Song * [songCount];
-	songs2[0] = new Song("One", 1, Jazz);
-	songs2[1] = new Song("Two", 2, Pop);
-	songs2[2] = new Song("Three", 3, HipHop);
-	songs2[3] = new Song("Four", 4, Jazz);
+	nameSong1 = "One";
+	nameSong2 = "Two";
+	nameSong3 = "Three";
+	nameSong4 = "Four";
+	songs2[0] = new Song(nameSong1, 1, Jazz);
+	songs2[1] = new Song(nameSong2, 2, Pop);
+	songs2[2] = new Song(nameSong3, 3, HipHop);
+	songs2[3] = new Song(nameSong4, 4, Jazz);
 
 	Song** songs3 = new Song * [songCount];
-	songs3[0] = new Song("Song 1", 1, HipHop);
-	songs3[1] = new Song("Song 2", 2, HipHop);
-	songs3[2] = new Song("Song 3", 3, HipHop);
-	songs3[3] = new Song("Song 4", 4, HipHop);
+	nameSong1 = "Song 1";
+	nameSong2 = "Song 2";
+	nameSong3 = "Song 3";
+	nameSong4 = "Song 4";
+	songs3[0] = new Song(nameSong1, 1, HipHop);
+	songs3[1] = new Song(nameSong2, 2, HipHop);
+	songs3[2] = new Song(nameSong3, 3, HipHop);
+	songs3[3] = new Song(nameSong4, 4, HipHop);
 
 	Album** albums = new Album * [albumsCount];
-	albums[0] = new Album("First Album", 1990, songCount, songs1);
-	albums[1] = new Album("Second Album", 1999, songCount, songs2);
-	albums[2] = new Album("Third Album", 2010, songCount, songs3);
+	string nameAlbum1 = "First Album";
+	string nameAlbum2 = "Second Album";
+	string nameAlbum3 = "Third Album";
+	albums[0] = new Album(nameAlbum1, 1990, songCount, songs1);
+	albums[1] = new Album(nameAlbum2, 1999, songCount, songs2);
+	albums[2] = new Album(nameAlbum3, 2010, songCount, songs3);
 
-	Band* band = new Band("Forever", "Forever young", albumsCount, albums);
+	string nameBand = "Forever";
+	string description = "Forever young";
+	Band* band = new Band(nameBand, description, albumsCount, albums);
 
-	Song* foundSong = band->FindSong("Song 1");
-	cout << "Title: " << foundSong->GetSongTitle() << '\t' << "Duration: "
-		<< foundSong->GetDuration()
-		<< '\t' << "Genre: " << foundSong->GetSongGenre() << endl << endl;
+	string foundSongName = "Song 1";
+	Song* foundSong = band->FindSong(foundSongName);
+	if (foundSong != nullptr)
+	{
+		foundSong->WriteSong();
+	}
+	else
+	{
+		cout << "Not found" << endl;
+	}
 
 	Album* foundAlbum = band->FindAlbum(songs2[2]);
-	cout << "Album title: " << foundAlbum->GetAlbumTitle() << '\t'
-		<< "Issue Year: " << foundAlbum->GetIssueYear()
-		<< '\t' << "Songs Count: " << foundAlbum->GetSongsCount() 
-		<< endl << endl;
-
+	if (foundAlbum != nullptr)
+	{
+		cout << "Album title: " << foundAlbum->GetAlbumTitle() << '\t'
+			<< "Issue Year: " << foundAlbum->GetIssueYear()
+			<< '\t' << "Songs Count: " << foundAlbum->GetSongsCount()
+			<< endl << endl;
+	}
+	else
+	{
+		cout << "Not found" << endl;
+	}
+	
 	int allSongsCount;
 	Song** allSongs = band->GetAllSongs(allSongsCount);
 	for (int i = 0; i < allSongsCount; i++)
 	{
-		//TODO: Дубль
-		cout << "Title: " << allSongs[i]->GetSongTitle() << '\t'
-			<< "Duration: " << allSongs[i]->GetDuration()
-			<< '\t' << "Genre: " << allSongs[i]->GetSongGenre() << endl;
+		//TODO: Дубль Done
+		allSongs[i]->WriteSong();
 	}
 	delete[] allSongs;
 	cout << endl;
@@ -146,10 +188,8 @@ void DemoBandClass()
 	Song** allSongGenre = band->GetAllGenreSongs(HipHop, allSongsCountGenre);
 	for (int i = 0; i < allSongsCountGenre; i++)
 	{
-		//TODO: Дубль
-		cout << "Title: " << allSongGenre[i]->GetSongTitle() << '\t'
-			<< "Duration: " << allSongGenre[i]->GetDuration()
-			<< '\t' << "Genre: " << allSongGenre[i]->GetSongGenre() << endl;
+		//TODO: Done
+		allSongGenre[i]->WriteSong();
 	}
 	delete[] allSongGenre;
 	delete[] songs1;

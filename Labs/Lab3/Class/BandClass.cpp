@@ -2,7 +2,7 @@
 
 using namespace std;
 
-Band::Band(string nameBand, string description,
+Band::Band(string& nameBand, string& description,
 	int albumsCount, Album** albums)
 {
 	this->SetNameBand(nameBand);
@@ -16,12 +16,12 @@ Band::~Band()
 	delete this;
 }
 
-void Band::SetNameBand(string nameBand)
+void Band::SetNameBand(string& nameBand)
 {
 	this->_nameBand = nameBand;
 }
 
-void Band::SetDescription(string description)
+void Band::SetDescription(string& description)
 {
 	this->_description = description;
 }
@@ -29,7 +29,7 @@ void Band::SetDescription(string description)
 void Band::SetAlbums(int albumsCount, Album** albums)
 {
 	//TODO: сравнение с nullptr лучше писать явно
-	if (this->_albums)
+	if (this->_albums != nullptr)
 	{
 		delete[] this->_albums;
 	}
@@ -57,7 +57,7 @@ Album** Band::GetAlbums()
 	return this->_albums;
 }
 
-Song* Band::FindSong(string songTitle)
+Song* Band::FindSong(string& songTitle)
 {
 	for (int i = 0; i < this->GetAlbumsCount(); i++)
 	{
@@ -81,7 +81,12 @@ Album* Band::FindAlbum(Song* song)
 		Album* tempAlbum = this->GetAlbums()[i];
 		for (int j = 0; j < tempAlbum->GetSongsCount(); j++)
 		{
-			if (tempAlbum->GetSongs()[j] == song)
+			if (tempAlbum->GetSongs()[j]->GetSongTitle() ==
+				song->GetSongTitle() 
+				&& tempAlbum->GetSongs()[j]->GetSongGenre() ==
+				song->GetSongGenre()
+				&& tempAlbum->GetSongs()[j]->GetDuration() ==
+				song->GetDuration())
 			{
 				return tempAlbum;
 			}

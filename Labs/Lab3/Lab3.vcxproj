@@ -156,6 +156,7 @@
     <ClCompile Include="Class\SongClass.cpp" />
     <ClCompile Include="Class\TimeClass.cpp" />
     <ClCompile Include="Lab3.cpp" />
+    <ClCompile Include="ReadPositiveNumber.cpp" />
     <ClCompile Include="Struct\Album.cpp" />
     <ClCompile Include="Struct\Band.cpp" />
     <ClCompile Include="Struct\Book.cpp" />
@@ -178,6 +179,7 @@
     <ClInclude Include="Class\SongClass.h" />
     <ClInclude Include="Class\TimeClass.h" />
     <ClInclude Include="Genre.h" />
+    <ClInclude Include="ReadPositiveNumber.h" />
     <ClInclude Include="Struct\Album.h" />
     <ClInclude Include="Struct\Band.h" />
     <ClInclude Include="Struct\Book.h" />

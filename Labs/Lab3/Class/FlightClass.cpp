@@ -3,8 +3,8 @@
 
 using namespace std;
 
-Flight::Flight(string flightNumber, string from,
-	string purpose, Time* departureTime, Time* purposeTime)
+Flight::Flight(string& flightNumber, string& from,
+	string& purpose, Time* departureTime, Time* purposeTime)
 {
 	this->SetFlightNumber(flightNumber);
 	this->SetFrom(from);
@@ -13,17 +13,17 @@ Flight::Flight(string flightNumber, string from,
 	this->SetPurposeTime(purposeTime);
 }
 
-void Flight::SetFlightNumber(string flightNumber)
+void Flight::SetFlightNumber(string& flightNumber)
 {
 	this->_flightNumber = flightNumber;
 }
 
-void Flight::SetFrom(string from)
+void Flight::SetFrom(string& from)
 {
 	this->_from = from;
 }
 
-void Flight::SetPurpose(string purpose)
+void Flight::SetPurpose(string& purpose)
 {
 	this->_purpose = purpose;
 }

@@ -96,6 +96,9 @@
     <ClCompile Include="Class\SongClass.cpp">
       <Filter>Source Files\Class</Filter>
     </ClCompile>
+    <ClCompile Include="ReadPositiveNumber.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\General Files\Read.h">
@@ -157,6 +160,9 @@
     </ClInclude>
     <ClInclude Include="Class\SongClass.h">
       <Filter>Header Files\Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ReadPositiveNumber.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -3,7 +3,7 @@
 
 using namespace std;
 
-Album::Album(string albumTitle, int issueYear, int songsCount,
+Album::Album(string& albumTitle, int issueYear, int songsCount,
 	Song** songs)
 {
 	this->SetAlbumTitle(albumTitle);
@@ -17,7 +17,7 @@ Album::~Album()
 	delete this;
 }
 
-void Album::SetAlbumTitle(string albumTitle)
+void Album::SetAlbumTitle(string& albumTitle)
 {
 	this->_albumTitle = albumTitle;
 }
@@ -34,7 +34,7 @@ void Album::SetIssueYear(int issueYear)
 void Album::SetSongs(int songsCount, Song** songs)
 {
 	//TODO: сравнение с nullptr лучше писать явно
-	if (this->_songs)
+	if (this->_songs != nullptr)
 	{
 		delete[] this->_songs;
 	}

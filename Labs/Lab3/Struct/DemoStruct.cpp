@@ -13,27 +13,42 @@ void DemoFlightWithTime()
 	Flight* flights[COUNT];
 	Time* departureTime = CreateTime(2020, 12, 30, 12, 40);
 	Time* purposeTime = CreateTime(2021, 1, 1, 16, 30);
-	flights[0] = CreateFlight("A201", "Moscow", "Tomsk", departureTime,
+	string flightNumber = "A201";
+	string from = "Moscow";
+	string purpose = "Tomsk";
+	flights[0] = CreateFlight(flightNumber, from, purpose, departureTime,
 		purposeTime);
 
+	flightNumber = "A323";
+	from = "Tomsk";
+	purpose = "Moscow";
 	departureTime = CreateTime(2020, 1, 23, 12, 0);
 	purposeTime = CreateTime(2020, 1, 23, 16, 0);
-	flights[1] = CreateFlight("A323", "Tomsk", "Moscow", departureTime,
+	flights[1] = CreateFlight(flightNumber, from, purpose, departureTime,
 		purposeTime);
 
+	flightNumber = "S588";
+	from = "Kemerovo";
+	purpose = "Moscow";
 	departureTime = CreateTime(2020, 3, 2, 9, 30);
 	purposeTime = CreateTime(2020, 3, 2, 12, 30);
-	flights[2] = CreateFlight("S588", "Kemerovo", "Moscow", departureTime,
+	flights[2] = CreateFlight(flightNumber, from, purpose, departureTime,
 		purposeTime);
 
+	flightNumber = "G023";
+	from = "Moscow";
+	purpose = "Kemerovo";
 	departureTime = CreateTime(2020, 3, 2, 9, 30);
 	purposeTime = CreateTime(2020, 3, 2, 12, 30);
-	flights[3] = CreateFlight("G023", "Moscow", "Kemerovo", departureTime,
+	flights[3] = CreateFlight(flightNumber, from, purpose, departureTime,
 		purposeTime);
 
+	flightNumber = "MA404";
+	from = "Kemerovo";
+	purpose = "Tomsk";
 	departureTime = CreateTime(2020, 6, 12, 3, 0);
 	purposeTime = CreateTime(2020, 6, 12, 4, 0);
-	flights[4] = CreateFlight("MA404", "Kemerovo", "Tomsk", departureTime,
+	flights[4] = CreateFlight(flightNumber, from, purpose, departureTime,
 		purposeTime);
 
 	for (int i = 0; i < COUNT; i++)
@@ -81,18 +96,18 @@ void DemoRecangleWithPoint()
 			<< "\tLength = " << rectangles[i]->Length
 			<< "\tWidth = " << rectangles[i]->Width << endl;
 	}
-	//TODO: RSDN
-	double Xcenter = 0.0;
-	double Ycenter = 0.0;
+	//TODO: RSDN(Done)
+	double xCenter = 0.0;
+	double yCenter = 0.0;
 	for (int i = 0; i < COUNT; i++)
 	{
-		Xcenter += rectangles[i]->Center->X;
-		Ycenter += rectangles[i]->Center->Y;
+		xCenter += rectangles[i]->Center->X;
+		yCenter += rectangles[i]->Center->Y;
 	}
 
-	Xcenter /= COUNT;
-	Ycenter /= COUNT;
-	cout << "Xcenter = " << Xcenter << "\tYcenter = " << Ycenter << endl;
+	xCenter /= COUNT;
+	yCenter /= COUNT;
+	cout << "X center = " << xCenter << "\tY center = " << yCenter << endl;
 	for (int i = 0; i < COUNT; i++)
 	{
 		delete rectangles[i]->Center;
@@ -102,53 +117,81 @@ void DemoRecangleWithPoint()
 
 void DemoBand()
 {
-	//TODO: const
-	int songCount = 4;
-	int albumsCount = 3;
+	//TODO: const Done
+	const int songCount = 4;
+	const int albumsCount = 3;
 
 	Song** songs1 = new Song * [songCount];
-	songs1[0] = CreateSong("first", 1, Rock);
-	songs1[1] = CreateSong("second", 2, Pop);
-	songs1[2] = CreateSong("third", 3, HipHop);
-	songs1[3] = CreateSong("fourth", 4, Jazz);
+	string nameSong1 = "first";
+	string nameSong2 = "second";
+	string nameSong3 = "third";
+	string nameSong4 = "fourth";
+	songs1[0] = CreateSong(nameSong1, 1, Rock);
+	songs1[1] = CreateSong(nameSong2, 2, Pop);
+	songs1[2] = CreateSong(nameSong3, 3, HipHop);
+	songs1[3] = CreateSong(nameSong4, 4, Jazz);
 
 	Song** songs2 = new Song * [songCount];
-	songs2[0] = CreateSong("One", 1, Jazz);
-	songs2[1] = CreateSong("Two", 2, Pop);
-	songs2[2] = CreateSong("Three", 3, HipHop);
-	songs2[3] = CreateSong("Four", 4, Jazz);
+	nameSong1 = "One";
+	nameSong2 = "Two";
+	nameSong3 = "Three";
+	nameSong4 = "Four";
+	songs2[0] = CreateSong(nameSong1, 1, Jazz);
+	songs2[1] = CreateSong(nameSong2, 2, Pop);
+	songs2[2] = CreateSong(nameSong3, 3, HipHop);
+	songs2[3] = CreateSong(nameSong4, 4, Jazz);
 
 	Song** songs3 = new Song * [songCount];
-	songs3[0] = CreateSong("Song 1", 1, HipHop);
-	songs3[1] = CreateSong("Song 2", 2, HipHop);
-	songs3[2] = CreateSong("Song 3", 3, HipHop);
-	songs3[3] = CreateSong("Song 4", 4, HipHop);
+	nameSong1 = "Song 1";
+	nameSong2 = "Song 2";
+	nameSong3 = "Song 3";
+	nameSong4 = "Song 4";
+	songs3[0] = CreateSong(nameSong1, 1, HipHop);
+	songs3[1] = CreateSong(nameSong2, 2, HipHop);
+	songs3[2] = CreateSong(nameSong3, 3, HipHop);
+	songs3[3] = CreateSong(nameSong4, 4, HipHop);
 
 	Album** albums = new Album * [albumsCount];
-	albums[0] = CreateAlbum("First Album", 1990, songCount, songs1);
-	albums[1] = CreateAlbum("Second Album", 1999, songCount, songs2);
-	albums[2] = CreateAlbum("Third Album", 2010, songCount, songs3);
+	string nameAlbum1 = "First Album";
+	string nameAlbum2 = "Second Album";
+	string nameAlbum3 = "Third Album";
+	albums[0] = CreateAlbum(nameAlbum1, 1990, songCount, songs1);
+	albums[1] = CreateAlbum(nameAlbum2, 1999, songCount, songs2);
+	albums[2] = CreateAlbum(nameAlbum3, 2010, songCount, songs3);
 
-	Band* band = CreateBand("Forever", "Forever young", albumsCount, albums);
-
-	Song* foundSong = FindSong(band, "Song 1");
-	cout << "Title: " << foundSong->SongTitle << '\t' << "Duration: "
-		<< foundSong->DurationInSeconds
-		<< '\t' << "Genre: " << foundSong->SongGenre << endl << endl;
+	string nameBand = "Forever";
+	string description = "Forever young";
+	Band* band = CreateBand(nameBand, description, albumsCount, albums);
+	
+	string foundSongName = "Song 1";
+	Song* foundSong = FindSong(band, foundSongName);
+	if (foundSong != nullptr)
+	{
+		WriteSong(foundSong);
+	}
+	else
+	{
+		cout << "Not found" << endl;
+	}
 
 	Album* foundAlbum = FindAlbum(band, songs2[2]);
-	cout << "Album title: " << foundAlbum->AlbumTitle << '\t'
-		<< "Issue Year: " << foundAlbum->IssueYear
-		<< '\t' << "Songs Count: " << foundAlbum->SongsCount << endl << endl;
+	if (foundAlbum != nullptr)
+	{
+		cout << "Album title: " << foundAlbum->AlbumTitle << '\t'
+				<< "Issue Year: " << foundAlbum->IssueYear
+				<< '\t' << "Songs Count: " << foundAlbum->SongsCount << endl << endl;
+	}
+	else
+	{
+		cout << "Not found" << endl;
+	}
 
 	int allSongsCount;
 	Song** allSongs = GetAllSongs(band, allSongsCount);
 	for (int i = 0; i < allSongsCount; i++)
 	{
-		//TODO: Дубль
-		cout << "Title: " << allSongs[i]->SongTitle << '\t'
-			<< "Duration: " << allSongs[i]->DurationInSeconds
-			<< '\t' << "Genre: " << allSongs[i]->SongGenre << endl;
+		//TODO: Дубль Done
+		WriteSong(allSongs[i]);
 	}
 	cout << endl;
 
@@ -156,8 +199,7 @@ void DemoBand()
 	Song** allSongGenre = GetAllGenreSongs(band, HipHop, allSongsCountGenre);
 	for (int i = 0; i < allSongsCountGenre; i++)
 	{
-		cout << "Title: " << allSongGenre[i]->SongTitle << '\t'
-			<< "Duration: " << allSongGenre[i]->DurationInSeconds
-			<< '\t' << "Genre: " << allSongGenre[i]->SongGenre << endl;
+		//TODO: Дубль Done
+		WriteSong(allSongGenre[i]);
 	}
 }

@@ -21,20 +21,22 @@ void SetCenter(Rectangle* rectangle, double x, double y)
 
 void SetLength(Rectangle* rectangle, double length)
 {
-	//TODO: Дубль
-	if (length < 0)
-	{
-		throw exception("Lengtth cannot be less than zero");
-	}
+	//TODO: Дубль Done
+	CheckNegative(length);
 	rectangle->Length = length;
 }
 
 void SetWidth(Rectangle* rectangle, double width)
 {
-	//TODO: Дубль
-	if (width < 0)
-	{
-		throw exception("Width cannot be less then zero");
-	}
+	//TODO: Дубль Done
+	CheckNegative(width);
 	rectangle->Width = width;
+}
+
+void CheckNegative(double number)
+{
+	if (number < 0)
+	{
+		throw exception("Number cannot be less then zero");
+	}
 }

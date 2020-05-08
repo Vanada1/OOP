@@ -10,12 +10,12 @@ struct Band
 	Album** Albums = nullptr;
 };
 
-Band* CreateBand(std::string nameBand, std::string description,
+Band* CreateBand(std::string& nameBand, std::string& description,
 	int albumsCount, Album** albums);
-void SetNameBand(Band* band, std::string nameBand);
-void SetDescription(Band* band, std::string description);
+void SetNameBand(Band* band, std::string& nameBand);
+void SetDescription(Band* band, std::string& description);
 void SetAlbums(Band* band, int albumsCount, Album** albums);
-Song* FindSong(Band* band, std::string songTitle);
+Song* FindSong(Band* band, std::string& songTitle);
 Album* FindAlbum(Band* band, Song* song);
 Song** GetAllSongs(Band* band, int& allSongsCount);
 Song** GetAllGenreSongs(Band* band, Genre findingGenre, int& allSongsCount);

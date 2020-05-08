@@ -10,8 +10,8 @@ struct Album
 	Song** Songs = nullptr;
 };
 
-Album* CreateAlbum(std::string albumTitle, int issueYear, int songsCount, 
+Album* CreateAlbum(std::string& albumTitle, int issueYear, int songsCount, 
 	Song** songs);
-void SetAlbumTitle(Album* album, std::string albumTitle);
+void SetAlbumTitle(Album* album, std::string& albumTitle);
 void SetIssueYear(Album* album, int issueYear);
 void SetSongs(Album* album, int songsCount, Song** songs);

@@ -1,6 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include "Book.h"
 #include "../../General Files/Read.h"
+#include "../ReadPositiveNumber.h"
 #include <iostream>
 #include <ctime>
 #include <exception>
@@ -26,11 +27,6 @@ void DemoBook()
 	{
 		WriteBookToConsole(books[foundIndex]);
 	}
-	//TODO: Зачем тут этот код?
-	/*for (int i = 0; i < COUNTELEMENTS; i++)
-	{
-		WriteBookToConsole(books[i]);
-	}*/
 	for (int i = 0; i < COUNT; i++)
 	{
 		delete[] books[i].Authors;
@@ -62,39 +58,11 @@ void ReadBookFromConsole(Book& book)
 			break;
 		}
 	}
-	//TODO: Дубль
-	while (true)
-	{
-		cout << "Enter number pages: ";
-		book.NumberPages = Read<int>();
-		cout << endl;
-		if (book.NumberPages <= 0)
-		{
-			cout << "Number pages cannot be negative or equal to 0"
-				<< ", try again" << endl;
-		}
-		else
-		{
-			break;
-		}
-	}
-	//TODO: Дубль
-	while (true)
-	{
-		cout << "Enter number authors: ";
-		book.NumberAuthors = Read<int>();
-		cout << endl;
-		if (book.NumberAuthors <= 0)
-		{
-			cout << "Number pages cannot be negative or equal to 0"
-				<< ", try again" << endl;
-		}
-		else
-		{
-			break;
-		}
-	}
-
+	//TODO: Дубль Done
+	book.NumberPages = ReadPositiveNumber();
+	//TODO: Дубль Done
+	book.NumberAuthors = ReadPositiveNumber();
+	
 	book.Authors = new string[book.NumberAuthors];
 	for (int i = 0; i < book.NumberAuthors; i++)
 	{

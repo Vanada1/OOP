@@ -3,7 +3,7 @@
 
 using namespace std;
 //TODO: строку по ссылке
-Album* CreateAlbum(string albumTitle, int issueYear, int songsCount,
+Album* CreateAlbum(string& albumTitle, int issueYear, int songsCount,
 	Song** songs)
 {
 	Album* newAlbum = new Album();
@@ -13,7 +13,7 @@ Album* CreateAlbum(string albumTitle, int issueYear, int songsCount,
 	return newAlbum;
 }
 //TODO: строку по ссылке
-void SetAlbumTitle(Album* album, string albumTitle)
+void SetAlbumTitle(Album* album, string& albumTitle)
 {
 	album->AlbumTitle = albumTitle;
 }
@@ -29,8 +29,8 @@ void SetIssueYear(Album* album, int issueYear)
 
 void SetSongs(Album* album, int songsCount, Song** songs)
 {
-	//TODO: сравнение с nullptr лучше писать явно
-	if (album->Songs)
+	//TODO: сравнение с nullptr лучше писать явно Done
+	if (album->Songs != nullptr)
 	{
 		delete[] album->Songs;
 	}

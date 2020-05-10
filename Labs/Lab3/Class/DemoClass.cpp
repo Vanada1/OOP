@@ -71,6 +71,7 @@ void DemoFlightWithTimeClass()
 		<< '-' << flights[0]->GetPurpose() << "\tFlight time: "
 		<< timeDifference / minutesInHour << "h "
 		<< timeDifference % minutesInHour << "min" << endl;
+	//TODO: освобождение памяти из-под Time?
 }
 
 void DemoRecangleWithPointClass()
@@ -89,7 +90,7 @@ void DemoRecangleWithPointClass()
 			<< "\tLength = " << rectangles[i]->GetLength()
 			<< "\tWidth = " << rectangles[i]->GetWidth() << endl;
 	}
-	//TODO: RSDN Done
+
 	double xCenter = 0.0;
 	double yCenter = 0.0;
 	for (int i = 0; i < COUNT; i++)
@@ -104,7 +105,7 @@ void DemoRecangleWithPointClass()
 }
 
 void DemoBandClass()
-{//TODO: const Done
+{
 	const int songCount = 4;
 	const int albumsCount = 3;
 
@@ -178,7 +179,6 @@ void DemoBandClass()
 	Song** allSongs = band->GetAllSongs(allSongsCount);
 	for (int i = 0; i < allSongsCount; i++)
 	{
-		//TODO: Дубль Done
 		allSongs[i]->WriteSong();
 	}
 	delete[] allSongs;
@@ -188,7 +188,6 @@ void DemoBandClass()
 	Song** allSongGenre = band->GetAllGenreSongs(HipHop, allSongsCountGenre);
 	for (int i = 0; i < allSongsCountGenre; i++)
 	{
-		//TODO: Done
 		allSongGenre[i]->WriteSong();
 	}
 	delete[] allSongGenre;

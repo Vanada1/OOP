@@ -33,7 +33,7 @@ void Album::SetIssueYear(int issueYear)
 
 void Album::SetSongs(int songsCount, Song** songs)
 {
-	//TODO: сравнение с nullptr лучше писать явно
+	//TODO: Мне автодополнение посказывает, что можно без этой проверки вызвать, предлагаю сделать эксперимент и вызвать, если всё ОК - убираем проверку
 	if (this->_songs != nullptr)
 	{
 		delete[] this->_songs;

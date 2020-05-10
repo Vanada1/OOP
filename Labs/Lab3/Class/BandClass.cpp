@@ -28,7 +28,7 @@ void Band::SetDescription(string& description)
 
 void Band::SetAlbums(int albumsCount, Album** albums)
 {
-	//TODO: сравнение с nullptr лучше писать явно
+	//TODO: Мне автодополнение посказывает, что можно без этой проверки вызвать, предлагаю сделать эксперимент и вызвать, если всё ОК - убираем проверку
 	if (this->_albums != nullptr)
 	{
 		delete[] this->_albums;

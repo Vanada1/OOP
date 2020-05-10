@@ -11,7 +11,6 @@ class Band
 		Album** _albums = nullptr;
 
 	public:
-	//TODO: Строку по ссылке? Done
 		void SetNameBand(std::string& nameBand);
 		void SetDescription(std::string& description);
 		void SetAlbums(int albumsCount, Album** albums);

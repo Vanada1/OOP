@@ -3,7 +3,6 @@
 
 using namespace std;
 
-//TODO: строку по ссылке Done
 Song* CreateSong(string& songTitle, int durationInSeconds, Genre songGenre)
 {
 	Song* newSong = new Song();
@@ -12,7 +11,7 @@ Song* CreateSong(string& songTitle, int durationInSeconds, Genre songGenre)
 	SetGenre(newSong, songGenre);
 	return newSong;
 }
-//TODO: строку по ссылке Done
+
 void SetSongTitle(Song* song, string& songTitle)
 {
 	song->SongTitle = songTitle;
@@ -30,6 +29,7 @@ void SetGenre(Song* song, Genre genre)
 
 void WriteSong(Song* song)
 {
+	//TODO: тоже замечание про консоль, что и в классе
 	cout << "Title: " << song->SongTitle << '\t'
 		<< "Duration: " << song->DurationInSeconds
 		<< '\t' << "Genre: " << song->SongGenre << endl;

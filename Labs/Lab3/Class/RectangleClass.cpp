@@ -22,14 +22,13 @@ void Rectangle::SetCenter(double x, double y)
 }
 
 void Rectangle::SetLength(double length)
-{//TODO: Дубль Done
+{
 	this->CheckNegative(length);
 	this->_length = length;
 }
 
 void Rectangle::SetWidth(double width)
 {
-	//TODO: Дубль Done
 	this->CheckNegative(width);
 	this->_width = width;
 }

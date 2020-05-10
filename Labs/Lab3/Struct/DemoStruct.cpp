@@ -96,7 +96,7 @@ void DemoRecangleWithPoint()
 			<< "\tLength = " << rectangles[i]->Length
 			<< "\tWidth = " << rectangles[i]->Width << endl;
 	}
-	//TODO: RSDN(Done)
+	
 	double xCenter = 0.0;
 	double yCenter = 0.0;
 	for (int i = 0; i < COUNT; i++)
@@ -117,7 +117,6 @@ void DemoRecangleWithPoint()
 
 void DemoBand()
 {
-	//TODO: const Done
 	const int songCount = 4;
 	const int albumsCount = 3;
 
@@ -190,7 +189,6 @@ void DemoBand()
 	Song** allSongs = GetAllSongs(band, allSongsCount);
 	for (int i = 0; i < allSongsCount; i++)
 	{
-		//TODO: Дубль Done
 		WriteSong(allSongs[i]);
 	}
 	cout << endl;
@@ -199,7 +197,6 @@ void DemoBand()
 	Song** allSongGenre = GetAllGenreSongs(band, HipHop, allSongsCountGenre);
 	for (int i = 0; i < allSongsCountGenre; i++)
 	{
-		//TODO: Дубль Done
 		WriteSong(allSongGenre[i]);
 	}
 }

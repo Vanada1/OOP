@@ -58,9 +58,8 @@ void ReadBookFromConsole(Book& book)
 			break;
 		}
 	}
-	//TODO: Дубль Done
+	
 	book.NumberPages = ReadPositiveNumber();
-	//TODO: Дубль Done
 	book.NumberAuthors = ReadPositiveNumber();
 	
 	book.Authors = new string[book.NumberAuthors];

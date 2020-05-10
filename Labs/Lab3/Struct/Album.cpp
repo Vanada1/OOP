@@ -2,7 +2,7 @@
 #include <exception>
 
 using namespace std;
-//TODO: строку по ссылке
+
 Album* CreateAlbum(string& albumTitle, int issueYear, int songsCount,
 	Song** songs)
 {
@@ -12,7 +12,7 @@ Album* CreateAlbum(string& albumTitle, int issueYear, int songsCount,
 	SetSongs(newAlbum, songsCount, songs);
 	return newAlbum;
 }
-//TODO: строку по ссылке
+
 void SetAlbumTitle(Album* album, string& albumTitle)
 {
 	album->AlbumTitle = albumTitle;
@@ -29,7 +29,7 @@ void SetIssueYear(Album* album, int issueYear)
 
 void SetSongs(Album* album, int songsCount, Song** songs)
 {
-	//TODO: сравнение с nullptr лучше писать явно Done
+	//TODO: Мне автодополнение посказывает, что можно без этой проверки вызвать, предлагаю сделать эксперимент и вызвать, если всё ОК - убираем проверку
 	if (album->Songs != nullptr)
 	{
 		delete[] album->Songs;

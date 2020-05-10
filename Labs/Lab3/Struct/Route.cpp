@@ -27,13 +27,9 @@ void DemoRoute()
 
 void ReadRouteFromConsole(Route& route)
 {
-	//TODO: Дубль Done
 	route.RouteNumber = ReadPositiveNumber();
-	//TODO: Дубль Done
 	route.DurationInMitutes = ReadPositiveNumber();
-	//TODO: Дубль Done
 	route.FrequencyInMitutes = ReadPositiveNumber();
-	//TODO: Дубль Done
 	route.NumberStops = ReadPositiveNumber();
 
 	route.Stops = new string[route.NumberStops];

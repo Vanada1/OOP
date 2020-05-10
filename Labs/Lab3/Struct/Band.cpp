@@ -3,7 +3,6 @@
 
 using namespace std;
 
-//TODO: строку по ссылке Done
 Band* CreateBand(string& nameBand, string& description, 
 	int albumsCount, Album** albums)
 {
@@ -14,13 +13,11 @@ Band* CreateBand(string& nameBand, string& description,
 	return newBand;
 }
 
-//TODO: строку по ссылке Done
 void SetNameBand(Band* band, string& nameBand)
 {
 	band->NameBand = nameBand;
 }
 
-//TODO: строку по ссылке Done
 void SetDescription(Band* band, string& description)
 {
 	band->Description = description;
@@ -28,7 +25,7 @@ void SetDescription(Band* band, string& description)
 
 void SetAlbums(Band* band, int albumsCount, Album** albums)
 {
-	//TODO: сравнение с nullptr лучше писать явно Done
+	//TODO: Мне автодополнение посказывает, что можно без этой проверки вызвать, предлагаю сделать эксперимент и вызвать, если всё ОК - убираем проверку
 	if (band->Albums != nullptr)
 	{
 		delete[] band->Albums;
@@ -37,7 +34,6 @@ void SetAlbums(Band* band, int albumsCount, Album** albums)
 	band->Albums = albums;
 }
 
-//TODO: строку по ссылке
 Song* FindSong(Band* band, string& songTitle)
 {
 	for (int i = 0; i < band->AlbumsCount; i++)
@@ -59,7 +55,6 @@ Album* FindAlbum(Band* band, Song* song)
 	{
 		for (int j = 0; j < band->Albums[i]->SongsCount; j++)
 		{
-			//TODO: Тут будет сравнение адресов - это правильно или правильнее будет сравнивать хранящиеся значения? Done
 			if (band->Albums[i]->Songs[j]->SongTitle == song->SongTitle
 				&& band->Albums[i]->Songs[j]->SongGenre ==
 				song->SongGenre

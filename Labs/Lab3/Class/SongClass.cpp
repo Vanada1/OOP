@@ -52,6 +52,7 @@ Genre Song::GetSongGenre()
 
 void Song::WriteSong()
 {
+	//TODO: Не правильно вынесено, в логику класса добавлена связь с консолью. Консоли тут не должно быть.
 	cout << "Title: " << this->GetSongTitle() << '\t'
 		<< "Duration: " << this->GetDuration()
 		<< '\t' << "Genre: " << this->GetSongGenre() << endl;

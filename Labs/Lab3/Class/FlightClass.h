@@ -12,7 +12,6 @@ class Flight
 		Time* _purposeTime;
 
 	public:
-		//TODO: строку по ссылкеDone
 		void SetFlightNumber(std::string& flightNumber);
 		void SetFrom(std::string& from);
 		void SetPurpose(std::string& purpose);
@@ -28,7 +27,6 @@ class Flight
 
 		int GetFlightTimeMinutes();
 
-		//TODO: строку по ссылке Done
 		Flight(std::string& flightNumber, std::string& from,
 			std::string& purpose, Time* departureTime, 
 			Time* purposeTime);

@@ -21,14 +21,12 @@ void SetCenter(Rectangle* rectangle, double x, double y)
 
 void SetLength(Rectangle* rectangle, double length)
 {
-	//TODO: Дубль Done
 	CheckNegative(length);
 	rectangle->Length = length;
 }
 
 void SetWidth(Rectangle* rectangle, double width)
 {
-	//TODO: Дубль Done
 	CheckNegative(width);
 	rectangle->Width = width;
 }

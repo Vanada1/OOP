@@ -26,5 +26,9 @@ class Band
 
 		Band(std::string& nameBand, std::string& description,
 			int albumsCount, Album** albums);
-		~Band();
+		~Band()
+		{
+			delete[] this->_albums;
+			delete this;
+		}
 };

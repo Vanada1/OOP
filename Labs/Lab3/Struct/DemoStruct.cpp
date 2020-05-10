@@ -2,6 +2,7 @@
 #include "Flight.h"
 #include "Band.h"
 #include "Rectangle.h"
+#include "WriteSong.h"
 #include <iostream>
 
 using namespace std;
@@ -11,45 +12,45 @@ const int COUNT = 5;
 void DemoFlightWithTime()
 {
 	Flight* flights[COUNT];
-	Time* departureTime = CreateTime(2020, 12, 30, 12, 40);
-	Time* purposeTime = CreateTime(2021, 1, 1, 16, 30);
+	Time* departureTime1 = CreateTime(2020, 12, 30, 12, 40);
+	Time* purposeTime1 = CreateTime(2021, 1, 1, 16, 30);
 	string flightNumber = "A201";
 	string from = "Moscow";
 	string purpose = "Tomsk";
-	flights[0] = CreateFlight(flightNumber, from, purpose, departureTime,
-		purposeTime);
+	flights[0] = CreateFlight(flightNumber, from, purpose, departureTime1,
+		purposeTime1);
 
 	flightNumber = "A323";
 	from = "Tomsk";
 	purpose = "Moscow";
-	departureTime = CreateTime(2020, 1, 23, 12, 0);
-	purposeTime = CreateTime(2020, 1, 23, 16, 0);
-	flights[1] = CreateFlight(flightNumber, from, purpose, departureTime,
-		purposeTime);
+	Time* departureTime2 = CreateTime(2020, 1, 23, 12, 0);
+	Time* purposeTime2 = CreateTime(2020, 1, 23, 16, 0);
+	flights[1] = CreateFlight(flightNumber, from, purpose, departureTime2,
+		purposeTime2);
 
 	flightNumber = "S588";
 	from = "Kemerovo";
 	purpose = "Moscow";
-	departureTime = CreateTime(2020, 3, 2, 9, 30);
-	purposeTime = CreateTime(2020, 3, 2, 12, 30);
-	flights[2] = CreateFlight(flightNumber, from, purpose, departureTime,
-		purposeTime);
+	Time* departureTime3 = CreateTime(2020, 3, 2, 9, 30);
+	Time* purposeTime3 = CreateTime(2020, 3, 2, 12, 30);
+	flights[2] = CreateFlight(flightNumber, from, purpose, departureTime3,
+		purposeTime3);
 
 	flightNumber = "G023";
 	from = "Moscow";
 	purpose = "Kemerovo";
-	departureTime = CreateTime(2020, 3, 2, 9, 30);
-	purposeTime = CreateTime(2020, 3, 2, 12, 30);
-	flights[3] = CreateFlight(flightNumber, from, purpose, departureTime,
-		purposeTime);
+	Time* departureTime4 = CreateTime(2020, 3, 2, 9, 30);
+	Time* purposeTime4 = CreateTime(2020, 3, 2, 12, 30);
+	flights[3] = CreateFlight(flightNumber, from, purpose, departureTime4,
+		purposeTime4);
 
 	flightNumber = "MA404";
 	from = "Kemerovo";
 	purpose = "Tomsk";
-	departureTime = CreateTime(2020, 6, 12, 3, 0);
-	purposeTime = CreateTime(2020, 6, 12, 4, 0);
-	flights[4] = CreateFlight(flightNumber, from, purpose, departureTime,
-		purposeTime);
+	Time* departureTime5 = CreateTime(2020, 6, 12, 3, 0);
+	Time* purposeTime5 = CreateTime(2020, 6, 12, 4, 0);
+	flights[4] = CreateFlight(flightNumber, from, purpose, departureTime5,
+		purposeTime5);
 
 	for (int i = 0; i < COUNT; i++)
 	{
@@ -199,4 +200,21 @@ void DemoBand()
 	{
 		WriteSong(allSongGenre[i]);
 	}
+
+	for (int i = 0; i < songCount; i++)
+	{
+		delete songs1[i];
+		delete songs2[i];
+		delete songs3[i];
+	}
+	delete[] songs1;
+	delete[] songs2;
+	delete[] songs3;
+
+	for (int i = 0; i < albumsCount; i++)
+	{
+		delete albums[i];
+	}
+	delete[] albums;
+	delete band;
 }

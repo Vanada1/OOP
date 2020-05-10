@@ -11,11 +11,6 @@ Song::Song(string& songTitle, int durationInSeconds, Genre songGenre)
 	this->SetGenre(songGenre);
 }
 
-Song::~Song()
-{
-	delete this;
-}
-
 void Song::SetSongTitle(string& songTitle)
 {
 	this->_songTitle = songTitle;
@@ -48,12 +43,4 @@ int Song::GetDuration()
 Genre Song::GetSongGenre()
 {
 	return this->_songGenre;
-}
-
-void Song::WriteSong()
-{
-	//TODO: Не правильно вынесено, в логику класса добавлена связь с консолью. Консоли тут не должно быть.
-	cout << "Title: " << this->GetSongTitle() << '\t'
-		<< "Duration: " << this->GetDuration()
-		<< '\t' << "Genre: " << this->GetSongGenre() << endl;
 }

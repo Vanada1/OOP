@@ -18,8 +18,10 @@ class Song
 		int GetDuration();
 		Genre GetSongGenre();
 
-		void WriteSong();
 		Song(std::string& songTitle, int durationInSeconds,
 			Genre songGenre);
-		~Song();
+		~Song()
+		{
+			delete this;
+		}
 };

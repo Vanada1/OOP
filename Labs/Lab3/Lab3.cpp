@@ -10,10 +10,10 @@ int main()
 {
     //DemoBook();
    /* DemoRoute();*/
-   /* DemoRecangleWithPointClass();
+    /*DemoRecangleWithPointClass();
     DemoRecangleWithPoint();*/
-   /* DemoFlightWithTimeClass();
-    DemoFlightWithTime();*/
-    DemoBandClass();
-    DemoBand();
+    DemoFlightWithTimeClass();
+    DemoFlightWithTime();
+    /*DemoBandClass();
+    DemoBand();*/
 }

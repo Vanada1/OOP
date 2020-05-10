@@ -11,12 +11,6 @@ Album::Album(string& albumTitle, int issueYear, int songsCount,
 	this->SetSongs(songsCount, songs);
 }
 
-Album::~Album()
-{
-	delete[] this->_songs;
-	delete this;
-}
-
 void Album::SetAlbumTitle(string& albumTitle)
 {
 	this->_albumTitle = albumTitle;
@@ -33,11 +27,8 @@ void Album::SetIssueYear(int issueYear)
 
 void Album::SetSongs(int songsCount, Song** songs)
 {
-	//TODO: Мне автодополнение посказывает, что можно без этой проверки вызвать, предлагаю сделать эксперимент и вызвать, если всё ОК - убираем проверку
-	if (this->_songs != nullptr)
-	{
-		delete[] this->_songs;
-	}
+	//TODO: Мне автодополнение посказывает, что можно без этой проверки вызвать, предлагаю сделать эксперимент и вызвать, если всё ОК - убираем проверку Done
+	delete[] this->_songs;
 	this->_songsCount = songsCount;
 	this->_songs = songs;
 }

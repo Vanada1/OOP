@@ -2,6 +2,7 @@
 #include "FlightClass.h"
 #include "RectangleClass.h"
 #include "DemoClass.h"
+#include "WriteSongClass.h"
 #include <iostream>
 
 using namespace std;
@@ -11,45 +12,45 @@ const int COUNT = 5;
 void DemoFlightWithTimeClass()
 {
 	Flight* flights[COUNT];
-	Time* departureTime = new Time(2020, 12, 30, 12, 40);
-	Time* purposeTime = new Time(2021, 1, 1, 16, 30);
+	Time* departureTime1 = new Time(2020, 12, 30, 12, 40);
+	Time* purposeTime1 = new Time(2021, 1, 1, 16, 30);
 	string flightNumber = "A201";
 	string from = "Moscow";
 	string purpose = "Tomsk";
-	flights[0] = new Flight(flightNumber, from, purpose, departureTime,
-		purposeTime);
+	flights[0] = new Flight(flightNumber, from, purpose, departureTime1,
+		purposeTime1);
 
 	flightNumber = "A323";
 	from = "Tomsk";
 	purpose = "Moscow";
-	departureTime = new Time(2020, 1, 23, 12, 0);
-	purposeTime = new Time(2020, 1, 23, 16, 0);
-	flights[1] = new Flight(flightNumber, from, purpose, departureTime,
-		purposeTime);
+	Time* departureTime2 = new Time(2020, 1, 23, 12, 0);
+	Time* purposeTime2 = new Time(2020, 1, 23, 16, 0);
+	flights[1] = new Flight(flightNumber, from, purpose, departureTime2,
+		purposeTime2);
 
 	flightNumber = "S588";
 	from = "Kemerovo";
 	purpose = "Moscow";
-	departureTime = new Time(2020, 3, 2, 9, 30);
-	purposeTime = new Time(2020, 3, 2, 12, 30);
-	flights[2] = new Flight(flightNumber, from, purpose, departureTime,
-		purposeTime);
+	Time* departureTime3 = new Time(2020, 3, 2, 9, 30);
+	Time* purposeTime3 = new Time(2020, 3, 2, 12, 30);
+	flights[2] = new Flight(flightNumber, from, purpose, departureTime3,
+		purposeTime3);
 
 	flightNumber = "G023";
 	from = "Moscow";
 	purpose = "Kemerovo";
-	departureTime = new Time(2020, 3, 2, 9, 30);
-	purposeTime = new Time(2020, 3, 2, 12, 30);
-	flights[3] = new Flight(flightNumber, from, purpose, departureTime,
-		purposeTime);
+	Time* departureTime4 = new Time(2020, 3, 2, 9, 30);
+	Time* purposeTime4 = new Time(2020, 3, 2, 12, 30);
+	flights[3] = new Flight(flightNumber, from, purpose, departureTime4,
+		purposeTime4);
 
 	flightNumber = "MA404";
 	from = "Kemerovo";
 	purpose = "Tomsk";
-	departureTime = new Time(2020, 6, 12, 3, 0);
-	purposeTime = new Time(2020, 6, 12, 4, 0);
-	flights[4] = new Flight(flightNumber, from, purpose, departureTime,
-		purposeTime);
+	Time* departureTime5 = new Time(2020, 6, 12, 3, 0);
+	Time* purposeTime5 = new Time(2020, 6, 12, 4, 0);
+	flights[4] = new Flight(flightNumber, from, purpose, departureTime5,
+		purposeTime5);
 
 	for (int i = 0; i < COUNT; i++)
 	{
@@ -71,7 +72,7 @@ void DemoFlightWithTimeClass()
 		<< '-' << flights[0]->GetPurpose() << "\tFlight time: "
 		<< timeDifference / minutesInHour << "h "
 		<< timeDifference % minutesInHour << "min" << endl;
-	//TODO: освобождение памяти из-под Time?
+	//TODO: освобождение памяти из-под Time?(Done)
 }
 
 void DemoRecangleWithPointClass()
@@ -155,7 +156,7 @@ void DemoBandClass()
 	Song* foundSong = band->FindSong(foundSongName);
 	if (foundSong != nullptr)
 	{
-		foundSong->WriteSong();
+		WriteSong(foundSong);
 	}
 	else
 	{
@@ -179,7 +180,7 @@ void DemoBandClass()
 	Song** allSongs = band->GetAllSongs(allSongsCount);
 	for (int i = 0; i < allSongsCount; i++)
 	{
-		allSongs[i]->WriteSong();
+		WriteSong(allSongs[i]);
 	}
 	delete[] allSongs;
 	cout << endl;
@@ -188,7 +189,7 @@ void DemoBandClass()
 	Song** allSongGenre = band->GetAllGenreSongs(HipHop, allSongsCountGenre);
 	for (int i = 0; i < allSongsCountGenre; i++)
 	{
-		allSongGenre[i]->WriteSong();
+		WriteSong(allSongGenre[i]);
 	}
 	delete[] allSongGenre;
 	delete[] songs1;

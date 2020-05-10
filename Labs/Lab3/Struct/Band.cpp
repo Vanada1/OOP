@@ -25,11 +25,8 @@ void SetDescription(Band* band, string& description)
 
 void SetAlbums(Band* band, int albumsCount, Album** albums)
 {
-	//TODO: Мне автодополнение посказывает, что можно без этой проверки вызвать, предлагаю сделать эксперимент и вызвать, если всё ОК - убираем проверку
-	if (band->Albums != nullptr)
-	{
-		delete[] band->Albums;
-	}
+	//TODO: Мне автодополнение посказывает, что можно без этой проверки вызвать, предлагаю сделать эксперимент и вызвать, если всё ОК - убираем проверку Done 
+	delete[] band->Albums;
 	band->AlbumsCount = albumsCount;
 	band->Albums = albums;
 }

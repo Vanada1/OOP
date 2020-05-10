@@ -26,11 +26,3 @@ void SetGenre(Song* song, Genre genre)
 {
 	song->SongGenre = genre;
 }
-
-void WriteSong(Song* song)
-{
-	//TODO: тоже замечание про консоль, что и в классе
-	cout << "Title: " << song->SongTitle << '\t'
-		<< "Duration: " << song->DurationInSeconds
-		<< '\t' << "Genre: " << song->SongGenre << endl;
-}

@@ -10,12 +10,6 @@ Band::Band(string& nameBand, string& description,
 	this->SetAlbums(albumsCount, albums);
 }
 
-Band::~Band()
-{
-	delete[] this->_albums;
-	delete this;
-}
-
 void Band::SetNameBand(string& nameBand)
 {
 	this->_nameBand = nameBand;
@@ -28,11 +22,8 @@ void Band::SetDescription(string& description)
 
 void Band::SetAlbums(int albumsCount, Album** albums)
 {
-	//TODO: Мне автодополнение посказывает, что можно без этой проверки вызвать, предлагаю сделать эксперимент и вызвать, если всё ОК - убираем проверку
-	if (this->_albums != nullptr)
-	{
-		delete[] this->_albums;
-	}
+	//TODO: Мне автодополнение посказывает, что можно без этой проверки вызвать, предлагаю сделать эксперимент и вызвать, если всё ОК - убираем проверку Done
+	delete[] this->_albums;
 	this->_albumsCount = albumsCount;
 	this->_albums = albums;
 }

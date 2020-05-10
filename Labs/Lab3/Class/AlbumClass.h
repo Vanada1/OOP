@@ -21,5 +21,9 @@ class Album
 		Song** GetSongs();
 		Album(std::string& albumTitle, int issueYear, int songsCount,
 			Song** songs);
-		~Album();
+		~Album()
+		{
+			delete[] this->_songs;
+			delete this;
+		}
 };

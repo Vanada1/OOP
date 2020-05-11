@@ -29,7 +29,6 @@ void SetIssueYear(Album* album, int issueYear)
 
 void SetSongs(Album* album, int songsCount, Song** songs)
 {
-	//TODO: Мне автодополнение посказывает, что можно без этой проверки вызвать, предлагаю сделать эксперимент и вызвать, если всё ОК - убираем проверку Done
 	delete[] album->Songs;
 	album->SongsCount = songsCount;
 	album->Songs = songs;

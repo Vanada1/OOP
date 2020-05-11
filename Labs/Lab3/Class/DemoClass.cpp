@@ -72,7 +72,6 @@ void DemoFlightWithTimeClass()
 		<< '-' << flights[0]->GetPurpose() << "\tFlight time: "
 		<< timeDifference / minutesInHour << "h "
 		<< timeDifference % minutesInHour << "min" << endl;
-	//TODO: освобождение памяти из-под Time?(Done)
 }
 
 void DemoRecangleWithPointClass()

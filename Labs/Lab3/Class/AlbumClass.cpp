@@ -27,7 +27,6 @@ void Album::SetIssueYear(int issueYear)
 
 void Album::SetSongs(int songsCount, Song** songs)
 {
-	//TODO: Мне автодополнение посказывает, что можно без этой проверки вызвать, предлагаю сделать эксперимент и вызвать, если всё ОК - убираем проверку Done
 	delete[] this->_songs;
 	this->_songsCount = songsCount;
 	this->_songs = songs;

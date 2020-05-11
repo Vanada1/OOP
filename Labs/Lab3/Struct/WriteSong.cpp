@@ -5,7 +5,7 @@ using namespace std;
 
 void WriteSong(Song* song)
 {
-	//TODO: тоже замечание про консоль, что и в классе (Done)
+	//TODO: Не совсем правильно сделано - что мешает возвращать строку, а консоль уже использовать снаружи?
 	cout << "Title: " << song->SongTitle << '\t'
 		<< "Duration: " << song->DurationInSeconds
 		<< '\t' << "Genre: " << song->SongGenre << endl;

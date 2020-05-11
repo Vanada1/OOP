@@ -22,7 +22,6 @@ void Band::SetDescription(string& description)
 
 void Band::SetAlbums(int albumsCount, Album** albums)
 {
-	//TODO: Мне автодополнение посказывает, что можно без этой проверки вызвать, предлагаю сделать эксперимент и вызвать, если всё ОК - убираем проверку Done
 	delete[] this->_albums;
 	this->_albumsCount = albumsCount;
 	this->_albums = albums;

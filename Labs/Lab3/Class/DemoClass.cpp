@@ -155,7 +155,7 @@ void DemoBandClass()
 	Song* foundSong = band->FindSong(foundSongName);
 	if (foundSong != nullptr)
 	{
-		WriteSong(foundSong);
+		cout << WriteSong(foundSong) << endl;
 	}
 	else
 	{
@@ -179,7 +179,7 @@ void DemoBandClass()
 	Song** allSongs = band->GetAllSongs(allSongsCount);
 	for (int i = 0; i < allSongsCount; i++)
 	{
-		WriteSong(allSongs[i]);
+		cout << WriteSong(allSongs[i]) << endl;
 	}
 	delete[] allSongs;
 	cout << endl;
@@ -188,7 +188,7 @@ void DemoBandClass()
 	Song** allSongGenre = band->GetAllGenreSongs(HipHop, allSongsCountGenre);
 	for (int i = 0; i < allSongsCountGenre; i++)
 	{
-		WriteSong(allSongGenre[i]);
+		cout << WriteSong(allSongGenre[i]) << endl;
 	}
 	delete[] allSongGenre;
 	delete[] songs1;

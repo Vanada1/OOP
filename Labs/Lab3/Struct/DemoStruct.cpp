@@ -167,7 +167,7 @@ void DemoBand()
 	Song* foundSong = FindSong(band, foundSongName);
 	if (foundSong != nullptr)
 	{
-		WriteSong(foundSong);
+		cout << WriteSong(foundSong) << endl;
 	}
 	else
 	{
@@ -190,7 +190,7 @@ void DemoBand()
 	Song** allSongs = GetAllSongs(band, allSongsCount);
 	for (int i = 0; i < allSongsCount; i++)
 	{
-		WriteSong(allSongs[i]);
+		cout << WriteSong(allSongs[i]) << endl;
 	}
 	cout << endl;
 
@@ -198,7 +198,7 @@ void DemoBand()
 	Song** allSongGenre = GetAllGenreSongs(band, HipHop, allSongsCountGenre);
 	for (int i = 0; i < allSongsCountGenre; i++)
 	{
-		WriteSong(allSongGenre[i]);
+		cout << WriteSong(allSongGenre[i]) << endl;
 	}
 
 	for (int i = 0; i < songCount; i++)

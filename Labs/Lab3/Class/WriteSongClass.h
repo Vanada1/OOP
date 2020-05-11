@@ -1,4 +1,5 @@
 #pragma once
 #include "SongClass.h"
+#include <string>
 
-void WriteSong(Song* song);
+std::string WriteSong(Song* song);

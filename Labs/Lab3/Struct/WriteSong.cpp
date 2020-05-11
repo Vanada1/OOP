@@ -3,10 +3,10 @@
 
 using namespace std;
 
-void WriteSong(Song* song)
+string WriteSong(Song* song)
 {
-	//TODO: Не совсем правильно сделано - что мешает возвращать строку, а консоль уже использовать снаружи?
-	cout << "Title: " << song->SongTitle << '\t'
-		<< "Duration: " << song->DurationInSeconds
-		<< '\t' << "Genre: " << song->SongGenre << endl;
+	//TODO: Не совсем правильно сделано - что мешает возвращать строку, а консоль уже использовать снаружи? (Done)
+	return "Title: " + song->SongTitle + '\t' + "Duration: " +
+		to_string(song->DurationInSeconds) + '\t' + "Genre: " +
+		to_string(song->SongGenre);
 }

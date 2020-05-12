@@ -44,3 +44,10 @@ Genre Song::GetSongGenre()
 {
 	return this->_songGenre;
 }
+
+string Song::WriteSong()
+{
+	return "Title: " + this->GetSongTitle() + '\t' + "Duration: " +
+		to_string(this->GetDuration()) + '\t' + "Genre: " +
+		to_string(this->GetSongGenre());
+}

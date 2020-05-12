@@ -2,7 +2,6 @@
 #include "Flight.h"
 #include "Band.h"
 #include "Rectangle.h"
-#include "WriteSong.h"
 #include <iostream>
 
 using namespace std;

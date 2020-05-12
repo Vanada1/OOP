@@ -2,7 +2,6 @@
 #include "FlightClass.h"
 #include "RectangleClass.h"
 #include "DemoClass.h"
-#include "WriteSongClass.h"
 #include <iostream>
 
 using namespace std;
@@ -155,7 +154,7 @@ void DemoBandClass()
 	Song* foundSong = band->FindSong(foundSongName);
 	if (foundSong != nullptr)
 	{
-		cout << WriteSong(foundSong) << endl;
+		cout << foundSong->WriteSong() << endl;
 	}
 	else
 	{
@@ -179,7 +178,7 @@ void DemoBandClass()
 	Song** allSongs = band->GetAllSongs(allSongsCount);
 	for (int i = 0; i < allSongsCount; i++)
 	{
-		cout << WriteSong(allSongs[i]) << endl;
+		cout << allSongs[i]->WriteSong() << endl;
 	}
 	delete[] allSongs;
 	cout << endl;
@@ -188,7 +187,7 @@ void DemoBandClass()
 	Song** allSongGenre = band->GetAllGenreSongs(HipHop, allSongsCountGenre);
 	for (int i = 0; i < allSongsCountGenre; i++)
 	{
-		cout << WriteSong(allSongGenre[i]) << endl;
+		cout << allSongGenre[i]->WriteSong() << endl;
 	}
 	delete[] allSongGenre;
 	delete[] songs1;

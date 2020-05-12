@@ -18,6 +18,7 @@ class Song
 		int GetDuration();
 		Genre GetSongGenre();
 
+		std::string WriteSong();
 		Song(std::string& songTitle, int durationInSeconds,
 			Genre songGenre);
 		~Song()

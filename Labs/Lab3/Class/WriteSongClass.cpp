@@ -1,6 +1,7 @@
 #include "WriteSongClass.h"
 
 //TODO: Убрать
+#include <iostream>
 
 using namespace std;
 

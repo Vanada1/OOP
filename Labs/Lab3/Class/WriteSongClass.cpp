@@ -1,11 +1,12 @@
 #include "WriteSongClass.h"
-#include <iostream>
+
+//TODO: Убрать
 
 using namespace std;
 
+//TODO: В таком виде уже можно было бы и в класс внести, не разделяя
 string WriteSong(Song* song)
 {
-	//TODO: Не совсем правильно сделано - что мешает возвращать строку, а консоль уже использовать снаружи? (Done)
 	return "Title: " + song->GetSongTitle() + '\t' + "Duration: " +
 		to_string(song->GetDuration()) + '\t' + "Genre: " +
 		to_string(song->GetSongGenre());

@@ -1,11 +1,11 @@
 #include "WriteSong.h"
-#include <iostream>
+//TODO: ”брать
 
 using namespace std;
 
 string WriteSong(Song* song)
 {
-	//TODO: Ќе совсем правильно сделано - что мешает возвращать строку, а консоль уже использовать снаружи? (Done)
+	//TODO: ¬ таком виде уже можно было бы и в файл с методами к структуре внести, не раздел€€
 	return "Title: " + song->SongTitle + '\t' + "Duration: " +
 		to_string(song->DurationInSeconds) + '\t' + "Genre: " +
 		to_string(song->SongGenre);

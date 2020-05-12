@@ -29,7 +29,7 @@ void SetGenre(Song* song, Genre genre)
 
 string WriteSong(Song* song)
 {
-	//TODO: В таком виде уже можно было бы и в файл с методами к структуре внести, не разделяя
+	//TODO: В таком виде уже можно было бы и в файл с методами к структуре внести, не разделяя (Done)
 	return "Title: " + song->SongTitle + '\t' + "Duration: " +
 		to_string(song->DurationInSeconds) + '\t' + "Genre: " +
 		to_string(song->SongGenre);

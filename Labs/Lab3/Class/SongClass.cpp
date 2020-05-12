@@ -47,7 +47,6 @@ Genre Song::GetSongGenre()
 
 string Song::WriteSong()
 {
-	//TODO: В таком виде уже можно было бы и в класс внести, не разделяя (Done)
 	return "Title: " + this->GetSongTitle() + '\t' + "Duration: " +
 		to_string(this->GetDuration()) + '\t' + "Genre: " +
 		to_string(this->GetSongGenre());

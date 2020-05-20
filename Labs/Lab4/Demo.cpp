@@ -1,6 +1,8 @@
 #include "Demo.h"
 #include "Ring.h"
 #include "../General Files/PointClass.h"
+#include "../General Files/RectangleClass.h"
+#include "../General Files/CollisionManager.h"
 #include <exception>
 #include <iostream>
 
@@ -41,4 +43,29 @@ void DemoRing()
 	cout << "Ring count: " << Ring::GetAllRingsCount() << endl;
 	delete ring;
 	cout << "Ring count: " << Ring::GetAllRingsCount() << endl;
+}
+
+void DemoCollision()
+{
+	Rectangle* rectangle1 = new Rectangle(10, 3, 0, 0);
+	Rectangle* rectangle2 = new Rectangle(14, 7, 1, 1);
+	if (CollisionManager::IsCollision(rectangle1, rectangle2))
+	{
+		cout << "Cross" << endl;
+	}
+	else
+	{
+		cout << "Dont cross" << endl;
+	}
+
+	Ring* ring1 = new Ring(12, 10, 0, 0);
+	Ring* ring2 = new Ring(12, 10, 5, 5);
+	if (CollisionManager::IsCollision(ring1, ring2))
+	{
+		cout << "Cross" << endl;
+	}
+	else
+	{
+		cout << "Dont cross" << endl;
+	}
 }

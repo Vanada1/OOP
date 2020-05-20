@@ -1,6 +1,6 @@
 #include "BandClass.h"
 #include "FlightClass.h"
-#include "RectangleClass.h"
+#include "../../General Files/RectangleClass.h"
 #include "DemoClass.h"
 #include <iostream>
 

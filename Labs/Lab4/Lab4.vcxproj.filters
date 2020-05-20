@@ -13,6 +13,15 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="General Files">
+      <UniqueIdentifier>{32170883-2735-4cea-b4bb-eaee6bd8c482}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="General Files\Header Files">
+      <UniqueIdentifier>{c0bf2426-9ca8-449f-a1b3-e69d370daf09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="General Files\Source Files">
+      <UniqueIdentifier>{53596d75-c55e-4b33-8492-873f3794e75e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Lab4.cpp">
@@ -24,8 +33,17 @@
     <ClCompile Include="Demo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\General Files\CollisionManager.cpp">
+      <Filter>General Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\General Files\DoubleValidator.cpp">
+      <Filter>General Files\Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="..\General Files\PointClass.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>General Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\General Files\RectangleClass.cpp">
+      <Filter>General Files\Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -36,7 +54,16 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\General Files\PointClass.h">
-      <Filter>Header Files</Filter>
+      <Filter>General Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\General Files\DoubleValidator.h">
+      <Filter>General Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\General Files\CollisionManager.h">
+      <Filter>General Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\General Files\RectangleClass.h">
+      <Filter>General Files\Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

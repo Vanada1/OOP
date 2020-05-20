@@ -1,9 +1,10 @@
 #include "RectangleClass.h"
+#include "DoubleValidator.h"
 #include <exception>
 
 using namespace std;
 
-Rectangle::Rectangle(double x, double y, double length, double width)
+Rectangle::Rectangle(double length, double width, double x, double y)
 {
 	this->_center = new Point(x, y);
 	this->SetLength(length);
@@ -23,13 +24,13 @@ void Rectangle::SetCenter(double x, double y)
 
 void Rectangle::SetLength(double length)
 {
-	this->CheckNegative(length);
+	DoubleValidator::AssertPositiveValue(length);
 	this->_length = length;
 }
 
 void Rectangle::SetWidth(double width)
 {
-	this->CheckNegative(width);
+	DoubleValidator::AssertPositiveValue(width);
 	this->_width = width;
 }
 

@@ -1,5 +1,5 @@
 #pragma once
-#include "../../General Files/PointClass.h"
+#include "PointClass.h"
 
 class Rectangle
 {
@@ -19,7 +19,7 @@ class Rectangle
 		double GetWidth();
 
 
-		Rectangle(double x, double y, double length, double width);
+		Rectangle(double length, double width, double x, double y);
 		~Rectangle();
 
 };

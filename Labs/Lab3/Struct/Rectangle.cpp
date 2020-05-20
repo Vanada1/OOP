@@ -1,4 +1,5 @@
 #include "Rectangle.h"
+#include "../../General Files/DoubleValidator.h"
 #include <exception>
 #include <iostream>
 
@@ -21,13 +22,13 @@ void SetCenter(Rectangle* rectangle, double x, double y)
 
 void SetLength(Rectangle* rectangle, double length)
 {
-	CheckNegative(length);
+	DoubleValidator::AssertPositiveValue(length);
 	rectangle->Length = length;
 }
 
 void SetWidth(Rectangle* rectangle, double width)
 {
-	CheckNegative(width);
+	DoubleValidator::AssertPositiveValue(width);
 	rectangle->Width = width;
 }
 

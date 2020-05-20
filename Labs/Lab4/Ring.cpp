@@ -1,4 +1,5 @@
 #include "Ring.h"
+#include "../General Files/DoubleValidator.h"
 #include <exception>
 #include <cmath>
 
@@ -26,8 +27,8 @@ Ring::~Ring()
 
 void Ring::SetRadii(double outerRadius, double innerRadius)
 {
-	AssertOnPositiveValue(outerRadius);
-	AssertOnPositiveValue(innerRadius);
+	DoubleValidator::AssertPositiveValue(outerRadius);
+	DoubleValidator::AssertPositiveValue(innerRadius);
 
 	if (innerRadius > outerRadius)
 	{

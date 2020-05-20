@@ -48,12 +48,6 @@
     <ClCompile Include="Class\AlbumClass.cpp">
       <Filter>Source Files\Class</Filter>
     </ClCompile>
-    <ClCompile Include="Class\FlightClass.cpp">
-      <Filter>Source Files\Class</Filter>
-    </ClCompile>
-    <ClCompile Include="Class\RectangleClass.cpp">
-      <Filter>Source Files\Class</Filter>
-    </ClCompile>
     <ClCompile Include="Class\TimeClass.cpp">
       <Filter>Source Files\Class</Filter>
     </ClCompile>
@@ -93,8 +87,17 @@
     <ClCompile Include="ReadPositiveNumber.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\General Files\PointClass.cpp">
+    <ClCompile Include="..\General Files\DoubleValidator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Class\FlightClass.cpp">
       <Filter>Source Files\Class</Filter>
+    </ClCompile>
+    <ClCompile Include="..\General Files\PointClass.cpp">
+      <Filter>General Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\General Files\RectangleClass.cpp">
+      <Filter>General Files\Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -108,9 +111,6 @@
       <Filter>Header Files\Class</Filter>
     </ClInclude>
     <ClInclude Include="Class\BandClass.h">
-      <Filter>Header Files\Class</Filter>
-    </ClInclude>
-    <ClInclude Include="Class\RectangleClass.h">
       <Filter>Header Files\Class</Filter>
     </ClInclude>
     <ClInclude Include="Class\DemoClass.h">
@@ -158,8 +158,14 @@
     <ClInclude Include="ReadPositiveNumber.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\General Files\DoubleValidator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="..\General Files\PointClass.h">
-      <Filter>Header Files\Class</Filter>
+      <Filter>General Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\General Files\RectangleClass.h">
+      <Filter>General Files\Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

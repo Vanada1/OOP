@@ -1,5 +1,5 @@
 #pragma once
-#include "PointClass.h"
+#include "../../General Files/PointClass.h"
 
 class Rectangle
 {

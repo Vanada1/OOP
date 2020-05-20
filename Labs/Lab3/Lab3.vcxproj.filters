@@ -51,9 +51,6 @@
     <ClCompile Include="Class\FlightClass.cpp">
       <Filter>Source Files\Class</Filter>
     </ClCompile>
-    <ClCompile Include="Class\PointClass.cpp">
-      <Filter>Source Files\Class</Filter>
-    </ClCompile>
     <ClCompile Include="Class\RectangleClass.cpp">
       <Filter>Source Files\Class</Filter>
     </ClCompile>
@@ -96,6 +93,9 @@
     <ClCompile Include="ReadPositiveNumber.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\General Files\PointClass.cpp">
+      <Filter>Source Files\Class</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\General Files\Read.h">
@@ -117,9 +117,6 @@
       <Filter>Header Files\Class</Filter>
     </ClInclude>
     <ClInclude Include="Class\FlightClass.h">
-      <Filter>Header Files\Class</Filter>
-    </ClInclude>
-    <ClInclude Include="Class\PointClass.h">
       <Filter>Header Files\Class</Filter>
     </ClInclude>
     <ClInclude Include="Class\TimeClass.h">
@@ -160,6 +157,9 @@
     </ClInclude>
     <ClInclude Include="ReadPositiveNumber.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\General Files\PointClass.h">
+      <Filter>Header Files\Class</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

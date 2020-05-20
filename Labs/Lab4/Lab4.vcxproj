@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{6898EA9B-71E7-4F60-A312-87197A3CB4A4}</ProjectGuid>
+    <ProjectGuid>{B3CC2C39-177E-4D74-8F96-15114059E9C4}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Lab3</RootNamespace>
+    <RootNamespace>Lab4</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -148,51 +148,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\General Files\PointClass.cpp" />
-    <ClCompile Include="Class\AlbumClass.cpp" />
-    <ClCompile Include="Class\BandClass.cpp" />
-    <ClCompile Include="Class\DemoClass.cpp" />
-    <ClCompile Include="Class\FlightClass.cpp" />
-    <ClCompile Include="Class\RectangleClass.cpp" />
-    <ClCompile Include="Class\SongClass.cpp" />
-    <ClCompile Include="Class\TimeClass.cpp" />
-    <ClCompile Include="Lab3.cpp" />
-    <ClCompile Include="ReadPositiveNumber.cpp" />
-    <ClCompile Include="Struct\Album.cpp" />
-    <ClCompile Include="Struct\Band.cpp" />
-    <ClCompile Include="Struct\Book.cpp" />
-    <ClCompile Include="Struct\DemoStruct.cpp" />
-    <ClCompile Include="Struct\Flight.cpp" />
-    <ClCompile Include="Struct\Point.cpp" />
-    <ClCompile Include="Struct\Rectangle.cpp" />
-    <ClCompile Include="Struct\Route.cpp" />
-    <ClCompile Include="Struct\Song.cpp" />
-    <ClCompile Include="Struct\Time.cpp" />
+    <ClCompile Include="Demo.cpp" />
+    <ClCompile Include="Lab4.cpp" />
+    <ClCompile Include="Ring.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\General Files\PointClass.h" />
-    <ClInclude Include="..\General Files\Read.h" />
-    <ClInclude Include="Class\AlbumClass.h" />
-    <ClInclude Include="Class\BandClass.h" />
-    <ClInclude Include="Class\DemoClass.h" />
-    <ClInclude Include="Class\FlightClass.h" />
-    <ClInclude Include="Class\RectangleClass.h" />
-    <ClInclude Include="Class\SongClass.h" />
-    <ClInclude Include="Class\TimeClass.h" />
-    <ClInclude Include="Genre.h" />
-    <ClInclude Include="ReadPositiveNumber.h" />
-    <ClInclude Include="Struct\Album.h" />
-    <ClInclude Include="Struct\Band.h" />
-    <ClInclude Include="Struct\Book.h" />
-    <ClInclude Include="Struct\DemoStruct.h" />
-    <ClInclude Include="Struct\Flight.h" />
-    <ClInclude Include="Struct\Point.h" />
-    <ClInclude Include="Struct\Rectangle.h" />
-    <ClInclude Include="Struct\Route.h" />
-    <ClInclude Include="Struct\Song.h" />
-    <ClInclude Include="Struct\Time.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="ClassDiagram\UMLClassDiagrams.jpg" />
+    <ClInclude Include="Demo.h" />
+    <ClInclude Include="Ring.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

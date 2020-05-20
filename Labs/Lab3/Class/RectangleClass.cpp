@@ -17,8 +17,8 @@ Rectangle::~Rectangle()
 
 void Rectangle::SetCenter(double x, double y)
 {
-	this->_center->SetX(x);
-	this->_center->SetY(y);
+	Point* newPoint = new Point(x, y);
+	this->_center = newPoint;
 }
 
 void Rectangle::SetLength(double length)

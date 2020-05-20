@@ -6,10 +6,10 @@ class Point
 		double _x;
 		double _y;
 
-	public:
 		void SetX(double x);
 		void SetY(double y);
 
+	public:
 		double GetX();
 		double GetY();
 

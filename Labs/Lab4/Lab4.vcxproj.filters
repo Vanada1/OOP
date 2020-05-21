@@ -30,12 +30,6 @@
     <ClCompile Include="Ring.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Demo.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\General Files\CollisionManager.cpp">
-      <Filter>General Files\Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\General Files\DoubleValidator.cpp">
       <Filter>General Files\Source Files</Filter>
     </ClCompile>
@@ -45,12 +39,15 @@
     <ClCompile Include="..\General Files\RectangleClass.cpp">
       <Filter>General Files\Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="GeometricProgram.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CollisionManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Ring.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Demo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\General Files\PointClass.h">
@@ -59,11 +56,14 @@
     <ClInclude Include="..\General Files\DoubleValidator.h">
       <Filter>General Files\Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\General Files\CollisionManager.h">
-      <Filter>General Files\Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\General Files\RectangleClass.h">
       <Filter>General Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeometricProgram.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

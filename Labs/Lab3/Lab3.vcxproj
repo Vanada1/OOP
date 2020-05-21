@@ -158,16 +158,6 @@
     <ClCompile Include="Class\TimeClass.cpp" />
     <ClCompile Include="Lab3.cpp" />
     <ClCompile Include="ReadPositiveNumber.cpp" />
-    <ClCompile Include="Struct\Album.cpp" />
-    <ClCompile Include="Struct\Band.cpp" />
-    <ClCompile Include="Struct\Book.cpp" />
-    <ClCompile Include="Struct\DemoStruct.cpp" />
-    <ClCompile Include="Struct\Flight.cpp" />
-    <ClCompile Include="Struct\Point.cpp" />
-    <ClCompile Include="Struct\Rectangle.cpp" />
-    <ClCompile Include="Struct\Route.cpp" />
-    <ClCompile Include="Struct\Song.cpp" />
-    <ClCompile Include="Struct\Time.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\General Files\DoubleValidator.h" />
@@ -182,16 +172,6 @@
     <ClInclude Include="Class\TimeClass.h" />
     <ClInclude Include="Genre.h" />
     <ClInclude Include="ReadPositiveNumber.h" />
-    <ClInclude Include="Struct\Album.h" />
-    <ClInclude Include="Struct\Band.h" />
-    <ClInclude Include="Struct\Book.h" />
-    <ClInclude Include="Struct\DemoStruct.h" />
-    <ClInclude Include="Struct\Flight.h" />
-    <ClInclude Include="Struct\Point.h" />
-    <ClInclude Include="Struct\Rectangle.h" />
-    <ClInclude Include="Struct\Route.h" />
-    <ClInclude Include="Struct\Song.h" />
-    <ClInclude Include="Struct\Time.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="ClassDiagram\UMLClassDiagrams.jpg" />

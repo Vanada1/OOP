@@ -1,6 +1,6 @@
 #pragma once
-#include "RectangleClass.h"
-#include "../Lab4/Ring.h"
+#include "../General Files/RectangleClass.h"
+#include "Ring.h"
 
 static class CollisionManager
 {

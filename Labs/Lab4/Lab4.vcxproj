@@ -147,20 +147,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\General Files\CollisionManager.cpp" />
     <ClCompile Include="..\General Files\DoubleValidator.cpp" />
     <ClCompile Include="..\General Files\PointClass.cpp" />
     <ClCompile Include="..\General Files\RectangleClass.cpp" />
-    <ClCompile Include="Demo.cpp" />
+    <ClCompile Include="CollisionManager.cpp" />
+    <ClCompile Include="GeometricProgram.cpp" />
     <ClCompile Include="Lab4.cpp" />
     <ClCompile Include="Ring.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\General Files\CollisionManager.h" />
     <ClInclude Include="..\General Files\DoubleValidator.h" />
     <ClInclude Include="..\General Files\PointClass.h" />
     <ClInclude Include="..\General Files\RectangleClass.h" />
-    <ClInclude Include="Demo.h" />
+    <ClInclude Include="CollisionManager.h" />
+    <ClInclude Include="GeometricProgram.h" />
     <ClInclude Include="Ring.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

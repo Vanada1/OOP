@@ -1,8 +1,10 @@
-﻿#include "Demo.h"
+﻿#include "GeometricProgram.h"
 #include <iostream>
 
 int main()
 {
-    DemoCollision();
-    //DemoRing();
+    GeometricProgram  demo;
+    demo.DemoRing();
+    //demo.DemoCollision();
+    //demo.DemoRecangleWithPointClass();
 }

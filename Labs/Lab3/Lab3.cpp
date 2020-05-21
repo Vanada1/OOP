@@ -5,13 +5,8 @@
 
 int main()
 {
-	//DemoBook();
-   /* DemoRoute();*/
 	DemoRecangleWithPointClass();
-	DemoRecangleWithPoint();
-   /* DemoFlightWithTimeClass();
-	DemoFlightWithTime();*/
-	/*DemoBandClass();
-	DemoBand();*/
+   // DemoFlightWithTimeClass();
+	//DemoBandClass();
 	
 }

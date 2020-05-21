@@ -25,14 +25,8 @@
     <Filter Include="Header Files\Class">
       <UniqueIdentifier>{560f09be-2d0e-4eb2-ae02-580d0266ed3c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Struct">
-      <UniqueIdentifier>{42ed12e6-dbc1-4756-8e58-47484419f43f}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\Class">
       <UniqueIdentifier>{408e8c6b-4d60-41e9-9eb7-bde6df07c488}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Struct">
-      <UniqueIdentifier>{0abf2ee1-dcdb-425e-84a7-f1c3316a1873}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -51,43 +45,10 @@
     <ClCompile Include="Class\TimeClass.cpp">
       <Filter>Source Files\Class</Filter>
     </ClCompile>
-    <ClCompile Include="Struct\DemoStruct.cpp">
-      <Filter>Source Files\Struct</Filter>
-    </ClCompile>
-    <ClCompile Include="Struct\Rectangle.cpp">
-      <Filter>Source Files\Struct</Filter>
-    </ClCompile>
-    <ClCompile Include="Struct\Flight.cpp">
-      <Filter>Source Files\Struct</Filter>
-    </ClCompile>
-    <ClCompile Include="Struct\Band.cpp">
-      <Filter>Source Files\Struct</Filter>
-    </ClCompile>
-    <ClCompile Include="Struct\Album.cpp">
-      <Filter>Source Files\Struct</Filter>
-    </ClCompile>
-    <ClCompile Include="Struct\Time.cpp">
-      <Filter>Source Files\Struct</Filter>
-    </ClCompile>
-    <ClCompile Include="Struct\Song.cpp">
-      <Filter>Source Files\Struct</Filter>
-    </ClCompile>
-    <ClCompile Include="Struct\Point.cpp">
-      <Filter>Source Files\Struct</Filter>
-    </ClCompile>
-    <ClCompile Include="Struct\Book.cpp">
-      <Filter>Source Files\Struct</Filter>
-    </ClCompile>
-    <ClCompile Include="Struct\Route.cpp">
-      <Filter>Source Files\Struct</Filter>
-    </ClCompile>
     <ClCompile Include="Class\SongClass.cpp">
       <Filter>Source Files\Class</Filter>
     </ClCompile>
     <ClCompile Include="ReadPositiveNumber.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\General Files\DoubleValidator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Class\FlightClass.cpp">
@@ -97,6 +58,9 @@
       <Filter>General Files\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\General Files\RectangleClass.cpp">
+      <Filter>General Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\General Files\DoubleValidator.cpp">
       <Filter>General Files\Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -122,49 +86,19 @@
     <ClInclude Include="Class\TimeClass.h">
       <Filter>Header Files\Class</Filter>
     </ClInclude>
-    <ClInclude Include="Struct\DemoStruct.h">
-      <Filter>Header Files\Struct</Filter>
-    </ClInclude>
-    <ClInclude Include="Struct\Band.h">
-      <Filter>Header Files\Struct</Filter>
-    </ClInclude>
-    <ClInclude Include="Struct\Flight.h">
-      <Filter>Header Files\Struct</Filter>
-    </ClInclude>
-    <ClInclude Include="Struct\Rectangle.h">
-      <Filter>Header Files\Struct</Filter>
-    </ClInclude>
-    <ClInclude Include="Struct\Point.h">
-      <Filter>Header Files\Struct</Filter>
-    </ClInclude>
-    <ClInclude Include="Struct\Album.h">
-      <Filter>Header Files\Struct</Filter>
-    </ClInclude>
-    <ClInclude Include="Struct\Song.h">
-      <Filter>Header Files\Struct</Filter>
-    </ClInclude>
-    <ClInclude Include="Struct\Time.h">
-      <Filter>Header Files\Struct</Filter>
-    </ClInclude>
-    <ClInclude Include="Struct\Route.h">
-      <Filter>Header Files\Struct</Filter>
-    </ClInclude>
-    <ClInclude Include="Struct\Book.h">
-      <Filter>Header Files\Struct</Filter>
-    </ClInclude>
     <ClInclude Include="Class\SongClass.h">
       <Filter>Header Files\Class</Filter>
     </ClInclude>
     <ClInclude Include="ReadPositiveNumber.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\General Files\DoubleValidator.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\General Files\PointClass.h">
       <Filter>General Files\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\General Files\RectangleClass.h">
+      <Filter>General Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\General Files\DoubleValidator.h">
       <Filter>General Files\Header Files</Filter>
     </ClInclude>
   </ItemGroup>

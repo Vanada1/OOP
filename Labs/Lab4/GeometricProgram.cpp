@@ -8,8 +8,6 @@
 
 using namespace std;
 
-const int COUNT = 5;
-
 void GeometricProgram::DemoRing()
 {
 	Ring* ring1;
@@ -45,6 +43,9 @@ void GeometricProgram::DemoRing()
 	cout << "Ring count: " << Ring::GetAllRingsCount() << endl;
 	delete ring;
 	cout << "Ring count: " << Ring::GetAllRingsCount() << endl;
+	delete ring3;
+	delete ring4;
+	delete ring5;
 }
 
 void GeometricProgram::DemoCollision()
@@ -59,6 +60,8 @@ void GeometricProgram::DemoCollision()
 	{
 		cout << "Dont cross" << endl;
 	}
+	delete rectangle1;
+	delete rectangle2;
 
 	Ring* ring1 = new Ring(12, 10, 0, 0);
 	Ring* ring2 = new Ring(12, 10, 5, 5);
@@ -70,10 +73,13 @@ void GeometricProgram::DemoCollision()
 	{
 		cout << "Dont cross" << endl;
 	}
+	delete ring1;
+	delete ring2;
 }
 
 void GeometricProgram::DemoRecangleWithPointClass()
 {
+	const int COUNT = 5;
 	Rectangle* rectangles[COUNT];
 	rectangles[0] = new Rectangle(0.0, 0.0, 8.1, 25.23);
 	rectangles[1] = new Rectangle(1.0, 21.0, 81.0, 223.8);
@@ -100,4 +106,9 @@ void GeometricProgram::DemoRecangleWithPointClass()
 	xCenter /= COUNT;
 	yCenter /= COUNT;
 	cout << "Xcenter = " << xCenter << "\tYcenter = " << yCenter << endl;
+
+	for (int i = 0; i < COUNT; i++)
+	{
+		delete rectangles[i];
+	}
 }

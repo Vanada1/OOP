@@ -5,6 +5,6 @@ int main()
 {
     GeometricProgram  demo;
     demo.DemoRing();
-    //demo.DemoCollision();
-    //demo.DemoRecangleWithPointClass();
+    demo.DemoCollision();
+    demo.DemoRecangleWithPointClass();
 }

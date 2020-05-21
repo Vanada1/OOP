@@ -7,7 +7,6 @@ class Rectangle
 		Point* _center;
 		double _length;
 		double _width;
-		void CheckNegative(double number);
 
 	public:
 		void SetCenter(double x, double y);

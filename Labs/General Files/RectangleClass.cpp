@@ -49,11 +49,3 @@ double Rectangle::GetWidth()
 	return this->_width;
 }
 
-void Rectangle::CheckNegative(double number)
-{
-	if (number < 0)
-	{
-		throw exception("Number cannot be less then zero");
-	}
-}
-

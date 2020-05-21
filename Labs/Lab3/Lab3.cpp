@@ -6,7 +6,7 @@
 int main()
 {
 	DemoRecangleWithPointClass();
-   // DemoFlightWithTimeClass();
-	//DemoBandClass();
+	DemoFlightWithTimeClass();
+	DemoBandClass();
 	
 }

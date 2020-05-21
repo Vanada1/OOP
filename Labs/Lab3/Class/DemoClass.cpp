@@ -71,6 +71,22 @@ void DemoFlightWithTimeClass()
 		<< '-' << flights[0]->GetPurpose() << "\tFlight time: "
 		<< timeDifference / minutesInHour << "h "
 		<< timeDifference % minutesInHour << "min" << endl;
+
+	delete departureTime1;
+	delete departureTime2;
+	delete departureTime3;
+	delete departureTime4;
+	delete departureTime5;
+	
+	delete purposeTime1;
+	delete purposeTime2;
+	delete purposeTime3;
+	delete purposeTime4;
+	delete purposeTime5;
+	for (int i = 0; i < COUNT; i++)
+	{
+		delete flights[i];
+	}
 }
 
 void DemoRecangleWithPointClass()
@@ -101,6 +117,11 @@ void DemoRecangleWithPointClass()
 	xCenter /= COUNT;
 	yCenter /= COUNT;
 	cout << "Xcenter = " << xCenter << "\tYcenter = " << yCenter << endl;
+
+	for (int i = 0; i < COUNT; i++)
+	{
+		delete rectangles[i];
+	}
 }
 
 void DemoBandClass()
@@ -189,9 +210,19 @@ void DemoBandClass()
 	{
 		cout << allSongGenre[i]->WriteSong() << endl;
 	}
+
+	for (int i = 0; i < songCount; i++)
+	{
+		delete songs1[i];
+		delete songs2[i];
+		delete songs3[i];
+	}
+
+	for (int i = 0; i < albumsCount; i++)
+	{
+		delete albums[i];
+	}
+
 	delete[] allSongGenre;
-	delete[] songs1;
-	delete[] songs2;
-	delete[] songs3;
 	delete[] albums;
 }

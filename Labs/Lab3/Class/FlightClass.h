@@ -32,6 +32,6 @@ class Flight
 			Time* purposeTime);
 		~Flight()
 		{
-			delete this;
+
 		}
 };

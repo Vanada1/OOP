@@ -23,6 +23,6 @@ class Song
 			Genre songGenre);
 		~Song()
 		{
-			delete this;
+
 		}
 };

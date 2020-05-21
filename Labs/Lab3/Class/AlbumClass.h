@@ -24,6 +24,5 @@ class Album
 		~Album()
 		{
 			delete[] this->_songs;
-			delete this;
 		}
 };

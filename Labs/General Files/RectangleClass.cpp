@@ -13,7 +13,7 @@ Rectangle::Rectangle(double length, double width, double x, double y)
 
 Rectangle::~Rectangle()
 {
-	delete this;
+
 }
 
 void Rectangle::SetCenter(double x, double y)

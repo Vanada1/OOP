@@ -22,6 +22,7 @@ Ring::Ring(double outerRadius, double innerRadius, double x,
 
 Ring::~Ring()
 {
+	delete this->_center;
 	SubtractAllRingsCount();
 }
 

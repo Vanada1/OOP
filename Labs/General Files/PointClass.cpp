@@ -8,7 +8,7 @@ Point::Point(double x, double y)
 
 Point::~Point()
 {
-	delete this;
+
 }
 
 void Point::SetX(double x)

@@ -19,7 +19,7 @@ class Ring
 			double y);
 		~Ring();
 
-		void SetRadii(double outerRadius, double innerRadius);
+		void SetRadius(double outerRadius, double innerRadius);
 		void SetCenter(Point* center);
 
 		static int GetAllRingsCount();

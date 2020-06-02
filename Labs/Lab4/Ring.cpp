@@ -7,7 +7,7 @@ int Ring::AllRingsCount = 0;
 
 Ring::Ring(double outerRadius, double innerRadius, Point* center)
 {
-	this->SetRadii(outerRadius, innerRadius);
+	this->SetRadius(outerRadius, innerRadius);
 	this->SetCenter(center);
 	AddAllRingsCount();
 }
@@ -15,7 +15,7 @@ Ring::Ring(double outerRadius, double innerRadius, Point* center)
 Ring::Ring(double outerRadius, double innerRadius, double x,
 	double y)
 {
-	this->SetRadii(outerRadius, innerRadius);
+	this->SetRadius(outerRadius, innerRadius);
 	this->_center = new Point(x, y);
 	AddAllRingsCount();
 }
@@ -27,7 +27,7 @@ Ring::~Ring()
 }
 
 //TODO: Radius?
-void Ring::SetRadii(double outerRadius, double innerRadius)
+void Ring::SetRadius(double outerRadius, double innerRadius)
 {
 	DoubleValidator::AssertPositiveValue(outerRadius);
 	DoubleValidator::AssertPositiveValue(innerRadius);

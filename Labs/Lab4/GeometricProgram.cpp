@@ -52,7 +52,7 @@ void GeometricProgram::DemoCollision()
 {
 	Rectangle* rectangle1 = new Rectangle(10, 3, 0, 0);
 	Rectangle* rectangle2 = new Rectangle(14, 7, 1, 1);
-	if (CollisionManager::IsCollision(rectangle1, rectangle2))
+	if (CollisionManager::IsCollision(*rectangle1, *rectangle2))
 	{
 		cout << "Cross" << endl;
 	}
@@ -65,7 +65,7 @@ void GeometricProgram::DemoCollision()
 
 	Ring* ring1 = new Ring(12, 10, 0, 0);
 	Ring* ring2 = new Ring(12, 10, 5, 5);
-	if (CollisionManager::IsCollision(ring1, ring2))
+	if (CollisionManager::IsCollision(*ring1, *ring2))
 	{
 		cout << "Cross" << endl;
 	}

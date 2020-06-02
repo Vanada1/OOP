@@ -18,9 +18,12 @@ Rectangle::~Rectangle()
 
 void Rectangle::SetCenter(double x, double y)
 {
-	//TODO: Может быть утечка памяти, т.к. через конструктор создал точку, а тут просто переопределил, а память не освободил
-	Point* newPoint = new Point(x, y);
-	this->_center = newPoint;
+	//TODO: Может быть утечка памяти, т.к. через конструктор создал точку, а тут просто переопределил, а память не освободил (Done)
+	if (_center != nullptr)
+	{
+		delete _center;
+	}
+	this->_center = new Point(x, y);
 }
 
 void Rectangle::SetLength(double length)

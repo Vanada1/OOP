@@ -12,6 +12,7 @@ bool CollisionManager::IsCollision(Rectangle* rectangle1,
 		rectangle2->GetLength()) ;
 	double deltaWidth = abs(rectangle1->GetWidth() -
 		rectangle2->GetWidth());
+	//TODO: ћожно сразу возвращать условие под if-ом
 	if (deltaX < deltaWidth / 2 && deltaY < deltaLength / 2)
 	{
 		return true;
@@ -26,6 +27,7 @@ bool CollisionManager::IsCollision(Ring* ring1, Ring* ring2)
 	double deltaY = abs(ring1->GetCenter()->GetY() -
 		ring2->GetCenter()->GetY());
 	double hypotenuse = sqrt(pow(deltaX, 2) + pow(deltaY, 2));
+	//TODO: ћожно сразу возвращать условие под if-ом
 	if (hypotenuse < ring1->GetOuterRadius() + ring2->GetOuterRadius())
 	{
 		return true;

@@ -26,6 +26,7 @@ Ring::~Ring()
 	SubtractAllRingsCount();
 }
 
+//TODO: Radius?
 void Ring::SetRadii(double outerRadius, double innerRadius)
 {
 	DoubleValidator::AssertPositiveValue(outerRadius);
@@ -41,6 +42,8 @@ void Ring::SetRadii(double outerRadius, double innerRadius)
 	this->_innerRadius = innerRadius;
 }
 
+//TODO: ѕочему тут центр передаЄтс€ снаружи, а не как в конструкторе - создаЄтс€ по точкам? (на диаграмме поправить)
+//TODO: ћожет быть утечка пам€ти, т.к. через конструктор создал точку, а тут просто переопределил, а пам€ть не освободил
 void Ring::SetCenter(Point* center)
 {
 	this->_center = center;

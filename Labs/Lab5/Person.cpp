@@ -3,9 +3,9 @@
 Person::Person(std::string& firstName, std::string& middleName,
 	std::string& lastName)
 {
-	SetFirsName(firstName);
-	SetMiddlename(middleName);
-	SetLastName(lastName);
+	this->SetFirsName(firstName);
+	this->SetMiddlename(middleName);
+	this->SetLastName(lastName);
 }
 
 Person::~Person()

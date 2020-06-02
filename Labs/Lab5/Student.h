@@ -12,7 +12,7 @@ class Student : public Person
 	public:
 		Student(std::string& firstName, std::string& middleName,
 			std::string& lastName, int numberRecordBookint,
-			int receiptDate); //: Person(firstName, middleName, lastName)
+			int receiptDate);
 		~Student();
 
 		void SetNumberRecordBook(int numberRecordBookint);

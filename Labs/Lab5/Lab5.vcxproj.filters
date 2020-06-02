@@ -13,6 +13,15 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="5.2">
+      <UniqueIdentifier>{c93ecaa6-5bab-46d4-8f69-0aec2902692c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="5.2\Header Files">
+      <UniqueIdentifier>{89530f3b-0742-42df-9bc1-46bf6c44367b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="5.2\Source Files">
+      <UniqueIdentifier>{c8a9edf2-1eaa-4e68-b5bf-a0c2022287ee}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Lab5.cpp">
@@ -30,6 +39,15 @@
     <ClCompile Include="OutputFunction.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="5.2\PaidUser.cpp">
+      <Filter>5.2\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="5.2\Post.cpp">
+      <Filter>5.2\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="5.2\User.cpp">
+      <Filter>5.2\Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Person.h">
@@ -43,6 +61,18 @@
     </ClInclude>
     <ClInclude Include="OutputFunction.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="5.2\Login.h">
+      <Filter>5.2\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="5.2\PaidUser.h">
+      <Filter>5.2\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="5.2\Post.h">
+      <Filter>5.2\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="5.2\User.h">
+      <Filter>5.2\Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

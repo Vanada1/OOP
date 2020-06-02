@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+
 class Post
 {
 	private:

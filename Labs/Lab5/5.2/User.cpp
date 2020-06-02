@@ -1,4 +1,5 @@
 #include "User.h"
+#include <exception>
 
 void User::SetId(int id) 
 { 
@@ -7,6 +8,19 @@ void User::SetId(int id)
 
 void User::SetLogin(std::string login) 
 {
+	const int countChar = 11;
+	char trashSymbols[countChar]{ '{', '}', '<', '>', '@', '#',
+		'$','%','^', ':','*' };
+	for (int i = 0; i < login.size(); i++)
+	{
+		for (int j = 0; j < countChar; j++)
+		{
+			if (login[i] == trashSymbols[j])
+			{
+				throw std::exception("Error Symbol");
+			}
+		}
+	}
 	this->_login = login;
 } 
 

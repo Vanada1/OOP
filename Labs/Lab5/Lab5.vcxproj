@@ -150,9 +150,14 @@
     <ClCompile Include="5.2\PaidUser.cpp" />
     <ClCompile Include="5.2\Post.cpp" />
     <ClCompile Include="5.2\User.cpp" />
+    <ClCompile Include="CertificateDiscount.cpp" />
+    <ClCompile Include="DiscountBase.cpp" />
     <ClCompile Include="Lab5.cpp" />
     <ClCompile Include="OutputFunction.cpp" />
+    <ClCompile Include="PercentDiscount.cpp" />
     <ClCompile Include="Person.cpp" />
+    <ClCompile Include="Product.cpp" />
+    <ClCompile Include="ShowCheckWithDiscount.cpp" />
     <ClCompile Include="Student.cpp" />
     <ClCompile Include="Teacher.cpp" />
   </ItemGroup>
@@ -161,8 +166,14 @@
     <ClInclude Include="5.2\PaidUser.h" />
     <ClInclude Include="5.2\Post.h" />
     <ClInclude Include="5.2\User.h" />
+    <ClInclude Include="CategoryType.h" />
+    <ClInclude Include="CertificateDiscount.h" />
+    <ClInclude Include="DiscountBase.h" />
     <ClInclude Include="OutputFunction.h" />
+    <ClInclude Include="PercentDiscount.h" />
     <ClInclude Include="Person.h" />
+    <ClInclude Include="Product.h" />
+    <ClInclude Include="ShowCheckWithDiscount.h" />
     <ClInclude Include="Student.h" />
     <ClInclude Include="Teacher.h" />
   </ItemGroup>

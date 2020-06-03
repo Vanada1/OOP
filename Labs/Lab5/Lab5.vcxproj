@@ -177,6 +177,11 @@
     <ClInclude Include="Student.h" />
     <ClInclude Include="Teacher.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="ClassDiagram\Person.png" />
+    <Image Include="ClassDiagram\Product.png" />
+    <Image Include="ClassDiagram\User.png" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

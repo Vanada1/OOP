@@ -108,4 +108,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="ClassDiagram\Person.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="ClassDiagram\Product.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="ClassDiagram\User.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
 </Project>

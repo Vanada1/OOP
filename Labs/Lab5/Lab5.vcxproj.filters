@@ -63,6 +63,9 @@
     <ClCompile Include="ShowCheckWithDiscount.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="5.2\Login.cpp">
+      <Filter>5.2\Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Person.h">

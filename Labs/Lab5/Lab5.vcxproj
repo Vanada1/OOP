@@ -147,6 +147,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="5.2\Login.cpp" />
     <ClCompile Include="5.2\PaidUser.cpp" />
     <ClCompile Include="5.2\Post.cpp" />
     <ClCompile Include="5.2\User.cpp" />

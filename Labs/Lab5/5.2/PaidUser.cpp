@@ -28,4 +28,4 @@ PaidUser::PaidUser(int id, std::string login, std::string password,
 
 PaidUser::PaidUser(int id, std::string login, std::string password)
 	: PaidUser(id, login, password, nullptr, 0)
-{ } 
+{} 

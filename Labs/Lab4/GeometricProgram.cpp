@@ -23,8 +23,7 @@ void GeometricProgram::DemoRing()
 	Ring* ring2;
 	try
 	{
-		Point* center = new Point(2.5, 6.1);
-		ring2 = new Ring(-1, 2, center);
+		ring2 = new Ring(-1, 2, 2.5, 6.1);
 	}
 	catch (exception e)
 	{
@@ -39,7 +38,7 @@ void GeometricProgram::DemoRing()
 	Ring* ring5 = new Ring(12, 5, 4.5, 6.6);
 	cout << "Ring count: " << Ring::GetAllRingsCount() << endl;
 
-	Ring* ring = new Ring(10.0, 5.0, new Point(25.0, 25.0));
+	Ring* ring = new Ring(10.0, 5.0, 25.0, 25.0);
 	cout << "Ring count: " << Ring::GetAllRingsCount() << endl;
 	delete ring;
 	cout << "Ring count: " << Ring::GetAllRingsCount() << endl;

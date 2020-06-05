@@ -12,7 +12,7 @@ void ShowCheckWithDiscount(DiscountBase* discount, Product** products,
 	{
 		cout << products[i]->GetName() << '\t' << "Old cost: " 
 			<< products[i]->GetCost() << '\t';
-		double newCost = discount->Calculate(products[i]);
+		double newCost = discount->Calculate(*products[i]);
 		cout << "New cost: " << newCost << endl;
 		allCost += newCost;
 	}

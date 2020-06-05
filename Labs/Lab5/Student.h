@@ -6,20 +6,20 @@
 class Student : public Person
 {
 	private:
-	//TODO: book records number и везде ниже также
-		int _numberRecordBook;
+	//TODO: book records number и везде ниже также(done)
+		int _bookRecordsNumber;
 		int _receiptDate;
 
 	public:
-	//TODO: Константные ссылки?
-		Student(std::string& firstName, std::string& middleName,
-			std::string& lastName, int numberRecordBookint,
+	//TODO: Константные ссылки?(Done)
+		Student(const std::string& firstName, const std::string& middleName,
+			const std::string& lastName, int bookRecordsNumber,
 			int receiptDate);
 		~Student();
 
-		void SetNumberRecordBook(int numberRecordBookint);
+		void SetBookRecordsNumber(int bookRecordsNumber);
 		void SetReceiptDate(int receiptDate);
 
-		int GetNumberRecordBook();
+		int GetBookRecordsNumber();
 		int GetReceiptDate();
 };

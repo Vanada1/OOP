@@ -3,5 +3,5 @@
 #include <string>
 
 User* Login(User** users, int usersCount,
-	//TODO: Константные ссылки?
-	std::string enteredLogin, std::string enteredPassword);
+	//TODO: Константные ссылки?(Done)
+	const std::string& enteredLogin, const std::string& enteredPassword);

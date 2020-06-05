@@ -26,18 +26,18 @@ double CertificateDiscount::GetAmount()
 	return this->_amount;
 }
 
-double CertificateDiscount::Calculate(Product* product)
+double CertificateDiscount::Calculate(Product& product)
 {
-	if (product->GetCategory() != this->GetCategory())
+	if (product.GetCategory() != this->GetCategory())
 	{
-		return product->GetCost();
+		return product.GetCost();
 	}
-	if (product->GetCost() - this->GetAmount() <= 0)
+	if (product.GetCost() - this->GetAmount() <= 0)
 	{
-		this->SetAmount(this->GetAmount() - product->GetCost());
+		this->SetAmount(this->GetAmount() - product.GetCost());
 		return 0;
 	}
-	double newCost = product->GetCost() - this->GetAmount();
+	double newCost = product.GetCost() - this->GetAmount();
 	this->SetAmount(0);
 	return newCost;
 }

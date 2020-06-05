@@ -1,7 +1,7 @@
 #include "Product.h"
 #include <exception>
 
-Product::Product(std::string& name, CategoryType type, double cost)
+Product::Product(const std::string& name, CategoryType type, double cost)
 {
 	this->SetName(name);
 	this->SetCategory(type);
@@ -13,7 +13,7 @@ Product::~Product()
 
 }
 
-void Product::SetName(std::string& name)
+void Product::SetName(const std::string& name)
 {
 	this->_name = name;
 }
@@ -37,7 +37,7 @@ void Product::SetCost(double cost)
 	this->_cost = cost;
 }
 
-std::string Product::GetName()
+const std::string& Product::GetName()
 {
 	return this->_name;
 }

@@ -10,15 +10,15 @@ class User
 		void SetId(int id);
 
 	public:
-		//TODO: Константные ссылки?
-		void SetLogin(std::string login);
-		void SetPassword(std::string password);
+		//TODO: Константные ссылки?(Done)
+		void SetLogin(const std::string& login);
+		void SetPassword(const std::string& password);
 
 		int GetId(); 
-		std::string GetLogin();
-		std::string GetPassword();
+		const std::string& GetLogin();
+		const std::string& GetPassword();
 
-		User(int id, std::string login, std::string password);
+		User(int id, const std::string& login, const std::string& password);
 
-		bool IsCorrectPassword(std::string password);
+		bool IsCorrectPassword(const std::string& password);
 };

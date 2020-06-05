@@ -11,5 +11,5 @@ class PercentDiscount : public DiscountBase
 		void SetPercent(double percent);
 		double GetPercent();
 		PercentDiscount(double percent, CategoryType category);
-		double Calculate(Product* product) override;
+		double Calculate(Product& product) override;
 };

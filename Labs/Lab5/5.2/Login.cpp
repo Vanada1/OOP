@@ -2,7 +2,7 @@
 #include <exception>
 
 User* Login(User** users, int usersCount,
-	std::string enteredLogin, std::string enteredPassword)
+	const std::string& enteredLogin, const std::string& enteredPassword)
 {
 	for (int i = 0; i < usersCount; i++)
 	{ 

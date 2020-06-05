@@ -20,12 +20,12 @@ int PaidUser::GetPostsCount()
 	return this->_postsCount;
 }
 
-PaidUser::PaidUser(int id, std::string login, std::string password,
+PaidUser::PaidUser(int id, const std::string& login, const std::string& password,
 	Post* posts, int postsCount) : User(id, login, password)
 { 
 	this->SetPosts(posts, postsCount);
 } 
 
-PaidUser::PaidUser(int id, std::string login, std::string password)
+PaidUser::PaidUser(int id, const std::string& login, const std::string& password)
 	: PaidUser(id, login, password, nullptr, 0)
 {} 

@@ -1,10 +1,10 @@
 #include "Student.h"
 
-Student::Student(std::string& firstName, std::string& middleName,
-	std::string& lastName, int numberRecordBookint,
+Student::Student(const std::string& firstName, const std::string& middleName,
+	const std::string& lastName, int bookRecordsNumber,
 	int receiptDate) : Person(firstName, middleName, lastName)
 {
-	this->SetNumberRecordBook(numberRecordBookint);
+	this->SetBookRecordsNumber(bookRecordsNumber);
 	this->SetReceiptDate(receiptDate);
 }
 
@@ -13,9 +13,9 @@ Student::~Student()
 
 }
 
-void Student::SetNumberRecordBook(int numberRecordBookint)
+void Student::SetBookRecordsNumber(int bookRecordsNumber)
 {
-	this->_numberRecordBook = numberRecordBookint;
+	this->_bookRecordsNumber = bookRecordsNumber;
 }
 
 void Student::SetReceiptDate(int receiptDate)
@@ -23,9 +23,9 @@ void Student::SetReceiptDate(int receiptDate)
 	this->_receiptDate = receiptDate;
 }
 
-int Student::GetNumberRecordBook()
+int Student::GetBookRecordsNumber()
 {
-	return this->_numberRecordBook;
+	return this->_bookRecordsNumber;
 }
 
 int Student::GetReceiptDate()

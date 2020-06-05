@@ -10,16 +10,16 @@ class Person
 		std::string _lastName;
 
 	public:
-	//TODO: Константные ссылки?
-		Person(std::string& firstName, std::string& middleName,
-			std::string& lastName);
+	//TODO: Константные ссылки?(Done)
+		Person(const std::string& firstName, const std::string& middleName,
+			const std::string& lastName);
 		~Person();
 
-		void SetFirsName(std::string& firstName);
-		void SetMiddlename(std::string& middleName);
-		void SetLastName(std::string& lastName);
+		void SetFirsName(const std::string& firstName);
+		void SetMiddlename(const std::string& middleName);
+		void SetLastName(const std::string& lastName);
 
-		std::string GetFistName();
-		std::string GetMiddleName();
-		std::string GetLastName();
+		const std::string& GetFistName();
+		const std::string& GetMiddleName();
+		const std::string& GetLastName();
 };

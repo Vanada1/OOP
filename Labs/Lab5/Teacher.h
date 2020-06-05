@@ -9,12 +9,12 @@ class Teacher : public Person
 		std::string _post;
 
 	public:
-	//TODO: Константные ссылки?
-		Teacher(std::string& firstName, std::string& middleName,
-			std::string& lastName, std::string& post);
+	//TODO: Константные ссылки?(done)
+		Teacher(const std::string& firstName, const std::string& middleName,
+			const std::string& lastName, std::string& post);
 		~Teacher();
 
-		void SetPost(std::string& post);
+		void SetPost(const std::string& post);
 
-		std::string GetPost();
+		const std::string& GetPost();
 };

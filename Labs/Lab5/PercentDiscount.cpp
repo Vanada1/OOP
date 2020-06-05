@@ -21,13 +21,13 @@ double PercentDiscount::GetPercent()
 	return this->_percent;
 }
 
-double PercentDiscount::Calculate(Product* product)
+double PercentDiscount::Calculate(Product& product)
 {
 	double allCost = 100.0;
-	if (product->GetCategory() == this->GetCategory())
+	if (product.GetCategory() == this->GetCategory())
 	{
-		return (product->GetCost() * (allCost - this->GetPercent()) 
+		return (product.GetCost() * (allCost - this->GetPercent()) 
 			/ allCost);
 	}
-	return product->GetCost();
+	return product.GetCost();
 }

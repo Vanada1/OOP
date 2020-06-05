@@ -1,26 +1,26 @@
 #include "Post.h"
 
-void Post::SetTitle(std::string title) 
+void Post::SetTitle(const std::string& title)
 { 
 	_title = title; 
 }
 
-void Post::SetText(std::string text)
+void Post::SetText(const std::string& text)
 { 
 	_text = text; 
 }
 
-std::string Post::GetTitle() 
+const std::string& Post::GetTitle()
 { 
 	return _title; 
 }
 
-std::string Post::GetText() 
+const std::string& Post::GetText()
 {
 	return _text; 
 }
 
-Post::Post(std::string title, std::string text)
+Post::Post(const std::string& title, const std::string& text)
 { 
 	SetTitle(title); 
 	SetText(text); 

@@ -20,12 +20,12 @@ using namespace std;
 int main()
 {
 	//5.1
-	/*string personFirstName = "Vasily";
+	string personFirstName = "Vasily";
 	string personMiddleName = "Viktorovich";
 	string personLastName = "Chekhov";
 	Person* person = new Person(personFirstName, personMiddleName,
 		personLastName);
-	ShowName(person);
+	ShowName(*person);
 
 	string studentFirstName = "Innocent";
 	string studentMiddleName = "Andreevich";
@@ -35,7 +35,7 @@ int main()
 	Student* student = new Student(studentFirstName, 
 		studentMiddleName, studentLastName, numberRecordBook,
 		receiptDate);
-	ShowName(student);
+	ShowName(*student);
 
 	string teacherFirstName = "Dmitry";
 	string teacherMiddleName = "Alexeyevich";
@@ -43,11 +43,11 @@ int main()
 	string post = "GPO teacher";
 	Teacher* teacher = new Teacher(studentFirstName,
 		studentMiddleName, studentLastName, post);
-	ShowName(teacher);
+	ShowName(*teacher);
 
 	delete person;
 	delete student;
-	delete teacher;*/
+	delete teacher;
 
 	//5.2
 	User** users = new User*[4] 
@@ -89,7 +89,7 @@ int main()
 	delete[] paidUsers;
 
 	//5.3
-	/*const int arrayCount = 4;
+	const int arrayCount = 4;
 	string names[arrayCount]
 	{
 		"LED DEXP H24E7000M", 
@@ -117,5 +117,5 @@ int main()
 	{
 		delete products[i];
 	}
-	delete[] products;*/
+	delete[] products;
 }

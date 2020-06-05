@@ -1,7 +1,7 @@
 #include "Teacher.h"
 
-Teacher::Teacher(std::string& firstName, std::string& middleName,
-	std::string& lastName, std::string& post) : 
+Teacher::Teacher(const std::string& firstName, const std::string& middleName,
+	const std::string& lastName, std::string& post) :
 	Person(firstName, middleName, lastName)
 {
 	this->SetPost(post);
@@ -12,12 +12,12 @@ Teacher::~Teacher()
 
 }
 
-void Teacher::SetPost(std::string& post)
+void Teacher::SetPost(const std::string& post)
 {
 	this->_post = post;
 }
 
-std::string Teacher::GetPost()
+const std::string& Teacher::GetPost()
 {
 	return this->_post;
 }

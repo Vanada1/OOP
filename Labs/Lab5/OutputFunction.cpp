@@ -3,8 +3,8 @@
 
 using namespace std;
 
-void ShowName(Person* person)
+void ShowName(Person& person)
 {
-	cout << person->GetFistName() << " " << person->GetMiddleName() 
-		<< " " << person->GetLastName() << endl;
+	cout << person.GetFistName() << " " << person.GetMiddleName() 
+		<< " " << person.GetLastName() << endl;
 }

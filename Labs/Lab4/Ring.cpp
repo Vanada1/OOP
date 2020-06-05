@@ -5,18 +5,11 @@
 
 int Ring::AllRingsCount = 0;
 
-Ring::Ring(double outerRadius, double innerRadius, Point* center)
-{
-	this->SetRadius(outerRadius, innerRadius);
-	this->SetCenter(center);
-	AddAllRingsCount();
-}
-
 Ring::Ring(double outerRadius, double innerRadius, double x,
 	double y)
 {
 	this->SetRadius(outerRadius, innerRadius);
-	this->_center = new Point(x, y);
+	this->SetCenter(x, y);
 	AddAllRingsCount();
 }
 
@@ -41,11 +34,12 @@ void Ring::SetRadius(double outerRadius, double innerRadius)
 	this->_innerRadius = innerRadius;
 }
 
-//TODO: ѕочему тут центр передаЄтс€ снаружи, а не как в конструкторе - создаЄтс€ по точкам? (на диаграмме поправить)
-//TODO: ћожет быть утечка пам€ти, т.к. через конструктор создал точку, а тут просто переопределил, а пам€ть не освободил
-void Ring::SetCenter(Point* center)
+//TODO: ѕочему тут центр передаЄтс€ снаружи, а не как в конструкторе - создаЄтс€ по точкам? (на диаграмме поправить) (Done)
+//TODO: ћожет быть утечка пам€ти, т.к. через конструктор создал точку, а тут просто переопределил, а пам€ть не освободил (Done)
+void Ring::SetCenter(double x, double y)
 {
-	this->_center = center;
+	delete this->_center;
+	this->_center = new Point(x, y);
 }
 
 double Ring::GetOuterRadius()

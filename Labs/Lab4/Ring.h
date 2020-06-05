@@ -14,13 +14,12 @@ class Ring
 		static void SubtractAllRingsCount();
 		void AssertOnPositiveValue(double value);
 	public:
-		Ring(double outerRadius, double innerRadius, Point* center);
 		Ring(double outerRadius, double innerRadius, double x,
 			double y);
 		~Ring();
 
 		void SetRadius(double outerRadius, double innerRadius);
-		void SetCenter(Point* center);
+		void SetCenter(double x, double y);
 
 		static int GetAllRingsCount();
 		double GetOuterRadius();

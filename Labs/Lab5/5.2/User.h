@@ -4,8 +4,8 @@
 class User
 {
 	private:
-	//TODO: что за скобочки?
-		int _id{};
+	//TODO: что за скобочки?(Done)
+		int _id;
 		std::string _login;
 		std::string _password;
 		void SetId(int id);

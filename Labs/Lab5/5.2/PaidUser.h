@@ -15,7 +15,9 @@ class PaidUser : public User
 		Post* GetPosts();
 		int GetPostsCount();
 
+	//TODO: Константные ссылки?
 		PaidUser(int id, std::string login, std::string password,
 			Post* posts, int postsCount);
+		//TODO: Константные ссылки?
 		PaidUser(int id, std::string login, std::string password);
 };

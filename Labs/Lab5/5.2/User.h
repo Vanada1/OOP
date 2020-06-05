@@ -4,12 +4,13 @@
 class User
 {
 	private:
-		int _id;
+		int _id{};
 		std::string _login;
 		std::string _password;
 		void SetId(int id);
 
 	public:
+		//TODO: Константные ссылки?
 		void SetLogin(std::string login);
 		void SetPassword(std::string password);
 

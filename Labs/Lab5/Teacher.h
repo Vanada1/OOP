@@ -9,6 +9,7 @@ class Teacher : public Person
 		std::string _post;
 
 	public:
+	//TODO: Константные ссылки?
 		Teacher(std::string& firstName, std::string& middleName,
 			std::string& lastName, std::string& post);
 		~Teacher();

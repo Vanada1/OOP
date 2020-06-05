@@ -10,9 +10,9 @@ class DiscountBase
 
 	public:
 		CategoryType GetCategory();
-		//TODO: Почему по указателю?(Done)
+	
 		virtual double Calculate(Product& product) = 0;
-		//TODO: Зачем публичный конструктор у класса, от которого нельзя создать объект?(Done)
+
 	protected:
 		DiscountBase(CategoryType category);
 };

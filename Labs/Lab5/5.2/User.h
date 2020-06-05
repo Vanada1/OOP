@@ -4,13 +4,13 @@
 class User
 {
 	private:
+	//TODO: что за скобочки?
 		int _id{};
 		std::string _login;
 		std::string _password;
 		void SetId(int id);
 
 	public:
-		//TODO: Константные ссылки?(Done)
 		void SetLogin(const std::string& login);
 		void SetPassword(const std::string& password);
 

@@ -10,7 +10,6 @@ class Person
 		std::string _lastName;
 
 	public:
-	//TODO: Константные ссылки?(Done)
 		Person(const std::string& firstName, const std::string& middleName,
 			const std::string& lastName);
 		~Person();

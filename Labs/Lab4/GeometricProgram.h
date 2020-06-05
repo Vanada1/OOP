@@ -1,5 +1,6 @@
 #pragma once
 
+//TODO: Лучше сделать статическим
 class GeometricProgram
 {
 	public:

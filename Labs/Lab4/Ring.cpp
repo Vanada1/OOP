@@ -26,7 +26,6 @@ Ring::~Ring()
 	SubtractAllRingsCount();
 }
 
-//TODO: Radius?
 void Ring::SetRadius(double outerRadius, double innerRadius)
 {
 	DoubleValidator::AssertPositiveValue(outerRadius);

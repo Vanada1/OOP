@@ -6,6 +6,7 @@ using namespace std;
 
 Rectangle::Rectangle(double length, double width, double x, double y)
 {
+	//TODO: А тут почему set для центра не вызвал
 	this->_center = new Point(x, y);
 	this->SetLength(length);
 	this->SetWidth(width);
@@ -18,7 +19,7 @@ Rectangle::~Rectangle()
 
 void Rectangle::SetCenter(double x, double y)
 {
-	//TODO: Может быть утечка памяти, т.к. через конструктор создал точку, а тут просто переопределил, а память не освободил (Done)
+	//TODO: Студия говорит, что удаление nullptr ничего не сломает, поэтому можно if убрать
 	if (_center != nullptr)
 	{
 		delete _center;

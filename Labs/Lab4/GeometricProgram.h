@@ -4,7 +4,7 @@
 static class GeometricProgram
 {
 	public:
-		void DemoRing();
-		void DemoCollision();
-		void DemoRecangleWithPointClass();
+		static void DemoRing();
+		static void DemoCollision();
+		static void DemoRecangleWithPointClass();
 };

@@ -3,8 +3,7 @@
 
 int main()
 {
-    GeometricProgram  demo;
-    demo.DemoRing();
-    demo.DemoCollision();
-    demo.DemoRecangleWithPointClass();
+    GeometricProgram::DemoRing();
+    GeometricProgram::DemoCollision();
+    GeometricProgram::DemoRecangleWithPointClass();
 }

@@ -34,6 +34,8 @@ void Ring::SetRadius(double outerRadius, double innerRadius)
 	this->_innerRadius = innerRadius;
 }
 
+//TODO: ѕочему тут центр передаЄтс€ снаружи, а не как в конструкторе - создаЄтс€ по точкам? (на диаграмме поправить) (Done)
+//TODO: ћожет быть утечка пам€ти, т.к. через конструктор создал точку, а тут просто переопределил, а пам€ть не освободил (Done)
 void Ring::SetCenter(double x, double y)
 {
 	delete this->_center;

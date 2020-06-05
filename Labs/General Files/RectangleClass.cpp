@@ -6,8 +6,8 @@ using namespace std;
 
 Rectangle::Rectangle(double length, double width, double x, double y)
 {
-	//TODO: А тут почему set для центра не вызвал
-	this->_center = new Point(x, y);
+	//TODO: А тут почему set для центра не вызвал(Done)
+	this->SetCenter(x, y);
 	this->SetLength(length);
 	this->SetWidth(width);
 }
@@ -19,11 +19,8 @@ Rectangle::~Rectangle()
 
 void Rectangle::SetCenter(double x, double y)
 {
-	//TODO: Студия говорит, что удаление nullptr ничего не сломает, поэтому можно if убрать
-	if (_center != nullptr)
-	{
-		delete _center;
-	}
+	//TODO: Студия говорит, что удаление nullptr ничего не сломает, поэтому можно if убрать (Done)
+	delete this->_center;
 	this->_center = new Point(x, y);
 }
 

@@ -1,7 +1,7 @@
 #pragma once
 
-//TODO: Лучше сделать статическим
-class GeometricProgram
+//TODO: Лучше сделать статическим (Done)
+static class GeometricProgram
 {
 	public:
 		void DemoRing();

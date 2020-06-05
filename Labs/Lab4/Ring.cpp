@@ -16,6 +16,7 @@ Ring::Ring(double outerRadius, double innerRadius, double x,
 	double y)
 {
 	this->SetRadius(outerRadius, innerRadius);
+	//TODO: ֲûחמג set
 	this->_center = new Point(x, y);
 	AddAllRingsCount();
 }

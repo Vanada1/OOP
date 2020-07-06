@@ -1,0 +1,16 @@
+			Menu
+1) 1.1.1.1 Breackpoint without conditions
+2) 1.1.1.2 Breackpoint with conditions
+3) 1.1.2.1 Sorting static array
+4) 1.1.2.2 Counting numbers that are greater than the number
+5) 1.1.2.3 Searching the letters in array
+6) 1.1.3.3 Exponentiation
+7) 1.1.3.4 Rounding
+8) 1.1.5.1 Dynamic double array 
+9) 1.1.5.2 Dynamic bool array 
+10) 1.1.5.3 Dynamic char array 
+11) 1.1.5.4 Dynamic double array with sorting
+12) 1.1.5.5 Dynamic int array with searching
+13) 1.1.5.6 Dynamic char array with search letter
+14) 1.1.5.7 Three arrays
+15) Exit
